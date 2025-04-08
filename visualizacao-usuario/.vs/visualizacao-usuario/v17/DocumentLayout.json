@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|c:\\users\\pedro\\source\\repos\\tecn-point\\visualizacao-usuario\\visualizacao-usuario\\visualizacaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\visualizacaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\visualizacaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\visualizacaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|c:\\users\\pedro\\source\\repos\\tecn-point\\visualizacao-usuario\\visualizacao-usuario\\visualizacaousuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\visualizacaousuario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\acompanharchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|c:\\users\\pedro\\source\\repos\\tecn-point\\visualizacao-usuario\\visualizacao-usuario\\acompanharchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\acompanharchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\criarchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\criarchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|c:\\users\\pedro\\source\\repos\\tecn-point\\visualizacao-usuario\\visualizacao-usuario\\acompanharchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\acompanharchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|c:\\users\\pedro\\source\\repos\\tecn-point\\visualizacao-usuario\\visualizacao-usuario\\acompanharchamado.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\acompanharchamado.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|c:\\users\\pedro\\source\\repos\\tecn-point\\visualizacao-usuario\\visualizacao-usuario\\visualizacaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\visualizacaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|c:\\users\\pedro\\source\\repos\\tecn-point\\visualizacao-usuario\\visualizacao-usuario\\criarchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{200FEEED-AEE9-4C71-B5F7-83ACF562282A}|visualizacao-usuario\\visualizacao-usuario.csproj|solutionrelative:visualizacao-usuario\\criarchamado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -71,73 +63,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VisualizacaoUsuario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\VisualizacaoUsuario.cs",
-              "RelativeDocumentMoniker": "visualizacao-usuario\\VisualizacaoUsuario.cs",
-              "ToolTip": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\VisualizacaoUsuario.cs [Design]",
-              "RelativeToolTip": "visualizacao-usuario\\VisualizacaoUsuario.cs [Design]",
+              "Title": "AcompanharChamado.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\AcompanharChamado.cs",
+              "RelativeDocumentMoniker": "visualizacao-usuario\\AcompanharChamado.cs",
+              "ToolTip": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\AcompanharChamado.cs",
+              "RelativeToolTip": "visualizacao-usuario\\AcompanharChamado.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T21:47:45.236Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-08T23:13:36.663Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VisualizacaoUsuario.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\VisualizacaoUsuario.Designer.cs",
-              "RelativeDocumentMoniker": "visualizacao-usuario\\VisualizacaoUsuario.Designer.cs",
-              "ToolTip": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\VisualizacaoUsuario.Designer.cs",
-              "RelativeToolTip": "visualizacao-usuario\\VisualizacaoUsuario.Designer.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAiwDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T21:47:07.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AcompanharChamado.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\AcompanharChamado.Designer.cs",
-              "RelativeDocumentMoniker": "visualizacao-usuario\\AcompanharChamado.Designer.cs",
-              "ToolTip": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\AcompanharChamado.Designer.cs",
-              "RelativeToolTip": "visualizacao-usuario\\AcompanharChamado.Designer.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T21:33:17.732Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "CriarChamado.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\CriarChamado.cs",
               "RelativeDocumentMoniker": "visualizacao-usuario\\CriarChamado.cs",
               "ToolTip": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\CriarChamado.cs [Projeto]",
               "RelativeToolTip": "visualizacao-usuario\\CriarChamado.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T21:30:03.358Z"
+              "WhenOpened": "2025-04-08T23:12:36.328Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "AcompanharChamado.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\AcompanharChamado.cs",
               "RelativeDocumentMoniker": "visualizacao-usuario\\AcompanharChamado.cs",
               "ToolTip": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\AcompanharChamado.cs [Projeto]",
               "RelativeToolTip": "visualizacao-usuario\\AcompanharChamado.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T21:29:51.772Z"
+              "WhenOpened": "2025-04-08T23:02:11.992Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VisualizacaoUsuario.cs",
+              "DocumentIndex": 2,
+              "Title": "VisualizacaoUsuario.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\VisualizacaoUsuario.cs",
               "RelativeDocumentMoniker": "visualizacao-usuario\\VisualizacaoUsuario.cs",
-              "ToolTip": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\VisualizacaoUsuario.cs",
-              "RelativeToolTip": "visualizacao-usuario\\VisualizacaoUsuario.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAAAzAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\pedro\\source\\repos\\Tecn-Point\\visualizacao-usuario\\visualizacao-usuario\\VisualizacaoUsuario.cs [Projeto]",
+              "RelativeToolTip": "visualizacao-usuario\\VisualizacaoUsuario.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T21:29:01.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T23:01:54.06Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }
