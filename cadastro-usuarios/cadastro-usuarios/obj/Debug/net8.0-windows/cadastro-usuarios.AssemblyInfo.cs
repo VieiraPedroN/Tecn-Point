@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cadastro-usuarios")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a79d65217e5b25d53974b4d36338f9f83859174")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7e2ab4673142772a88c586befafaedf6aa12fad")]
 [assembly: System.Reflection.AssemblyProductAttribute("cadastro-usuarios")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cadastro-usuarios")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
