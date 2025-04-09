@@ -14,18 +14,24 @@ namespace visualizacao_usuario
         {
             InitializeComponent();
             CarregarFormulario(new AcompanharChamado());
+            buttonCriarChamado.BackColor = Color.Transparent;
+            buttonAcompanharChamado.BackColor = Color.Orchid;
         }
 
         private void buttonAcompanharChamado_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             CarregarFormulario(new AcompanharChamado());
+            buttonCriarChamado.BackColor = Color.Transparent;
+            buttonAcompanharChamado.BackColor = Color.Orchid;
         }
 
         private void buttonCriarChamado_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
             CarregarFormulario(new CriarChamado());
+            buttonAcompanharChamado.BackColor = Color.Transparent;
+            buttonCriarChamado.BackColor = Color.Orchid;
         }
     }
 }
