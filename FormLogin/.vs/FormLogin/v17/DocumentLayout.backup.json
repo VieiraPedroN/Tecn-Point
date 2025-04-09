@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2720FC1-FB2F-4B20-AA71-C6D4F9613604}|FormLogin\\FormLogin.csproj|c:\\users\\home\\source\\repos\\tecn-point\\formlogin\\formlogin\\formlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2720FC1-FB2F-4B20-AA71-C6D4F9613604}|FormLogin\\FormLogin.csproj|solutionrelative:formlogin\\formlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2720FC1-FB2F-4B20-AA71-C6D4F9613604}|FormLogin\\FormLogin.csproj|C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\formlogin\\formfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F2720FC1-FB2F-4B20-AA71-C6D4F9613604}|FormLogin\\FormLogin.csproj|solutionrelative:formlogin\\formfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2720FC1-FB2F-4B20-AA71-C6D4F9613604}|FormLogin\\FormLogin.csproj|C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\formlogin\\formlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F2720FC1-FB2F-4B20-AA71-C6D4F9613604}|FormLogin\\FormLogin.csproj|solutionrelative:formlogin\\formlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2720FC1-FB2F-4B20-AA71-C6D4F9613604}|FormLogin\\FormLogin.csproj|C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormCliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F2720FC1-FB2F-4B20-AA71-C6D4F9613604}|FormLogin\\FormLogin.csproj|solutionrelative:FormLogin\\FormCliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormFuncionario.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormFuncionario.cs",
+              "RelativeDocumentMoniker": "FormLogin\\FormFuncionario.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormFuncionario.cs [Projeto]",
+              "RelativeToolTip": "FormLogin\\FormFuncionario.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T16:40:00.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormCliente.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormCliente.cs",
+              "RelativeDocumentMoniker": "FormLogin\\FormCliente.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormCliente.cs [Projeto]",
+              "RelativeToolTip": "FormLogin\\FormCliente.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T16:21:27.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormLog.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormLog.cs",
+              "RelativeDocumentMoniker": "FormLogin\\FormLog.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormLog.cs [Design]",
+              "RelativeToolTip": "FormLogin\\FormLog.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T18:35:45.613Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormLog.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormLog.cs",
+              "RelativeDocumentMoniker": "FormLogin\\FormLog.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\Tecn-Point\\FormLogin\\FormLogin\\FormLog.cs",
+              "RelativeToolTip": "FormLogin\\FormLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T19:13:41.968Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
