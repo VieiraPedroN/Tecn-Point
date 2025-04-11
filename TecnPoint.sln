@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecnPoint.Interface", "TecnPoint\TecnPoint.Interface.csproj", "{9FECF77B-A7CE-4159-93F1-65C8DAB33E2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecnPoint.Modelo", "TecnPoint.Modelo\TecnPoint.Modelo.csproj", "{1D59D323-4F90-4934-8A13-3D8EE500E67A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecnPoint.Dados", "TecnPoint.Dados\TecnPoint.Dados.csproj", "{4B4FBF80-273C-4960-84AC-A6F3E5B4CD5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FECF77B-A7CE-4159-93F1-65C8DAB33E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FECF77B-A7CE-4159-93F1-65C8DAB33E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FECF77B-A7CE-4159-93F1-65C8DAB33E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FECF77B-A7CE-4159-93F1-65C8DAB33E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D59D323-4F90-4934-8A13-3D8EE500E67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D59D323-4F90-4934-8A13-3D8EE500E67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D59D323-4F90-4934-8A13-3D8EE500E67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D59D323-4F90-4934-8A13-3D8EE500E67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B4FBF80-273C-4960-84AC-A6F3E5B4CD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B4FBF80-273C-4960-84AC-A6F3E5B4CD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B4FBF80-273C-4960-84AC-A6F3E5B4CD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B4FBF80-273C-4960-84AC-A6F3E5B4CD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
