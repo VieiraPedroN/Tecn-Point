@@ -1,4 +1,6 @@
-﻿namespace TecnPoint
+﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
+namespace TecnPoint
 {
     partial class Form1
     {
@@ -32,9 +34,10 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);

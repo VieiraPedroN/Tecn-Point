@@ -32,5 +32,6 @@ namespace TecnPoint.Modelo.ClassLoginUsuario
         {
             return _email == entradaEmail && _senha == entradaSenha;
         }
-    }   
-}
+    }
+}        
+
