@@ -27,5 +27,3 @@ public class ClassDadosTelaInicial
         Console.WriteLine($"Nome: {_nome}\nEmail: {_email}");
     }
 }
-
-
