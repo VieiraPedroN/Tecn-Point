@@ -8,18 +8,31 @@ namespace TecnPoint.Modelo.ClassLoginUsuario
 {
     public class ClassLoginUsuario
     {
+        private int _idUsuario;
+        private string _nome;
         private string _email;
         private string _senha;
         private string _tipoUsuario;
 
-
-        public ClassLoginUsuario(string email, string senha, string tipoUsuario) 
+        public ClassLoginUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario) 
         {
+            _idUsuario = idUsuario;
+            _nome = nome;
             _email = email;
             _senha = senha;
             _tipoUsuario = tipoUsuario;
         }
 
+        public int IdUsuario 
+        {
+            get { return _idUsuario; }
+            set { _idUsuario = value; }
+        }
+        public string Nome
+        {
+            get { return _nome; }
+            set { _nome = value; }
+        }
         public string Email
         { 
             get {  return _email; } 

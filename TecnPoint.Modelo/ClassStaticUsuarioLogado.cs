@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TecnPoint.Modelo.ClassUsuarioLogado
+namespace TecnPoint.Modelo.ClassStaticUsuarioLogado
 {
-    public static class ClassUsuarioLogado
+    public static class ClassStaticUsuarioLogado
     {
         public static int IdUsuario { get; set; }
         public static string Nome { get; set; }
