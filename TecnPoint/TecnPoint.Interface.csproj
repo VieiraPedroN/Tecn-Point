@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TecnPoint.Dados\TecnPoint.Dados.csproj" />
     <ProjectReference Include="..\TecnPoint.Modelo\TecnPoint.Modelo.csproj" />
   </ItemGroup>
 

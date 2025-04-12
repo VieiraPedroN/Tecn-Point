@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TecnPoint\TecnPoint.Interface.csproj" />
+    <ProjectReference Include="..\TecnPoint.Modelo\TecnPoint.Modelo.csproj" />
   </ItemGroup>
 
 </Project>

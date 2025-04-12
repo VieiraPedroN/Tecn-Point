@@ -16,7 +16,7 @@ namespace TecnPoint.Dados
         {
             using (ClassConexaoBanco conexaoConsultaEmailSenha = new ClassConexaoBanco())
             {
-                string query = "SELECT Email, Senha, tipo_Usuario FROM Usuarios WHERE Email = @RecebeEmail AND Senha = @RecebeSenha";
+                string query = "SELECT id_Usuario, Nome, Email, Senha, tipo_Usuario FROM Usuarios WHERE Email = @RecebeEmail AND Senha = @RecebeSenha";
 
                 using (NpgsqlCommand comando = new NpgsqlCommand(query, conexaoConsultaEmailSenha.conexao))
                 {
@@ -30,9 +30,11 @@ namespace TecnPoint.Dados
                         {
                             if ((String.Equals(leitorDeColunas.GetString(leitorDeColunas.GetOrdinal("Email")), emailConsultado)) && (String.Equals(leitorDeColunas.GetString(leitorDeColunas.GetOrdinal("Senha")), senhaConsultada)))
                             {
-                                return new ClassLoginUsuario(email:"", senha:"", tipoUsuario:"")
+                                return new ClassLoginUsuario(idUsuario: 0, nome:"", email:"", senha:"", tipoUsuario:"")
                                 {
                                     //GetOrdinal vai retornar o número da coluna com base no seu nome
+                                    IdUsuario = leitorDeColunas.GetInt32(leitorDeColunas.GetOrdinal("id_Usuario")),
+                                    Nome = leitorDeColunas.GetString(leitorDeColunas.GetOrdinal("Nome")),
                                     Email = leitorDeColunas.GetString(leitorDeColunas.GetOrdinal("Email")),
                                     Senha = leitorDeColunas.GetString(leitorDeColunas.GetOrdinal("Senha")),
                                     TipoUsuario = leitorDeColunas.GetString(leitorDeColunas.GetOrdinal("tipo_Usuario"))
