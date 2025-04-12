@@ -10,13 +10,14 @@ namespace TecnPoint.Modelo.ClassLoginUsuario
     {
         private string _email;
         private string _senha;
-        private int _funcao;
+        private string _tipoUsuario;
 
-        public ClassLoginUsuario(string email, string senha, int funcao) 
+
+        public ClassLoginUsuario(string email, string senha, string tipoUsuario) 
         {
             _email = email;
             _senha = senha;
-            _funcao = funcao;
+            _tipoUsuario = tipoUsuario;
         }
 
         public string Email
@@ -24,15 +25,15 @@ namespace TecnPoint.Modelo.ClassLoginUsuario
             get {  return _email; } 
             set { _email = value; }
         }
-        public string Senha 
+        public string Senha
         {
             get { return _senha; }
             set { _senha = value; }
         }
-        public int Funcao
+        public string TipoUsuario
         {
-            get { return _funcao; }
-            set { _funcao = value; }
+            get { return _tipoUsuario; }
+            set { _tipoUsuario = value; }
         }
 
         public bool ValidarLogin(string entradaEmail, string entradaSenha)
