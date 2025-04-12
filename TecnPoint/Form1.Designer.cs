@@ -31,8 +31,8 @@ namespace TecnPoint
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            email = new TextBox();
+            senha = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -45,27 +45,27 @@ namespace TecnPoint
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
+            // email
             // 
-            textBox1.Location = new Point(263, 101);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(179, 23);
-            textBox1.TabIndex = 1;
+            email.Location = new Point(263, 101);
+            email.Name = "email";
+            email.Size = new Size(179, 23);
+            email.TabIndex = 1;
             // 
-            // textBox2
+            // senha
             // 
-            textBox2.Location = new Point(263, 151);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(179, 23);
-            textBox2.TabIndex = 2;
+            senha.Location = new Point(263, 151);
+            senha.Name = "senha";
+            senha.Size = new Size(179, 23);
+            senha.TabIndex = 2;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(senha);
+            Controls.Add(email);
             Controls.Add(button1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
@@ -77,7 +77,7 @@ namespace TecnPoint
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox email;
+        private TextBox senha;
     }
 }
