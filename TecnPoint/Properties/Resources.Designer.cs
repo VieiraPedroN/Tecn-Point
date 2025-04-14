@@ -63,9 +63,69 @@ namespace TecnPoint.Interface.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Group_6 {
+        internal static System.Drawing.Bitmap CheckLisIconInactive {
             get {
-                object obj = ResourceManager.GetObject("Group 6", resourceCulture);
+                object obj = ResourceManager.GetObject("CheckLisIconInactive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChecklistIconActive {
+            get {
+                object obj = ResourceManager.GetObject("ChecklistIconActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlusIconActive {
+            get {
+                object obj = ResourceManager.GetObject("PlusIconActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PlusIconInactive {
+            get {
+                object obj = ResourceManager.GetObject("PlusIconInactive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TelaFundo {
+            get {
+                object obj = ResourceManager.GetObject("TelaFundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TelaFundoLogin {
+            get {
+                object obj = ResourceManager.GetObject("TelaFundoLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UserPicture {
+            get {
+                object obj = ResourceManager.GetObject("UserPicture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

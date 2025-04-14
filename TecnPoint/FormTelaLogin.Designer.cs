@@ -30,6 +30,7 @@ namespace TecnPoint
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaLogin));
             button1 = new Button();
             email = new TextBox();
             senha = new TextBox();
@@ -44,6 +45,7 @@ namespace TecnPoint
             // 
             button1.Anchor = AnchorStyles.None;
             button1.BackColor = Color.FromArgb(126, 105, 171);
+            button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(224, 224, 224);
             button1.Location = new Point(257, 240);
@@ -137,7 +139,7 @@ namespace TecnPoint
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(100, 52, 144);
-            BackgroundImage = Interface.Properties.Resources.Group_6;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(700, 338);
             Controls.Add(label5);
