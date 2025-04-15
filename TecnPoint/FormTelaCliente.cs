@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Modelo.ClassStaticUsuarioLogado;
+using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
 
 
 namespace TecnPoint.Interface
@@ -30,8 +30,8 @@ namespace TecnPoint.Interface
         }
         private void FormTelaCliente_Load(object sender, EventArgs e)
         {
-            NomeUsuario.Text = ClassStaticUsuarioLogado.Nome;
-            EmailUsuario.Text = ClassStaticUsuarioLogado.Email;
+            NomeUsuario.Text = ClassDadosEstaticosUsuario.Nome;
+            EmailUsuario.Text = ClassDadosEstaticosUsuario.Email;
         }
         private void button1_Click(object sender, EventArgs e)
         {

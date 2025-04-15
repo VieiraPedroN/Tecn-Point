@@ -1,6 +1,6 @@
 using TecnPoint.Dados;
 using TecnPoint.Modelo.ClassLoginUsuario;
-using TecnPoint.Modelo.ClassStaticUsuarioLogado;
+using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
 using TecnPoint.Interface;
 
 namespace TecnPoint
@@ -27,8 +27,8 @@ namespace TecnPoint
                                 "Tecn Solutions",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                ClassStaticUsuarioLogado.Nome = usuarioLogado.Nome;
-                ClassStaticUsuarioLogado.Email = usuarioLogado.Email;
+                ClassDadosEstaticosUsuario.Nome = usuarioLogado.Nome;
+                ClassDadosEstaticosUsuario.Email = usuarioLogado.Email;
 
                 if (usuarioLogado.TipoUsuario == "Funcionário")
                 {
