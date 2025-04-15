@@ -71,7 +71,7 @@
             button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(10, 111);
             button2.Name = "button2";
-            button2.Size = new Size(183, 40);
+            button2.Size = new Size(190, 40);
             button2.TabIndex = 3;
             button2.Text = "Acompanhar um chamado";
             button2.TextAlign = ContentAlignment.MiddleRight;
