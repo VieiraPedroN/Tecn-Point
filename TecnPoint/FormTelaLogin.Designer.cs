@@ -31,108 +31,108 @@ namespace TecnPoint
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaLogin));
-            button1 = new Button();
-            email = new TextBox();
-            senha = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            botaoEntrarLogin = new Button();
+            EntradaEmail = new TextBox();
+            EntradaSenha = new TextBox();
+            EmailLogin = new Label();
+            SenhaLogin = new Label();
+            NomeEmpresa = new Label();
+            DescricaoLogin = new Label();
+            DescricaoSistema = new Label();
             SuspendLayout();
             // 
-            // button1
+            // botaoEntrarLogin
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.BackColor = Color.FromArgb(126, 105, 171);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(224, 224, 224);
-            button1.Location = new Point(257, 240);
-            button1.Name = "button1";
-            button1.Size = new Size(185, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Entrar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            botaoEntrarLogin.Anchor = AnchorStyles.None;
+            botaoEntrarLogin.BackColor = Color.FromArgb(126, 105, 171);
+            botaoEntrarLogin.Cursor = Cursors.Hand;
+            botaoEntrarLogin.FlatStyle = FlatStyle.Flat;
+            botaoEntrarLogin.ForeColor = Color.FromArgb(224, 224, 224);
+            botaoEntrarLogin.Location = new Point(257, 240);
+            botaoEntrarLogin.Name = "botaoEntrarLogin";
+            botaoEntrarLogin.Size = new Size(185, 23);
+            botaoEntrarLogin.TabIndex = 0;
+            botaoEntrarLogin.Text = "Entrar";
+            botaoEntrarLogin.UseVisualStyleBackColor = false;
+            botaoEntrarLogin.Click += botaoEntrarLogin_Click;
             // 
-            // email
+            // EntradaEmail
             // 
-            email.Anchor = AnchorStyles.None;
-            email.Location = new Point(230, 141);
-            email.Name = "email";
-            email.Size = new Size(240, 23);
-            email.TabIndex = 1;
+            EntradaEmail.Anchor = AnchorStyles.None;
+            EntradaEmail.Location = new Point(230, 141);
+            EntradaEmail.Name = "EntradaEmail";
+            EntradaEmail.Size = new Size(240, 23);
+            EntradaEmail.TabIndex = 1;
             // 
-            // senha
+            // EntradaSenha
             // 
-            senha.Anchor = AnchorStyles.None;
-            senha.Cursor = Cursors.IBeam;
-            senha.Location = new Point(230, 191);
-            senha.Name = "senha";
-            senha.PasswordChar = '*';
-            senha.Size = new Size(240, 23);
-            senha.TabIndex = 2;
+            EntradaSenha.Anchor = AnchorStyles.None;
+            EntradaSenha.Cursor = Cursors.IBeam;
+            EntradaSenha.Location = new Point(230, 191);
+            EntradaSenha.Name = "EntradaSenha";
+            EntradaSenha.PasswordChar = '*';
+            EntradaSenha.Size = new Size(240, 23);
+            EntradaSenha.TabIndex = 2;
             // 
-            // label1
+            // EmailLogin
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(215, 120);
-            label1.Name = "label1";
-            label1.Size = new Size(55, 18);
-            label1.TabIndex = 3;
-            label1.Text = "E-mail";
+            EmailLogin.Anchor = AnchorStyles.None;
+            EmailLogin.AutoSize = true;
+            EmailLogin.BackColor = Color.Transparent;
+            EmailLogin.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            EmailLogin.Location = new Point(215, 120);
+            EmailLogin.Name = "EmailLogin";
+            EmailLogin.Size = new Size(55, 18);
+            EmailLogin.TabIndex = 3;
+            EmailLogin.Text = "Email";
             // 
-            // label2
+            // SenhaLogin
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(215, 170);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 18);
-            label2.TabIndex = 4;
-            label2.Text = "Senha";
+            SenhaLogin.Anchor = AnchorStyles.None;
+            SenhaLogin.AutoSize = true;
+            SenhaLogin.BackColor = Color.Transparent;
+            SenhaLogin.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SenhaLogin.Location = new Point(215, 170);
+            SenhaLogin.Name = "SenhaLogin";
+            SenhaLogin.Size = new Size(50, 18);
+            SenhaLogin.TabIndex = 4;
+            SenhaLogin.Text = "Senha";
             // 
-            // label3
+            // NomeEmpresa
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Berlin Sans FB Demi", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(263, 50);
-            label3.Name = "label3";
-            label3.Size = new Size(179, 31);
-            label3.TabIndex = 5;
-            label3.Text = "Tech Solutions";
+            NomeEmpresa.Anchor = AnchorStyles.None;
+            NomeEmpresa.AutoSize = true;
+            NomeEmpresa.BackColor = Color.Transparent;
+            NomeEmpresa.Font = new Font("Berlin Sans FB Demi", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NomeEmpresa.Location = new Point(263, 50);
+            NomeEmpresa.Name = "NomeEmpresa";
+            NomeEmpresa.Size = new Size(179, 31);
+            NomeEmpresa.TabIndex = 5;
+            NomeEmpresa.Text = "Tech Solutions";
             // 
-            // label4
+            // DescricaoLogin
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Berlin Sans FB", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(280, 83);
-            label4.Name = "label4";
-            label4.Size = new Size(139, 13);
-            label4.TabIndex = 6;
-            label4.Text = "Entre com suas credenciais";
+            DescricaoLogin.Anchor = AnchorStyles.None;
+            DescricaoLogin.AutoSize = true;
+            DescricaoLogin.BackColor = Color.Transparent;
+            DescricaoLogin.Font = new Font("Berlin Sans FB", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DescricaoLogin.Location = new Point(280, 83);
+            DescricaoLogin.Name = "DescricaoLogin";
+            DescricaoLogin.Size = new Size(139, 13);
+            DescricaoLogin.TabIndex = 6;
+            DescricaoLogin.Text = "Entre com suas credenciais";
             // 
-            // label5
+            // DescricaoSistema
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Berlin Sans FB", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(270, 275);
-            label5.Name = "label5";
-            label5.Size = new Size(157, 13);
-            label5.TabIndex = 7;
-            label5.Text = "Sistema de Suporte ao Cliente";
+            DescricaoSistema.Anchor = AnchorStyles.None;
+            DescricaoSistema.AutoSize = true;
+            DescricaoSistema.BackColor = Color.Transparent;
+            DescricaoSistema.Font = new Font("Berlin Sans FB", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DescricaoSistema.Location = new Point(270, 275);
+            DescricaoSistema.Name = "DescricaoSistema";
+            DescricaoSistema.Size = new Size(157, 13);
+            DescricaoSistema.TabIndex = 7;
+            DescricaoSistema.Text = "Sistema de Suporte ao Cliente";
             // 
             // FormTelaLogin
             // 
@@ -142,14 +142,14 @@ namespace TecnPoint
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(700, 338);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(senha);
-            Controls.Add(email);
-            Controls.Add(button1);
+            Controls.Add(DescricaoSistema);
+            Controls.Add(DescricaoLogin);
+            Controls.Add(NomeEmpresa);
+            Controls.Add(SenhaLogin);
+            Controls.Add(EmailLogin);
+            Controls.Add(EntradaSenha);
+            Controls.Add(EntradaEmail);
+            Controls.Add(botaoEntrarLogin);
             DoubleBuffered = true;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormTelaLogin";
@@ -160,13 +160,13 @@ namespace TecnPoint
 
         #endregion
 
-        private Button button1;
-        private TextBox email;
-        private TextBox senha;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
+        private Button botaoEntrarLogin;
+        private TextBox EntradaEmail;
+        private TextBox EntradaSenha;
+        private Label EmailLogin;
+        private Label SenhaLogin;
+        private Label NomeEmpresa;
+        private Label DescricaoLogin;
+        private Label DescricaoSistema;
     }
 }

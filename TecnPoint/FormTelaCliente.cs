@@ -33,13 +33,13 @@ namespace TecnPoint.Interface
             NomeUsuario.Text = ClassDadosEstaticosUsuario.Nome;
             EmailUsuario.Text = ClassDadosEstaticosUsuario.Email;
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void botaoCriarChamado_Click(object sender, EventArgs e)
         {
-            AlternarBotoes(button1, button2);
+            AlternarBotoes(botaoCriarChamado, botaoAcompanharChamado);
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {
-            AlternarBotoes(button2, button1);
+            AlternarBotoes(botaoAcompanharChamado, botaoCriarChamado);
         }
     }
         

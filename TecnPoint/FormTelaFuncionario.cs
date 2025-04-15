@@ -32,9 +32,9 @@ namespace TecnPoint.Interface
             NomeUsuario.Text = ClassDadosEstaticosUsuario.Nome;
             EmailUsuario.Text = ClassDadosEstaticosUsuario.Email;
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {
-            button2.BackColor = Color.FromArgb(163, 89, 253);
+            botaoAcompanharChamado.BackColor = Color.FromArgb(163, 89, 253);
 
         }
     }

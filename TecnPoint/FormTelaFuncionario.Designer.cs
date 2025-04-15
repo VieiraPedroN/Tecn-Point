@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaFuncionario));
             NomeUsuario = new Label();
             EmailUsuario = new Label();
-            button2 = new Button();
+            botaoAcompanharChamado = new Button();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
             SuspendLayout();
@@ -58,25 +58,25 @@
             EmailUsuario.TabIndex = 1;
             EmailUsuario.Text = "Email Usuario";
             // 
-            // button2
+            // botaoAcompanharChamado
             // 
-            button2.BackColor = Color.Transparent;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = Color.DarkGray;
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.Gainsboro;
-            button2.Image = Properties.Resources.ChecklistIconActive;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(10, 111);
-            button2.Name = "button2";
-            button2.Size = new Size(190, 40);
-            button2.TabIndex = 3;
-            button2.Text = "Acompanhar um chamado";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            botaoAcompanharChamado.BackColor = Color.Transparent;
+            botaoAcompanharChamado.Cursor = Cursors.Hand;
+            botaoAcompanharChamado.FlatAppearance.BorderColor = Color.DarkGray;
+            botaoAcompanharChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            botaoAcompanharChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+            botaoAcompanharChamado.FlatStyle = FlatStyle.Flat;
+            botaoAcompanharChamado.ForeColor = Color.Gainsboro;
+            botaoAcompanharChamado.Image = Properties.Resources.ChecklistIconActive;
+            botaoAcompanharChamado.ImageAlign = ContentAlignment.MiddleLeft;
+            botaoAcompanharChamado.Location = new Point(10, 111);
+            botaoAcompanharChamado.Name = "botaoAcompanharChamado";
+            botaoAcompanharChamado.Size = new Size(190, 40);
+            botaoAcompanharChamado.TabIndex = 3;
+            botaoAcompanharChamado.Text = "Acompanhar um chamado";
+            botaoAcompanharChamado.TextAlign = ContentAlignment.MiddleRight;
+            botaoAcompanharChamado.UseVisualStyleBackColor = false;
+            botaoAcompanharChamado.Click += botaoAcompanharChamado_Click;
             // 
             // panel1
             // 
@@ -106,7 +106,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(700, 338);
-            Controls.Add(button2);
+            Controls.Add(botaoAcompanharChamado);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Controls.Add(EmailUsuario);
@@ -124,7 +124,7 @@
 
         private Label NomeUsuario;
         private Label EmailUsuario;
-        private Button button2;
+        private Button botaoAcompanharChamado;
         private Panel panel1;
         private GroupBox groupBox1;
     }

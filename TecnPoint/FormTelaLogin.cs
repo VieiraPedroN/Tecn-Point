@@ -16,10 +16,10 @@ namespace TecnPoint
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botaoEntrarLogin_Click(object sender, EventArgs e)
         {
 
-            usuarioLogado = dadosUsuarioLogado.ConsultaEmailSenha(email.Text, senha.Text);
+            usuarioLogado = dadosUsuarioLogado.ConsultaEmailSenha(EntradaEmail.Text, EntradaSenha.Text);
 
             if (usuarioLogado != null)
             {
@@ -50,7 +50,7 @@ namespace TecnPoint
                            MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
             }
-            
+
         }
     }
- }
+}
