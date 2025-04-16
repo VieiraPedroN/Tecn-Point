@@ -1,7 +1,7 @@
 using TecnPoint.Dados;
-using TecnPoint.Modelo.ClassLoginUsuario;
 using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
 using TecnPoint.Interface;
+using TecnPoint.Modelo.DadosUsuario;
 
 namespace TecnPoint
 {
@@ -9,7 +9,7 @@ namespace TecnPoint
     {
         //Criando objeto para passar os dados para o usuário
         ClassRepositorioLoginUsuario dadosUsuarioLogado = new ClassRepositorioLoginUsuario();
-        ClassLoginUsuario usuarioLogado = new ClassLoginUsuario(idUsuario: 0, nome: "", email: "", senha: "", tipoUsuario: "");
+        DadosUsuario usuarioLogado = new DadosUsuario(idUsuario: 0, nome: "", email: "", senha: "", tipoUsuario: "");
 
         public FormTelaLogin()
         {

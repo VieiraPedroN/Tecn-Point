@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TecnPoint.Modelo.ClassLoginUsuario
+namespace TecnPoint.Modelo.DadosUsuario
 {
-    public class ClassLoginUsuario
+    public class DadosUsuario
     {
         private int _idUsuario;
         private string _nome;
@@ -14,7 +14,7 @@ namespace TecnPoint.Modelo.ClassLoginUsuario
         private string _senha;
         private string _tipoUsuario;
 
-        public ClassLoginUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario) 
+        public DadosUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario) 
         {
             _idUsuario = idUsuario;
             _nome = nome;
@@ -47,11 +47,6 @@ namespace TecnPoint.Modelo.ClassLoginUsuario
         {
             get { return _tipoUsuario; }
             set { _tipoUsuario = value; }
-        }
-
-        public bool ValidarLogin(string entradaEmail, string entradaSenha)
-        {
-            return _email == entradaEmail && _senha == entradaSenha;
         }
     }
 }        

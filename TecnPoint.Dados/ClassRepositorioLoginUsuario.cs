@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TecnPoint.Modelo.ClassLoginUsuario;
+using TecnPoint.Modelo.DadosUsuario;
 
 namespace TecnPoint.Dados
 {
@@ -12,7 +12,7 @@ namespace TecnPoint.Dados
     {
         
         //Método para obter os dados do usuário para validar login
-        public ClassLoginUsuario ConsultaEmailSenha(string emailConsultado, string senhaConsultada)
+        public DadosUsuario ConsultaEmailSenha(string emailConsultado, string senhaConsultada)
         {
             using (ClassConexaoBanco conexaoConsultaEmailSenha = new ClassConexaoBanco())
             {
@@ -30,7 +30,7 @@ namespace TecnPoint.Dados
                         {
                             if ((String.Equals(leitorDeColunas.GetString(leitorDeColunas.GetOrdinal("Email")), emailConsultado)) && (String.Equals(leitorDeColunas.GetString(leitorDeColunas.GetOrdinal("Senha")), senhaConsultada)))
                             {
-                                return new ClassLoginUsuario(idUsuario: 0, nome:"", email:"", senha:"", tipoUsuario:"")
+                                return new DadosUsuario(idUsuario: 0, nome:"", email:"", senha:"", tipoUsuario:"")
                                 {
                                     //GetOrdinal vai retornar o número da coluna com base no seu nome
                                     IdUsuario = leitorDeColunas.GetInt32(leitorDeColunas.GetOrdinal("id_Usuario")),
