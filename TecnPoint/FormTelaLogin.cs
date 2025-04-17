@@ -7,20 +7,20 @@ namespace TecnPoint
 {
     public partial class FormTelaLogin : Form
     {
+        private ValidarLogin validarLogin = new ValidarLogin();
 
         public FormTelaLogin()
         {   
-            
             InitializeComponent();
         }
 
         private void botaoEntrarLogin_Click(object sender, EventArgs e)
         {
-            
-            ValidarLogin validarLogin = new ValidarLogin(dadosUsuario: DadosU);
-            if (validarLogin.Checar(EmailLogin.Text, SenhaLogin.Text) != null)
+            var usuarioLogado = validarLogin.Checar(EntradaEmail.Text, EntradaSenha.Text);
+
+            if (usuarioLogado != null)
             {
-                ClassDadosEstaticosUsuario.Nome = .Nome;
+                ClassDadosEstaticosUsuario.Nome = usuarioLogado.Nome;
                 ClassDadosEstaticosUsuario.Email = usuarioLogado.Email;
 
                 if (usuarioLogado.TipoUsuario == "Funcionário")

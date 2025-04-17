@@ -5,14 +5,16 @@ namespace TecnPoint.Service.ValidarLogin
 {
     public class ValidarLogin
     {
-        ClassRepositorioLoginUsuario dadosUsuarioLogado = new ClassRepositorioLoginUsuario();
-        DadosUsuario usuarioLogado = new DadosUsuario(idUsuario: 0, nome: "", email: "", senha: "", tipoUsuario: "");
+        private ClassRepositorioLoginUsuario _loginUsuario;
 
-        public void Checar(string EntradaEmail, string EntradaSenha)
+        public ValidarLogin() 
         {
-            dadosUsuarioLogado.ConsultaEmailSenha(EntradaEmail, EntradaSenha);
+            _loginUsuario = new ClassRepositorioLoginUsuario();
         }
-        
-        
+
+        public DadosUsuario Checar(string EntradaEmail, string EntradaSenha)
+        {
+            return _loginUsuario.ConsultaEmailSenha(EntradaEmail, EntradaSenha);
+        }
     }
 }
