@@ -14,7 +14,7 @@ namespace TecnPoint.Modelo.DadosUsuario
         private string _senha;
         private string _tipoUsuario;
 
-        public DadosUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario) 
+        public DadosUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario)
         {
             _idUsuario = idUsuario;
             _nome = nome;
@@ -23,7 +23,7 @@ namespace TecnPoint.Modelo.DadosUsuario
             _tipoUsuario = tipoUsuario;
         }
 
-        public int IdUsuario 
+        public int IdUsuario
         {
             get { return _idUsuario; }
             set { _idUsuario = value; }
@@ -34,8 +34,8 @@ namespace TecnPoint.Modelo.DadosUsuario
             set { _nome = value; }
         }
         public string Email
-        { 
-            get {  return _email; } 
+        {
+            get { return _email; }
             set { _email = value; }
         }
         public string Senha
@@ -49,5 +49,5 @@ namespace TecnPoint.Modelo.DadosUsuario
             set { _tipoUsuario = value; }
         }
     }
-}        
+}
 

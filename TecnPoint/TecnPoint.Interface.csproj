@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TecnPoint.Dados\TecnPoint.Dados.csproj" />
     <ProjectReference Include="..\TecnPoint.Modelo\TecnPoint.Modelo.csproj" />
+    <ProjectReference Include="..\TecnPoint.Service\TecnPoint.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,33 +1,26 @@
-using TecnPoint.Dados;
 using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
 using TecnPoint.Interface;
+using TecnPoint.Service.ValidarLogin;
 using TecnPoint.Modelo.DadosUsuario;
 
 namespace TecnPoint
 {
     public partial class FormTelaLogin : Form
     {
-        //Criando objeto para passar os dados para o usuário
-        ClassRepositorioLoginUsuario dadosUsuarioLogado = new ClassRepositorioLoginUsuario();
-        DadosUsuario usuarioLogado = new DadosUsuario(idUsuario: 0, nome: "", email: "", senha: "", tipoUsuario: "");
 
         public FormTelaLogin()
-        {
+        {   
+            
             InitializeComponent();
         }
 
         private void botaoEntrarLogin_Click(object sender, EventArgs e)
         {
-
-            usuarioLogado = dadosUsuarioLogado.ConsultaEmailSenha(EntradaEmail.Text, EntradaSenha.Text);
-
-            if (usuarioLogado != null)
+            
+            ValidarLogin validarLogin = new ValidarLogin(dadosUsuario: DadosU);
+            if (validarLogin.Checar(EmailLogin.Text, SenhaLogin.Text) != null)
             {
-                MessageBox.Show("Login válido",
-                                "Tecn Solutions",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ClassDadosEstaticosUsuario.Nome = usuarioLogado.Nome;
+                ClassDadosEstaticosUsuario.Nome = .Nome;
                 ClassDadosEstaticosUsuario.Email = usuarioLogado.Email;
 
                 if (usuarioLogado.TipoUsuario == "Funcionário")
@@ -46,8 +39,8 @@ namespace TecnPoint
             else
             {
                 MessageBox.Show("Login inválido",
-                               "Tecn Solutions",
-                           MessageBoxButtons.OK,
+                    "Erro ao executar essa ação", 
+                            MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
             }
 
