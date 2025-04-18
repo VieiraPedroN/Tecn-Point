@@ -14,7 +14,6 @@ namespace TecnPoint.Modelo.DadosUsuario
         private string _senha;
         private string _tipoUsuario;
 
-        public DadosUsuario() { }
         public DadosUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario)
         {
             _idUsuario = idUsuario;

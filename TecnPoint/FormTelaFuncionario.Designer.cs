@@ -34,7 +34,6 @@
             botaoAcompanharChamado = new Button();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
-            btnAddUser = new Button();
             SuspendLayout();
             // 
             // NomeUsuario
@@ -99,22 +98,6 @@
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             // 
-            // btnAddUser
-            // 
-            btnAddUser.BackColor = Color.Transparent;
-            btnAddUser.Cursor = Cursors.Hand;
-            btnAddUser.FlatAppearance.BorderColor = Color.DarkGray;
-            btnAddUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
-            btnAddUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
-            btnAddUser.FlatStyle = FlatStyle.Flat;
-            btnAddUser.Image = (Image)resources.GetObject("btnAddUser.Image");
-            btnAddUser.Location = new Point(15, 290);
-            btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(30, 30);
-            btnAddUser.TabIndex = 6;
-            btnAddUser.UseVisualStyleBackColor = false;
-            btnAddUser.Click += btnAddUser_Click;
-            // 
             // FormTelaFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -123,7 +106,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(700, 338);
-            Controls.Add(btnAddUser);
             Controls.Add(botaoAcompanharChamado);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
@@ -145,6 +127,5 @@
         private Button botaoAcompanharChamado;
         private Panel panel1;
         private GroupBox groupBox1;
-        private Button btnAddUser;
     }
 }
