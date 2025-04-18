@@ -17,8 +17,8 @@ namespace TecnPoint.Interface
         {
             InitializeComponent();
         }
-       /* private void AlternarBotoes(Button ativo, Button inativo)
-        {
+        /*private void AlternarBotoes(Button ativo, Button inativo)
+        /{
             ativo.BackColor = Color.FromArgb(163, 89, 253);
             inativo.BackColor = Color.Transparent;
         }*/
@@ -35,7 +35,6 @@ namespace TecnPoint.Interface
         private void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {
             botaoAcompanharChamado.BackColor = Color.FromArgb(163, 89, 253);
-
         }
     }
         
