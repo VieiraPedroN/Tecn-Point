@@ -36,6 +36,12 @@ namespace TecnPoint.Interface
         {
             botaoAcompanharChamado.BackColor = Color.FromArgb(163, 89, 253);
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            FormTelaCadastroUser cadastroUser = new FormTelaCadastroUser();
+            cadastroUser.ShowDialog();
+        }
     }
-        
+
 }
