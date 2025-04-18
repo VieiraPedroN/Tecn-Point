@@ -10,7 +10,7 @@ namespace TecnPoint.Dados
 {
     public class ClassRepositorioCadastro
     {
-        public void CadastrarCliente(DadosUsuario usuarioCadastro)
+        public void CadastrarUsuario(DadosUsuario usuarioCadastro)
         {
             using (ClassConexaoBanco conexaoCadastro = new ClassConexaoBanco())
             {
@@ -24,6 +24,7 @@ namespace TecnPoint.Dados
                     comandoConsulta.Parameters.AddWithValue("@RecebeEmail", usuarioCadastro.Email);
                     comandoConsulta.Parameters.AddWithValue("@RecebeSenha", usuarioCadastro.Senha);
                     comandoConsulta.Parameters.AddWithValue("@RecebeTipoUsuario", usuarioCadastro.TipoUsuario);
+                    comandoConsulta.ExecuteNonQuery();
                 }
             }
         }
