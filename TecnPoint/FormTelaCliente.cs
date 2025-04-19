@@ -36,6 +36,8 @@ namespace TecnPoint.Interface
         private void botaoCriarChamado_Click(object sender, EventArgs e)
         {
             AlternarBotoes(botaoCriarChamado, botaoAcompanharChamado);
+            FormTelaCadastroChamado formTelaCadastroChamado = new FormTelaCadastroChamado();
+            formTelaCadastroChamado.ShowDialog();
         }
         private void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {

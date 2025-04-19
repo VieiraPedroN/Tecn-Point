@@ -22,6 +22,7 @@ namespace TecnPoint
             {
                 ClassDadosEstaticosUsuario.Nome = usuarioLogado.Nome;
                 ClassDadosEstaticosUsuario.Email = usuarioLogado.Email;
+                ClassDadosEstaticosUsuario.IdUsuario = usuarioLogado.IdUsuario;
 
                 if (usuarioLogado.TipoUsuario == "Funcionário")
                 {
