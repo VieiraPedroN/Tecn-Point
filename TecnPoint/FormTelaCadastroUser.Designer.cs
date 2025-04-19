@@ -33,12 +33,12 @@
             txtbSenha = new TextBox();
             txtbTipoUsuario = new TextBox();
             btnCadastrar = new Button();
-            label1 = new Label();
+            lblTituloNovoUsuario = new Label();
             btnCancelarCadastro = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            lblNome = new Label();
+            lblEmail = new Label();
+            lblSenha = new Label();
+            lblTipoUsuario = new Label();
             SuspendLayout();
             // 
             // txtbNome
@@ -84,16 +84,16 @@
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += btnCadastrar_Click;
             // 
-            // label1
+            // lblTituloNovoUsuario
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Berlin Sans FB Demi", 20F, FontStyle.Bold);
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(174, 31);
-            label1.TabIndex = 5;
-            label1.Text = "Novo Usuário";
+            lblTituloNovoUsuario.AutoSize = true;
+            lblTituloNovoUsuario.BackColor = Color.Transparent;
+            lblTituloNovoUsuario.Font = new Font("Berlin Sans FB Demi", 20F, FontStyle.Bold);
+            lblTituloNovoUsuario.Location = new Point(12, 9);
+            lblTituloNovoUsuario.Name = "lblTituloNovoUsuario";
+            lblTituloNovoUsuario.Size = new Size(174, 31);
+            lblTituloNovoUsuario.TabIndex = 5;
+            lblTituloNovoUsuario.Text = "Novo Usuário";
             // 
             // btnCancelarCadastro
             // 
@@ -109,49 +109,49 @@
             btnCancelarCadastro.UseVisualStyleBackColor = true;
             btnCancelarCadastro.Click += btnCancelarCadastro_Click;
             // 
-            // label2
+            // lblNome
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Berlin Sans FB", 12F);
-            label2.Location = new Point(206, 67);
-            label2.Name = "label2";
-            label2.Size = new Size(48, 18);
-            label2.TabIndex = 7;
-            label2.Text = "Nome";
+            lblNome.AutoSize = true;
+            lblNome.BackColor = Color.Transparent;
+            lblNome.Font = new Font("Berlin Sans FB", 12F);
+            lblNome.Location = new Point(206, 67);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(48, 18);
+            lblNome.TabIndex = 7;
+            lblNome.Text = "Nome";
             // 
-            // label3
+            // lblEmail
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Berlin Sans FB", 12F);
-            label3.Location = new Point(203, 117);
-            label3.Name = "label3";
-            label3.Size = new Size(51, 18);
-            label3.TabIndex = 8;
-            label3.Text = "E-mail";
+            lblEmail.AutoSize = true;
+            lblEmail.BackColor = Color.Transparent;
+            lblEmail.Font = new Font("Berlin Sans FB", 12F);
+            lblEmail.Location = new Point(203, 117);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(51, 18);
+            lblEmail.TabIndex = 8;
+            lblEmail.Text = "E-mail";
             // 
-            // label4
+            // lblSenha
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Berlin Sans FB", 12F);
-            label4.Location = new Point(206, 167);
-            label4.Name = "label4";
-            label4.Size = new Size(48, 18);
-            label4.TabIndex = 9;
-            label4.Text = "Senha";
+            lblSenha.AutoSize = true;
+            lblSenha.BackColor = Color.Transparent;
+            lblSenha.Font = new Font("Berlin Sans FB", 12F);
+            lblSenha.Location = new Point(206, 167);
+            lblSenha.Name = "lblSenha";
+            lblSenha.Size = new Size(48, 18);
+            lblSenha.TabIndex = 9;
+            lblSenha.Text = "Senha";
             // 
-            // label5
+            // lblTipoUsuario
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(144, 217);
-            label5.Name = "label5";
-            label5.Size = new Size(110, 18);
-            label5.TabIndex = 10;
-            label5.Text = "Tipo de Usuário";
+            lblTipoUsuario.AutoSize = true;
+            lblTipoUsuario.BackColor = Color.Transparent;
+            lblTipoUsuario.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTipoUsuario.Location = new Point(144, 217);
+            lblTipoUsuario.Name = "lblTipoUsuario";
+            lblTipoUsuario.Size = new Size(110, 18);
+            lblTipoUsuario.TabIndex = 10;
+            lblTipoUsuario.Text = "Tipo de Usuário";
             // 
             // FormTelaCadastroUser
             // 
@@ -161,12 +161,12 @@
             BackgroundImage = Properties.Resources.TelaFundo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(700, 338);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(lblTipoUsuario);
+            Controls.Add(lblSenha);
+            Controls.Add(lblEmail);
+            Controls.Add(lblNome);
             Controls.Add(btnCancelarCadastro);
-            Controls.Add(label1);
+            Controls.Add(lblTituloNovoUsuario);
             Controls.Add(btnCadastrar);
             Controls.Add(txtbTipoUsuario);
             Controls.Add(txtbSenha);
@@ -187,11 +187,11 @@
         private TextBox txtbSenha;
         private TextBox txtbTipoUsuario;
         private Button btnCadastrar;
-        private Label label1;
+        private Label lblTituloNovoUsuario;
         private Button btnCancelarCadastro;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
+        private Label lblNome;
+        private Label lblEmail;
+        private Label lblSenha;
+        private Label lblTipoUsuario;
     }
 }
