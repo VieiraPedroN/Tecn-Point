@@ -34,7 +34,14 @@
             botaoCriarChamado = new Button();
             botaoAcompanharChamado = new Button();
             panel1 = new Panel();
+            groupBox2 = new GroupBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             groupBox1 = new GroupBox();
+            panel1.SuspendLayout();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // NomeUsuario
@@ -101,10 +108,61 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(groupBox2);
             panel1.Location = new Point(221, -5);
             panel1.Name = "panel1";
             panel1.Size = new Size(480, 345);
             panel1.TabIndex = 4;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Location = new Point(25, 42);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(425, 73);
+            groupBox2.TabIndex = 0;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "groupBox2";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(333, 43);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 3;
+            label4.Text = "label4";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(333, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 2;
+            label3.Text = "label3";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(18, 43);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 1;
+            label2.Text = "label2";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(18, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
             // groupBox1
             // 
@@ -137,6 +195,9 @@
             Text = "FormTelaCliente";
             Closed += FormTelaCliente_Closed;
             Load += FormTelaCliente_Load;
+            panel1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,5 +210,10 @@
         private Button botaoAcompanharChamado;
         private Panel panel1;
         private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Label label4;
     }
 }

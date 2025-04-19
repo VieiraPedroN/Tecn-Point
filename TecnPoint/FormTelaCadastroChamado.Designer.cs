@@ -38,7 +38,7 @@
             // 
             // txtbTitulo
             // 
-            txtbTitulo.Location = new Point(286, 140);
+            txtbTitulo.Location = new Point(123, 100);
             txtbTitulo.Name = "txtbTitulo";
             txtbTitulo.PlaceholderText = "Título";
             txtbTitulo.Size = new Size(210, 23);
@@ -46,7 +46,7 @@
             // 
             // txtbDescricao
             // 
-            txtbDescricao.Location = new Point(287, 169);
+            txtbDescricao.Location = new Point(124, 129);
             txtbDescricao.Multiline = true;
             txtbDescricao.Name = "txtbDescricao";
             txtbDescricao.PlaceholderText = "Descricao";
@@ -55,7 +55,7 @@
             // 
             // btnAbrirChamado
             // 
-            btnAbrirChamado.Location = new Point(286, 368);
+            btnAbrirChamado.Location = new Point(124, 310);
             btnAbrirChamado.Name = "btnAbrirChamado";
             btnAbrirChamado.Size = new Size(210, 23);
             btnAbrirChamado.TabIndex = 8;
@@ -67,7 +67,7 @@
             // 
             cbxModulo.FormattingEnabled = true;
             cbxModulo.Items.AddRange(new object[] { "Selecione o módulo...", "Hardware", "Software", "Rede" });
-            cbxModulo.Location = new Point(287, 53);
+            cbxModulo.Location = new Point(124, 13);
             cbxModulo.Name = "cbxModulo";
             cbxModulo.Size = new Size(210, 23);
             cbxModulo.TabIndex = 9;
@@ -77,7 +77,7 @@
             // 
             cbxJornada.FormattingEnabled = true;
             cbxJornada.Items.AddRange(new object[] { "Selecione a jornada...", "Financeiro", "Marketing", "Recursos Humanos", "Jurídico" });
-            cbxJornada.Location = new Point(286, 82);
+            cbxJornada.Location = new Point(123, 42);
             cbxJornada.Name = "cbxJornada";
             cbxJornada.Size = new Size(211, 23);
             cbxJornada.TabIndex = 10;
@@ -87,7 +87,7 @@
             // 
             cbxPrioridade.FormattingEnabled = true;
             cbxPrioridade.Items.AddRange(new object[] { "Baixa", "Média", "Alta" });
-            cbxPrioridade.Location = new Point(286, 111);
+            cbxPrioridade.Location = new Point(123, 71);
             cbxPrioridade.Name = "cbxPrioridade";
             cbxPrioridade.Size = new Size(211, 23);
             cbxPrioridade.TabIndex = 11;
@@ -97,13 +97,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(480, 345);
             Controls.Add(cbxPrioridade);
             Controls.Add(cbxJornada);
             Controls.Add(cbxModulo);
             Controls.Add(btnAbrirChamado);
             Controls.Add(txtbDescricao);
             Controls.Add(txtbTitulo);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormTelaCadastroChamado";
             Text = "FormTelaCadastroChamado";
             ResumeLayout(false);

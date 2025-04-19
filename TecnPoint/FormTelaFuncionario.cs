@@ -22,6 +22,14 @@ namespace TecnPoint.Interface
             ativo.BackColor = Color.FromArgb(163, 89, 253);
             inativo.BackColor = Color.Transparent;
         }*/
+        private void CarregarFormularioForm(Form form)
+        {
+            panel1.Controls.Clear();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            form.Show();
+        }
         private void FormTelaCliente_Closed(object sender, EventArgs e)
         {
             FormTelaLogin telaLogin = new FormTelaLogin();
@@ -39,9 +47,7 @@ namespace TecnPoint.Interface
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            FormTelaCadastroUser cadastroUser = new FormTelaCadastroUser();
-            cadastroUser.ShowDialog();
+            CarregarFormularioForm(new FormTelaCadastroUser());
         }
     }
-
 }
