@@ -22,11 +22,16 @@ namespace TecnPoint.Interface
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             var cadastro = cadastroUsuarios.CadastrarUsuario(txtbNome.Text, txtbEmail.Text, txtbSenha.Text, txtbTipoUsuario.Text);
-            if (cadastro == true) 
+            if (cadastro == true)
             {
                 MessageBox.Show("Deu certo", "Returno", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
+        }
+
+        private void btnCancelarCadastro_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
