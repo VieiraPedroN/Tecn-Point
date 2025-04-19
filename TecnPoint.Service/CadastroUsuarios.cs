@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using TecnPoint.Modelo.DadosUsuario;
 using TecnPoint.Dados;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using TecnPoint.Service.Validação;
 
 namespace TecnPoint.Service.CadastroUsuarios
 {
     public class CadastroUsuarios
     {
+        private ValidacaoCadastro _validacaoCadastro;
         private ClassRepositorioCadastro _dadosUsuarioCadastro;
 
         public CadastroUsuarios()
         {
             _dadosUsuarioCadastro = new ClassRepositorioCadastro();
+            _validacaoCadastro  = new ValidacaoCadastro();
         }
 
         public bool CadastrarUsuario(string Nome, string Email, string Senha, string Tipo_Usuario)
@@ -30,6 +33,23 @@ namespace TecnPoint.Service.CadastroUsuarios
             };
             _dadosUsuarioCadastro.CadastrarUsuario(dadosUsuario);
             return true;
+        }
+
+        public bool ValidarNome(string nome) 
+        {
+            return _validacaoCadastro.NomeValido(nome);
+        }
+        public bool ValidarEmail(string email)
+        {
+            return _validacaoCadastro.EmailValido(email);
+        }
+        public bool ValidarSenha(string senha)
+        {
+            return _validacaoCadastro.SenhaValido(senha);
+        }
+        public bool ValidarTipoUsuario(string tipoUsuario) 
+        {
+            return _validacaoCadastro.TipoUsuárioValido(tipoUsuario);
         }
     }
 }

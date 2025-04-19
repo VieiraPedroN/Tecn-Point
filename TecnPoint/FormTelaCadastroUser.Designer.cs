@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             txtbNome = new TextBox();
             txtbEmail = new TextBox();
             txtbSenha = new TextBox();
@@ -39,6 +40,8 @@
             lblSenha = new Label();
             lblTipoUsuario = new Label();
             cbbTipoUsuário = new ComboBox();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // txtbNome
@@ -47,6 +50,7 @@
             txtbNome.Name = "txtbNome";
             txtbNome.Size = new Size(198, 23);
             txtbNome.TabIndex = 0;
+            txtbNome.Leave += txtbNome_Leave;
             // 
             // txtbEmail
             // 
@@ -54,6 +58,7 @@
             txtbEmail.Name = "txtbEmail";
             txtbEmail.Size = new Size(198, 23);
             txtbEmail.TabIndex = 1;
+            txtbEmail.Leave += txtbEmail_Leave;
             // 
             // txtbSenha
             // 
@@ -61,6 +66,32 @@
             txtbSenha.Name = "txtbSenha";
             txtbSenha.Size = new Size(198, 23);
             txtbSenha.TabIndex = 2;
+            txtbSenha.Leave += txtbSenha_Leave;
+            // 
+            // cbbTipoUsuário
+            // 
+            cbbTipoUsuário.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbTipoUsuário.FormattingEnabled = true;
+            cbbTipoUsuário.Items.AddRange(new object[] { "Funcionário", "Cliente" });
+            cbbTipoUsuário.Location = new Point(260, 212);
+            cbbTipoUsuário.Name = "cbbTipoUsuário";
+            cbbTipoUsuário.Size = new Size(198, 23);
+            cbbTipoUsuário.TabIndex = 3;
+            cbbTipoUsuário.Leave += cbbTipoUsuário_Leave;
+            // 
+            // btnCancelarCadastro
+            // 
+            btnCancelarCadastro.FlatAppearance.BorderColor = Color.DarkGray;
+            btnCancelarCadastro.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+            btnCancelarCadastro.FlatStyle = FlatStyle.Flat;
+            btnCancelarCadastro.ForeColor = Color.Gainsboro;
+            btnCancelarCadastro.Location = new Point(260, 262);
+            btnCancelarCadastro.Name = "btnCancelarCadastro";
+            btnCancelarCadastro.Size = new Size(75, 23);
+            btnCancelarCadastro.TabIndex = 4;
+            btnCancelarCadastro.Text = "Cancelar";
+            btnCancelarCadastro.UseVisualStyleBackColor = true;
+            btnCancelarCadastro.Click += btnCancelarCadastro_Click;
             // 
             // btnCadastrar
             // 
@@ -72,7 +103,7 @@
             btnCadastrar.Location = new Point(383, 262);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(75, 23);
-            btnCadastrar.TabIndex = 4;
+            btnCadastrar.TabIndex = 5;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += btnCadastrar_Click;
@@ -85,22 +116,9 @@
             lblTituloNovoUsuario.Location = new Point(12, 9);
             lblTituloNovoUsuario.Name = "lblTituloNovoUsuario";
             lblTituloNovoUsuario.Size = new Size(174, 31);
-            lblTituloNovoUsuario.TabIndex = 5;
+            lblTituloNovoUsuario.TabIndex = 6;
             lblTituloNovoUsuario.Text = "Novo Usuário";
-            // 
-            // btnCancelarCadastro
-            // 
-            btnCancelarCadastro.FlatAppearance.BorderColor = Color.DarkGray;
-            btnCancelarCadastro.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
-            btnCancelarCadastro.FlatStyle = FlatStyle.Flat;
-            btnCancelarCadastro.ForeColor = Color.Gainsboro;
-            btnCancelarCadastro.Location = new Point(260, 262);
-            btnCancelarCadastro.Name = "btnCancelarCadastro";
-            btnCancelarCadastro.Size = new Size(75, 23);
-            btnCancelarCadastro.TabIndex = 6;
-            btnCancelarCadastro.Text = "Cancelar";
-            btnCancelarCadastro.UseVisualStyleBackColor = true;
-            btnCancelarCadastro.Click += btnCancelarCadastro_Click;
+            
             // 
             // lblNome
             // 
@@ -146,15 +164,9 @@
             lblTipoUsuario.TabIndex = 10;
             lblTipoUsuario.Text = "Tipo de Usuário";
             // 
-            // cbbTipoUsuário
+            // errorProvider1
             // 
-            cbbTipoUsuário.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbTipoUsuário.FormattingEnabled = true;
-            cbbTipoUsuário.Items.AddRange(new object[] { "Funcionário", "Cliente" });
-            cbbTipoUsuário.Location = new Point(260, 212);
-            cbbTipoUsuário.Name = "cbbTipoUsuário";
-            cbbTipoUsuário.Size = new Size(198, 23);
-            cbbTipoUsuário.TabIndex = 11;
+            errorProvider1.ContainerControl = this;
             // 
             // FormTelaCadastroUser
             // 
@@ -179,6 +191,7 @@
             DoubleBuffered = true;
             Name = "FormTelaCadastroUser";
             Text = "FormTelaCadastroUser";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -196,5 +209,6 @@
         private Label lblEmail;
         private Label lblSenha;
         private Label lblTipoUsuario;
+        private ErrorProvider errorProvider1;
     }
 }
