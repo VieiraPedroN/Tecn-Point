@@ -21,7 +21,7 @@ namespace TecnPoint.Interface
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            var cadastro = cadastroUsuarios.CadastrarUsuario(txtbNome.Text, txtbEmail.Text, txtbSenha.Text, txtbTipoUsuario.Text);
+            var cadastro = cadastroUsuarios.CadastrarUsuario(txtbNome.Text, txtbEmail.Text, txtbSenha.Text, cbbTipoUsuário.Text);
             if (cadastro == true)
             {
                 MessageBox.Show("Deu certo", "Returno", MessageBoxButtons.OK, MessageBoxIcon.Information);

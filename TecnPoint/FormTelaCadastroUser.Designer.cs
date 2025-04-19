@@ -31,7 +31,6 @@
             txtbNome = new TextBox();
             txtbEmail = new TextBox();
             txtbSenha = new TextBox();
-            txtbTipoUsuario = new TextBox();
             btnCadastrar = new Button();
             lblTituloNovoUsuario = new Label();
             btnCancelarCadastro = new Button();
@@ -39,6 +38,7 @@
             lblEmail = new Label();
             lblSenha = new Label();
             lblTipoUsuario = new Label();
+            cbbTipoUsuário = new ComboBox();
             SuspendLayout();
             // 
             // txtbNome
@@ -61,13 +61,6 @@
             txtbSenha.Name = "txtbSenha";
             txtbSenha.Size = new Size(198, 23);
             txtbSenha.TabIndex = 2;
-            // 
-            // txtbTipoUsuario
-            // 
-            txtbTipoUsuario.Location = new Point(260, 212);
-            txtbTipoUsuario.Name = "txtbTipoUsuario";
-            txtbTipoUsuario.Size = new Size(198, 23);
-            txtbTipoUsuario.TabIndex = 3;
             // 
             // btnCadastrar
             // 
@@ -153,6 +146,16 @@
             lblTipoUsuario.TabIndex = 10;
             lblTipoUsuario.Text = "Tipo de Usuário";
             // 
+            // cbbTipoUsuário
+            // 
+            cbbTipoUsuário.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbTipoUsuário.FormattingEnabled = true;
+            cbbTipoUsuário.Items.AddRange(new object[] { "Funcionário", "Cliente" });
+            cbbTipoUsuário.Location = new Point(260, 212);
+            cbbTipoUsuário.Name = "cbbTipoUsuário";
+            cbbTipoUsuário.Size = new Size(198, 23);
+            cbbTipoUsuário.TabIndex = 11;
+            // 
             // FormTelaCadastroUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -161,6 +164,7 @@
             BackgroundImage = Properties.Resources.TelaFundo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(700, 338);
+            Controls.Add(cbbTipoUsuário);
             Controls.Add(lblTipoUsuario);
             Controls.Add(lblSenha);
             Controls.Add(lblEmail);
@@ -168,7 +172,6 @@
             Controls.Add(btnCancelarCadastro);
             Controls.Add(lblTituloNovoUsuario);
             Controls.Add(btnCadastrar);
-            Controls.Add(txtbTipoUsuario);
             Controls.Add(txtbSenha);
             Controls.Add(txtbEmail);
             Controls.Add(txtbNome);
@@ -185,10 +188,10 @@
         private TextBox txtbNome;
         private TextBox txtbEmail;
         private TextBox txtbSenha;
-        private TextBox txtbTipoUsuario;
+        private ComboBox cbbTipoUsuário;
         private Button btnCadastrar;
-        private Label lblTituloNovoUsuario;
         private Button btnCancelarCadastro;
+        private Label lblTituloNovoUsuario;
         private Label lblNome;
         private Label lblEmail;
         private Label lblSenha;
