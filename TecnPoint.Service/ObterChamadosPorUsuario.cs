@@ -19,7 +19,7 @@ namespace TecnPoint.Service.ObterChamadosPorUsuario
 
         public List<ExibicaoChamado> BuscarChamados (int idusuario, string tipousuario)
         {
-            return 
+            return buscarChamadoPorCliente.ExibeChamadosCliente(idusuario, tipousuario);
         }
     }
 }
