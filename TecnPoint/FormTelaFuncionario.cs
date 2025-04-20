@@ -43,6 +43,7 @@ namespace TecnPoint.Interface
         private void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {
             botaoAcompanharChamado.BackColor = Color.FromArgb(163, 89, 253);
+            CarregarFormularioForm(new FormTelaAcompanharChamado());
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
