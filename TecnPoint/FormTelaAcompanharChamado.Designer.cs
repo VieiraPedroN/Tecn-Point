@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // label1
@@ -36,19 +37,30 @@
             label1.AutoSize = true;
             label1.Location = new Point(121, 81);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(0, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(480, 345);
+            flowLayoutPanel1.TabIndex = 1;
             // 
             // FormTelaAcompanharChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(480, 345);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormTelaAcompanharChamado";
             Text = "FormTelaAcompanharChamado";
+            Load += FormTelaAcompanharChamado_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -56,5 +68,6 @@
         #endregion
 
         private Label label1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
