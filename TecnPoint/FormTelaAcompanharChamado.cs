@@ -30,9 +30,9 @@ namespace TecnPoint.Interface
                     Font = new Font("Segoe UI", 10, FontStyle.Bold),
                 };
 
-                Label lblTitulo = new Label { Text = $"Titulo: {chamado.Titulo}", Location = new Point(10, 20), AutoSize = true };
-                Label lblCliente = new Label { Text = $"Cliente: {chamado.NomeCliente}", Location = new Point(10, 55), AutoSize = true };
-                Label lblFuncionario = new Label { Text = $"Funcionário: {chamado.NomeFuncionario}", Location = new Point(200, 55), AutoSize = true };
+                Label lblTitulo = new Label { Text = $"{chamado.Titulo}", Location = new Point(10, 20), AutoSize = true };
+                Label lblCliente = new Label { Text = $"Criado por: {chamado.NomeCliente}", Location = new Point(10, 55), AutoSize = true };
+                Label lblFuncionario = new Label { Text = $"Atribuido: {chamado.NomeFuncionario}", Location = new Point(200, 55), AutoSize = true };
                 Label lblStatus = new Label { Text = $"Status: {chamado.Status}", Location = new Point(200, 20), AutoSize = true };
 
                 card.Controls.Add(lblTitulo);
