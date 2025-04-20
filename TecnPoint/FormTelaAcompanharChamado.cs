@@ -21,10 +21,7 @@ namespace TecnPoint.Interface
         private void CarregarChamados()
         {
             ObterChamadosPorUsuario service = new ObterChamadosPorUsuario();
-            var chamados = service.BuscarChamados(ClassDadosEstaticosUsuario.IdUsuario, ClassDadosEstaticosUsuario.Nome);
-
-            flowLayoutPanel1.Controls.Clear();
-
+            var chamados = service.BuscarChamados(ClassDadosEstaticosUsuario.IdUsuario, ClassDadosEstaticosUsuario.TipoUsuario);
             foreach (var chamado in chamados)
             {
                 GroupBox card = new GroupBox
