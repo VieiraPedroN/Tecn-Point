@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TecnPoint.Modelo.DadosAcompanharChamado;
-
-public class DadosAcompanharChamado
+namespace TecnPoint.Services
 {
-    
+    public class UsuarioService
+    {
+       
+    }
 }

@@ -10,7 +10,6 @@ namespace TecnPoint.Dados
 {
     public class ClassRepositorioAberturaChamado
     {
-
         public void AbreChamado(ClassDadosChamado chamadoAbertura)
         {
             using (ClassConexaoBanco conexaoCad = new ClassConexaoBanco())
