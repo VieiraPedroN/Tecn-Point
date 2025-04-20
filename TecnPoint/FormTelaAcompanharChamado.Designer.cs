@@ -49,6 +49,8 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(480, 345);
             flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Resize += new System.EventHandler(this.flowLayoutPanel1_Resize);
+
             // 
             // FormTelaAcompanharChamado
             // 

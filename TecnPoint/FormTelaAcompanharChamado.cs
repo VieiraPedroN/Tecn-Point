@@ -26,26 +26,42 @@ namespace TecnPoint.Interface
             {
                 GroupBox card = new GroupBox
                 {
-                    Text = chamado.Titulo,
-                    Size = new Size(300, 150),
-                    Font = new Font("Segoe UI", 10, FontStyle.Bold)
+                    Size = new Size(400, 85),
+                    Font = new Font("Segoe UI", 10, FontStyle.Bold),
                 };
 
-                Label lblCliente = new Label { Text = $"Cliente: {chamado.NomeCliente}", Location = new Point(10, 30), AutoSize = true };
-                Label lblFuncionario = new Label { Text = $"Funcionário: {chamado.NomeFuncionario}", Location = new Point(10, 55), AutoSize = true };
-                Label lblStatus = new Label { Text = $"Status: {chamado.Status}", Location = new Point(10, 80), AutoSize = true };
+                Label lblTitulo = new Label { Text = $"Titulo: {chamado.Titulo}", Location = new Point(10, 20), AutoSize = true };
+                Label lblCliente = new Label { Text = $"Cliente: {chamado.NomeCliente}", Location = new Point(10, 55), AutoSize = true };
+                Label lblFuncionario = new Label { Text = $"Funcionário: {chamado.NomeFuncionario}", Location = new Point(200, 55), AutoSize = true };
+                Label lblStatus = new Label { Text = $"Status: {chamado.Status}", Location = new Point(200, 20), AutoSize = true };
 
+                card.Controls.Add(lblTitulo);
                 card.Controls.Add(lblCliente);
                 card.Controls.Add(lblFuncionario);
                 card.Controls.Add(lblStatus);
 
+                // Centralizando horizontalmente
+                int marginHorizontal = (flowLayoutPanel1.ClientSize.Width - card.Width) / 2;
+                card.Margin = new Padding(marginHorizontal, 10, 0, 10);
+
                 flowLayoutPanel1.Controls.Add(card);
             }
+
         }
 
         private void FormTelaAcompanharChamado_Load(object sender, EventArgs e)
         {
             CarregarChamados();
         }
+
+        private void flowLayoutPanel1_Resize(object sender, EventArgs e)
+        {
+            foreach (Control card in flowLayoutPanel1.Controls)
+            {
+                int marginHorizontal = (flowLayoutPanel1.ClientSize.Width - card.Width) / 2;
+                card.Margin = new Padding(marginHorizontal, 10, 0, 10);
+            }
+        }
+
     }
 }
