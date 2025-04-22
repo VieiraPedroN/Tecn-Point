@@ -10,7 +10,7 @@ namespace TecnPoint
         private ValidarLogin validarLogin = new ValidarLogin();
 
         public FormTelaLogin()
-        {   
+        {
             InitializeComponent();
         }
 
@@ -41,7 +41,7 @@ namespace TecnPoint
             else
             {
                 MessageBox.Show("Login inválido",
-                    "Erro ao executar essa ação", 
+                    "Erro ao executar essa ação",
                             MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
             }
