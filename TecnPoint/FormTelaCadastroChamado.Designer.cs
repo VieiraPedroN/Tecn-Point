@@ -35,28 +35,28 @@
             cbxJornada = new ComboBox();
             cbxPrioridade = new ComboBox();
             button1 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            lblModulo = new Label();
+            lblJornada = new Label();
+            lblPrioridade = new Label();
+            lblTitulo = new Label();
+            lblDescricao = new Label();
             SuspendLayout();
             // 
             // txtbTitulo
             // 
-            txtbTitulo.Location = new Point(77, 145);
+            txtbTitulo.Location = new Point(77, 167);
             txtbTitulo.Name = "txtbTitulo";
-            txtbTitulo.PlaceholderText = "Título";
+            txtbTitulo.PlaceholderText = "Descreva o problema de forma resumida";
             txtbTitulo.Size = new Size(330, 23);
             txtbTitulo.TabIndex = 0;
             // 
             // txtbDescricao
             // 
-            txtbDescricao.Location = new Point(77, 190);
+            txtbDescricao.Location = new Point(77, 211);
             txtbDescricao.Multiline = true;
             txtbDescricao.Name = "txtbDescricao";
-            txtbDescricao.PlaceholderText = "Descricao";
-            txtbDescricao.Size = new Size(330, 118);
+            txtbDescricao.PlaceholderText = "Descreva o que ocorreu e como ocorreu";
+            txtbDescricao.Size = new Size(330, 97);
             txtbDescricao.TabIndex = 1;
             // 
             // btnAbrirChamado
@@ -78,7 +78,7 @@
             cbxModulo.Cursor = Cursors.Hand;
             cbxModulo.FormattingEnabled = true;
             cbxModulo.Items.AddRange(new object[] { "Selecione o módulo...", "Hardware", "Software", "Rede" });
-            cbxModulo.Location = new Point(77, 30);
+            cbxModulo.Location = new Point(77, 35);
             cbxModulo.Name = "cbxModulo";
             cbxModulo.Size = new Size(330, 23);
             cbxModulo.TabIndex = 9;
@@ -89,7 +89,7 @@
             cbxJornada.Cursor = Cursors.Hand;
             cbxJornada.FormattingEnabled = true;
             cbxJornada.Items.AddRange(new object[] { "Selecione a jornada...", "Financeiro", "Marketing", "Recursos Humanos", "Jurídico" });
-            cbxJornada.Location = new Point(77, 70);
+            cbxJornada.Location = new Point(77, 79);
             cbxJornada.Name = "cbxJornada";
             cbxJornada.Size = new Size(330, 23);
             cbxJornada.TabIndex = 10;
@@ -100,7 +100,7 @@
             cbxPrioridade.Cursor = Cursors.Hand;
             cbxPrioridade.FormattingEnabled = true;
             cbxPrioridade.Items.AddRange(new object[] { "Baixa", "Média", "Alta" });
-            cbxPrioridade.Location = new Point(77, 105);
+            cbxPrioridade.Location = new Point(77, 123);
             cbxPrioridade.Name = "cbxPrioridade";
             cbxPrioridade.Size = new Size(330, 23);
             cbxPrioridade.TabIndex = 11;
@@ -119,61 +119,61 @@
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblModulo
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(66, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 13;
-            label1.Text = "label1";
+            lblModulo.AutoSize = true;
+            lblModulo.Location = new Point(66, 17);
+            lblModulo.Name = "lblModulo";
+            lblModulo.Size = new Size(49, 15);
+            lblModulo.TabIndex = 13;
+            lblModulo.Text = "Módulo";
             // 
-            // label2
+            // lblJornada
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(66, 52);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 14;
-            label2.Text = "label2";
+            lblJornada.AutoSize = true;
+            lblJornada.Location = new Point(66, 61);
+            lblJornada.Name = "lblJornada";
+            lblJornada.Size = new Size(44, 15);
+            lblJornada.TabIndex = 14;
+            lblJornada.Text = "Jonada";
             // 
-            // label3
+            // lblPrioridade
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(66, 91);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 15;
-            label3.Text = "label3";
+            lblPrioridade.AutoSize = true;
+            lblPrioridade.Location = new Point(66, 105);
+            lblPrioridade.Name = "lblPrioridade";
+            lblPrioridade.Size = new Size(61, 15);
+            lblPrioridade.TabIndex = 15;
+            lblPrioridade.Text = "Prioridade";
             // 
-            // label4
+            // lblTitulo
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(66, 126);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 16;
-            label4.Text = "label4";
+            lblTitulo.AutoSize = true;
+            lblTitulo.Location = new Point(66, 149);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(38, 15);
+            lblTitulo.TabIndex = 16;
+            lblTitulo.Text = "Titulo";
             // 
-            // label5
+            // lblDescricao
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(66, 172);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 15);
-            label5.TabIndex = 17;
-            label5.Text = "label5";
+            lblDescricao.AutoSize = true;
+            lblDescricao.Location = new Point(66, 193);
+            lblDescricao.Name = "lblDescricao";
+            lblDescricao.Size = new Size(58, 15);
+            lblDescricao.TabIndex = 17;
+            lblDescricao.Text = "Descrição";
             // 
             // FormTelaCadastroChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(480, 345);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblDescricao);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblPrioridade);
+            Controls.Add(lblJornada);
+            Controls.Add(lblModulo);
             Controls.Add(button1);
             Controls.Add(cbxPrioridade);
             Controls.Add(cbxJornada);
@@ -197,10 +197,10 @@
         private ComboBox cbxJornada;
         private ComboBox cbxPrioridade;
         private Button button1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
+        private Label lblModulo;
+        private Label lblJornada;
+        private Label lblPrioridade;
+        private Label lblTitulo;
+        private Label lblDescricao;
     }
 }
