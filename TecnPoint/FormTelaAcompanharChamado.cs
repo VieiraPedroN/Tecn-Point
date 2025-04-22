@@ -27,13 +27,13 @@ namespace TecnPoint.Interface
                 GroupBox card = new GroupBox
                 {
                     Size = new Size(400, 85),
-                    Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                    Font = new Font("Segoe UI", 8, FontStyle.Bold),
                 };
 
                 Label lblTitulo = new Label { Text = $"{chamado.Titulo}", Location = new Point(10, 20), AutoSize = true };
                 Label lblCliente = new Label { Text = $"Criado por: {chamado.NomeCliente}", Location = new Point(10, 55), AutoSize = true };
-                Label lblFuncionario = new Label { Text = $"Atribuido: {chamado.NomeFuncionario}", Location = new Point(200, 55), AutoSize = true };
-                Label lblStatus = new Label { Text = $"Status: {chamado.Status}", Location = new Point(200, 20), AutoSize = true };
+                Label lblFuncionario = new Label { Text = $"Atribuido: {chamado.NomeFuncionario}", Location = new Point(250, 55), AutoSize = true };
+                Label lblStatus = new Label { Text = $"Status: {chamado.Status}", Location = new Point(250, 20), AutoSize = true };
 
                 card.Controls.Add(lblTitulo);
                 card.Controls.Add(lblCliente);
@@ -42,7 +42,7 @@ namespace TecnPoint.Interface
 
                 // Centralizando horizontalmente
                 int marginHorizontal = (flowLayoutPanel1.ClientSize.Width - card.Width) / 2;
-                card.Margin = new Padding(marginHorizontal, 10, 0, 10);
+                card.Margin = new Padding(marginHorizontal, 2, 0, 12);
 
                 flowLayoutPanel1.Controls.Add(card);
             }
@@ -59,7 +59,7 @@ namespace TecnPoint.Interface
             foreach (Control card in flowLayoutPanel1.Controls)
             {
                 int marginHorizontal = (flowLayoutPanel1.ClientSize.Width - card.Width) / 2;
-                card.Margin = new Padding(marginHorizontal, 10, 0, 10);
+                card.Margin = new Padding(marginHorizontal, 2, 0, 12);
             }
         }
 

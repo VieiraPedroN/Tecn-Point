@@ -47,7 +47,7 @@ namespace TecnPoint
             botaoEntrarLogin.BackColor = Color.FromArgb(126, 105, 171);
             botaoEntrarLogin.Cursor = Cursors.Hand;
             botaoEntrarLogin.FlatStyle = FlatStyle.Flat;
-            botaoEntrarLogin.ForeColor = Color.FromArgb(224, 224, 224);
+            botaoEntrarLogin.ForeColor = SystemColors.ButtonHighlight;
             botaoEntrarLogin.Location = new Point(257, 240);
             botaoEntrarLogin.Name = "botaoEntrarLogin";
             botaoEntrarLogin.Size = new Size(185, 23);
@@ -61,6 +61,7 @@ namespace TecnPoint
             EntradaEmail.Anchor = AnchorStyles.None;
             EntradaEmail.Location = new Point(230, 141);
             EntradaEmail.Name = "EntradaEmail";
+            EntradaEmail.PlaceholderText = "Digite seu e-mail...";
             EntradaEmail.Size = new Size(240, 23);
             EntradaEmail.TabIndex = 1;
             // 
@@ -71,6 +72,7 @@ namespace TecnPoint
             EntradaSenha.Location = new Point(230, 191);
             EntradaSenha.Name = "EntradaSenha";
             EntradaSenha.PasswordChar = '*';
+            EntradaSenha.PlaceholderText = "Digite sua senha...";
             EntradaSenha.Size = new Size(240, 23);
             EntradaSenha.TabIndex = 2;
             // 
@@ -82,7 +84,7 @@ namespace TecnPoint
             EmailLogin.Font = new Font("Berlin Sans FB Demi", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EmailLogin.Location = new Point(215, 120);
             EmailLogin.Name = "EmailLogin";
-            EmailLogin.Size = new Size(55, 18);
+            EmailLogin.Size = new Size(48, 18);
             EmailLogin.TabIndex = 3;
             EmailLogin.Text = "Email";
             // 
@@ -116,6 +118,7 @@ namespace TecnPoint
             DescricaoLogin.AutoSize = true;
             DescricaoLogin.BackColor = Color.Transparent;
             DescricaoLogin.Font = new Font("Berlin Sans FB", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DescricaoLogin.ForeColor = SystemColors.ControlDarkDark;
             DescricaoLogin.Location = new Point(280, 83);
             DescricaoLogin.Name = "DescricaoLogin";
             DescricaoLogin.Size = new Size(139, 13);
@@ -128,6 +131,7 @@ namespace TecnPoint
             DescricaoSistema.AutoSize = true;
             DescricaoSistema.BackColor = Color.Transparent;
             DescricaoSistema.Font = new Font("Berlin Sans FB", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DescricaoSistema.ForeColor = SystemColors.ControlDarkDark;
             DescricaoSistema.Location = new Point(270, 275);
             DescricaoSistema.Name = "DescricaoSistema";
             DescricaoSistema.Size = new Size(157, 13);
