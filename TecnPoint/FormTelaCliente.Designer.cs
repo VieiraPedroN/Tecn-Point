@@ -106,9 +106,9 @@
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Location = new Point(248, -5);
+            panel1.Location = new Point(248, -4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(555, 460);
+            panel1.Size = new Size(555, 456);
             panel1.TabIndex = 4;
             // 
             // groupBox1
