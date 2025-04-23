@@ -1,4 +1,3 @@
-using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
 using TecnPoint.Interface;
 using TecnPoint.Service.ValidarLogin;
 using TecnPoint.Modelo.DadosUsuario;
@@ -20,20 +19,15 @@ namespace TecnPoint
 
             if (usuarioLogado != null)
             {
-                ClassDadosEstaticosUsuario.Nome = usuarioLogado.Nome;
-                ClassDadosEstaticosUsuario.Email = usuarioLogado.Email;
-                ClassDadosEstaticosUsuario.IdUsuario = usuarioLogado.IdUsuario;
-                ClassDadosEstaticosUsuario.TipoUsuario = usuarioLogado.TipoUsuario;
-
                 if (usuarioLogado.TipoUsuario == "Funcionário")
                 {
-                    FormTelaFuncionario telaFuncionario = new FormTelaFuncionario();
+                    FormTelaFuncionario telaFuncionario = new FormTelaFuncionario(usuarioLogado);
                     telaFuncionario.Show();
                     this.Hide();
                 }
                 else
                 {
-                    FormTelaCliente telaCliente = new FormTelaCliente();
+                    FormTelaCliente telaCliente = new FormTelaCliente(usuarioLogado);
                     telaCliente.Show();
                     this.Hide();
                 }
@@ -45,7 +39,6 @@ namespace TecnPoint
                             MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
             }
-
         }
     }
 }

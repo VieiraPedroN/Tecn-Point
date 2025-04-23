@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TecnPoint.Modelo.DadosUsuario;
 using TecnPoint.Service;
-using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaCadastroChamado : Form
     {
+        private DadosUsuario usuarioLogado;
         CadastroChamado cadastroChamado;
-        public FormTelaCadastroChamado()
+        public FormTelaCadastroChamado(DadosUsuario dadosUsuario)
         {
+            this.usuarioLogado = dadosUsuario;
             InitializeComponent();
             cadastroChamado = new CadastroChamado();
             cbxModulo.SelectedIndex = 0;
@@ -28,7 +30,7 @@ namespace TecnPoint.Interface
         {
 
             var cadastrou = cadastroChamado.AbrirChamado(txtbTitulo.Text, txtbDescricao.Text,
-                                                            cbxPrioridade.Text, ClassDadosEstaticosUsuario.IdUsuario,
+                                                            cbxPrioridade.Text, usuarioLogado.IdUsuario,
                                                             cbxModulo.SelectedIndex, cbxJornada.SelectedIndex);
             if (cadastrou == true)
             {

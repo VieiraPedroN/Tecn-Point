@@ -7,15 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
+using TecnPoint.Modelo.DadosUsuario;
 
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaCliente : Form
     {
-        public FormTelaCliente()
+        private DadosUsuario usuarioLogado;
+        public FormTelaCliente(DadosUsuario dadosUsuario)
         {
+            this.usuarioLogado = dadosUsuario;
             InitializeComponent();
         }
         private void CarregarFormularioForm(Form form) 
@@ -38,19 +40,19 @@ namespace TecnPoint.Interface
         }
         private void FormTelaCliente_Load(object sender, EventArgs e)
         {
-            NomeUsuario.Text = ClassDadosEstaticosUsuario.Nome;
-            EmailUsuario.Text = ClassDadosEstaticosUsuario.Email;
+            NomeUsuario.Text = usuarioLogado.Nome;
+            EmailUsuario.Text = usuarioLogado.Email;
         }
         private void botaoCriarChamado_Click(object sender, EventArgs e)
         {
             AlternarBotoes(botaoCriarChamado, botaoAcompanharChamado);
-            CarregarFormularioForm(new FormTelaCadastroChamado());
+            CarregarFormularioForm(new FormTelaCadastroChamado(usuarioLogado));
 
         }
         private void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {
             AlternarBotoes(botaoAcompanharChamado, botaoCriarChamado);
-            CarregarFormularioForm(new FormTelaAcompanharChamado());
+            CarregarFormularioForm(new FormTelaAcompanharChamado(usuarioLogado));
         }
     }
         

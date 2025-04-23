@@ -7,21 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
+using TecnPoint.Modelo.DadosUsuario;
 using TecnPoint.Service.ObterChamadosPorUsuario;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaAcompanharChamado : Form
     {
-        public FormTelaAcompanharChamado()
+        private DadosUsuario usuarioLogado;
+        public FormTelaAcompanharChamado(DadosUsuario dadosUsuario)
         {
+            this.usuarioLogado = dadosUsuario;
             InitializeComponent();
         }
         private void CarregarChamados()
         {
             ObterChamadosPorUsuario service = new ObterChamadosPorUsuario();
-            var chamados = service.BuscarChamados(ClassDadosEstaticosUsuario.IdUsuario, ClassDadosEstaticosUsuario.TipoUsuario);
+            var chamados = service.BuscarChamados(usuarioLogado.IdUsuario, usuarioLogado.TipoUsuario);
             foreach (var chamado in chamados)
             {
                 GroupBox card = new GroupBox

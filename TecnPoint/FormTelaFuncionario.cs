@@ -7,15 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Modelo.ClassDadosEstaticosUsuario;
+using TecnPoint.Modelo.DadosUsuario;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaFuncionario : Form
     {
-        public FormTelaFuncionario()
+        private DadosUsuario usuarioLogado;
+        public FormTelaFuncionario(DadosUsuario dadosUsuario)
         {
             InitializeComponent();
+            this.usuarioLogado = dadosUsuario;
         }
         /*private void AlternarBotoes(Button ativo, Button inativo)
         /{
@@ -37,13 +39,13 @@ namespace TecnPoint.Interface
         }
         private void FormTelaCliente_Load(object sender, EventArgs e)
         {
-            NomeUsuario.Text = ClassDadosEstaticosUsuario.Nome;
-            EmailUsuario.Text = ClassDadosEstaticosUsuario.Email;
+            NomeUsuario.Text = usuarioLogado.Nome;
+            EmailUsuario.Text = usuarioLogado.Email;
         }
         private void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {
             botaoAcompanharChamado.BackColor = Color.FromArgb(163, 89, 253);
-            CarregarFormularioForm(new FormTelaAcompanharChamado());
+            CarregarFormularioForm(new FormTelaAcompanharChamado(usuarioLogado));
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
