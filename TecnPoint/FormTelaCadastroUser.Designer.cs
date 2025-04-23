@@ -70,52 +70,54 @@
             // 
             // btnCadastrar
             // 
+            btnCadastrar.BackColor = Color.FromArgb(126, 105, 171);
             btnCadastrar.FlatAppearance.BorderColor = Color.DarkGray;
             btnCadastrar.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
             btnCadastrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnCadastrar.FlatStyle = FlatStyle.Flat;
-            btnCadastrar.ForeColor = Color.Gainsboro;
+            btnCadastrar.ForeColor = SystemColors.ControlLightLight;
             btnCadastrar.Location = new Point(280, 279);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(75, 23);
             btnCadastrar.TabIndex = 5;
             btnCadastrar.Text = "Cadastrar";
-            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.UseVisualStyleBackColor = false;
             btnCadastrar.Click += btnCadastrar_Click;
             // 
             // lblTituloNovoUsuario
             // 
             lblTituloNovoUsuario.AutoSize = true;
             lblTituloNovoUsuario.BackColor = Color.Transparent;
-            lblTituloNovoUsuario.Font = new Font("Berlin Sans FB Demi", 20F, FontStyle.Bold);
+            lblTituloNovoUsuario.Font = new Font("Consolas", 25F, FontStyle.Bold);
             lblTituloNovoUsuario.Location = new Point(12, 9);
             lblTituloNovoUsuario.Name = "lblTituloNovoUsuario";
-            lblTituloNovoUsuario.Size = new Size(174, 31);
+            lblTituloNovoUsuario.Size = new Size(245, 40);
             lblTituloNovoUsuario.TabIndex = 6;
             lblTituloNovoUsuario.Text = "Novo Usuário";
             // 
             // btnCancelarCadastro
             // 
+            btnCancelarCadastro.BackColor = SystemColors.ButtonFace;
             btnCancelarCadastro.FlatAppearance.BorderColor = Color.DarkGray;
             btnCancelarCadastro.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnCancelarCadastro.FlatStyle = FlatStyle.Flat;
-            btnCancelarCadastro.ForeColor = Color.Gainsboro;
+            btnCancelarCadastro.ForeColor = Color.Gray;
             btnCancelarCadastro.Location = new Point(157, 279);
             btnCancelarCadastro.Name = "btnCancelarCadastro";
             btnCancelarCadastro.Size = new Size(75, 23);
             btnCancelarCadastro.TabIndex = 4;
             btnCancelarCadastro.Text = "Cancelar";
-            btnCancelarCadastro.UseVisualStyleBackColor = true;
+            btnCancelarCadastro.UseVisualStyleBackColor = false;
             btnCancelarCadastro.Click += btnCancelarCadastro_Click;
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
             lblNome.BackColor = Color.Transparent;
-            lblNome.Font = new Font("Berlin Sans FB", 12F);
-            lblNome.Location = new Point(103, 84);
+            lblNome.Font = new Font("Consolas", 11F, FontStyle.Bold);
+            lblNome.Location = new Point(111, 84);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(48, 18);
+            lblNome.Size = new Size(40, 18);
             lblNome.TabIndex = 7;
             lblNome.Text = "Nome";
             // 
@@ -123,10 +125,10 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.BackColor = Color.Transparent;
-            lblEmail.Font = new Font("Berlin Sans FB", 12F);
-            lblEmail.Location = new Point(100, 134);
+            lblEmail.Font = new Font("Consolas", 11F, FontStyle.Bold);
+            lblEmail.Location = new Point(95, 134);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(51, 18);
+            lblEmail.Size = new Size(56, 18);
             lblEmail.TabIndex = 8;
             lblEmail.Text = "E-mail";
             // 
@@ -134,7 +136,7 @@
             // 
             lblSenha.AutoSize = true;
             lblSenha.BackColor = Color.Transparent;
-            lblSenha.Font = new Font("Berlin Sans FB", 12F);
+            lblSenha.Font = new Font("Consolas", 11F, FontStyle.Bold);
             lblSenha.Location = new Point(103, 184);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(48, 18);
@@ -145,10 +147,10 @@
             // 
             lblTipoUsuario.AutoSize = true;
             lblTipoUsuario.BackColor = Color.Transparent;
-            lblTipoUsuario.Font = new Font("Berlin Sans FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTipoUsuario.Location = new Point(41, 234);
+            lblTipoUsuario.Font = new Font("Consolas", 11F, FontStyle.Bold);
+            lblTipoUsuario.Location = new Point(23, 230);
             lblTipoUsuario.Name = "lblTipoUsuario";
-            lblTipoUsuario.Size = new Size(110, 18);
+            lblTipoUsuario.Size = new Size(128, 18);
             lblTipoUsuario.TabIndex = 10;
             lblTipoUsuario.Text = "Tipo de Usuário";
             // 
@@ -171,8 +173,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(100, 52, 144);
-            BackgroundImage = Properties.Resources.TelaFundo;
+            BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(480, 345);
             Controls.Add(cbbTipoUsuário);

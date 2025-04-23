@@ -64,6 +64,7 @@
             btnAbrirChamado.BackColor = Color.FromArgb(126, 105, 171);
             btnAbrirChamado.Cursor = Cursors.Hand;
             btnAbrirChamado.FlatStyle = FlatStyle.Flat;
+            btnAbrirChamado.Font = new Font("Consolas", 9F);
             btnAbrirChamado.ForeColor = SystemColors.ControlLightLight;
             btnAbrirChamado.Location = new Point(317, 315);
             btnAbrirChamado.Name = "btnAbrirChamado";
@@ -122,45 +123,50 @@
             // lblModulo
             // 
             lblModulo.AutoSize = true;
+            lblModulo.Font = new Font("Consolas", 9F);
             lblModulo.Location = new Point(66, 17);
             lblModulo.Name = "lblModulo";
-            lblModulo.Size = new Size(49, 15);
+            lblModulo.Size = new Size(49, 14);
             lblModulo.TabIndex = 13;
             lblModulo.Text = "Módulo";
             // 
             // lblJornada
             // 
             lblJornada.AutoSize = true;
+            lblJornada.Font = new Font("Consolas", 9F);
             lblJornada.Location = new Point(66, 61);
             lblJornada.Name = "lblJornada";
-            lblJornada.Size = new Size(44, 15);
+            lblJornada.Size = new Size(49, 14);
             lblJornada.TabIndex = 14;
             lblJornada.Text = "Jonada";
             // 
             // lblPrioridade
             // 
             lblPrioridade.AutoSize = true;
+            lblPrioridade.Font = new Font("Consolas", 9F);
             lblPrioridade.Location = new Point(66, 105);
             lblPrioridade.Name = "lblPrioridade";
-            lblPrioridade.Size = new Size(61, 15);
+            lblPrioridade.Size = new Size(77, 14);
             lblPrioridade.TabIndex = 15;
             lblPrioridade.Text = "Prioridade";
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Consolas", 9F);
             lblTitulo.Location = new Point(66, 149);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(38, 15);
+            lblTitulo.Size = new Size(49, 14);
             lblTitulo.TabIndex = 16;
             lblTitulo.Text = "Titulo";
             // 
             // lblDescricao
             // 
             lblDescricao.AutoSize = true;
+            lblDescricao.Font = new Font("Consolas", 9F);
             lblDescricao.Location = new Point(66, 193);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(58, 15);
+            lblDescricao.Size = new Size(70, 14);
             lblDescricao.TabIndex = 17;
             lblDescricao.Text = "Descrição";
             // 
