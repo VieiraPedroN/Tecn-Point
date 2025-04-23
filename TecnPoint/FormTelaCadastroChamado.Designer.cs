@@ -44,15 +44,17 @@
             // 
             // txtbTitulo
             // 
-            txtbTitulo.Location = new Point(77, 167);
+            txtbTitulo.Font = new Font("Segoe UI", 12F);
+            txtbTitulo.Location = new Point(126, 230);
             txtbTitulo.Name = "txtbTitulo";
             txtbTitulo.PlaceholderText = "Descreva o problema de forma resumida";
-            txtbTitulo.Size = new Size(330, 23);
+            txtbTitulo.Size = new Size(330, 29);
             txtbTitulo.TabIndex = 0;
             // 
             // txtbDescricao
             // 
-            txtbDescricao.Location = new Point(77, 211);
+            txtbDescricao.Font = new Font("Segoe UI", 12F);
+            txtbDescricao.Location = new Point(126, 293);
             txtbDescricao.Multiline = true;
             txtbDescricao.Name = "txtbDescricao";
             txtbDescricao.PlaceholderText = "Descreva o que ocorreu e como ocorreu";
@@ -64,11 +66,11 @@
             btnAbrirChamado.BackColor = Color.FromArgb(126, 105, 171);
             btnAbrirChamado.Cursor = Cursors.Hand;
             btnAbrirChamado.FlatStyle = FlatStyle.Flat;
-            btnAbrirChamado.Font = new Font("Consolas", 9F);
+            btnAbrirChamado.Font = new Font("Consolas", 11F);
             btnAbrirChamado.ForeColor = SystemColors.ControlLightLight;
-            btnAbrirChamado.Location = new Point(317, 315);
+            btnAbrirChamado.Location = new Point(346, 417);
             btnAbrirChamado.Name = "btnAbrirChamado";
-            btnAbrirChamado.Size = new Size(90, 23);
+            btnAbrirChamado.Size = new Size(110, 30);
             btnAbrirChamado.TabIndex = 8;
             btnAbrirChamado.Text = "Enviar";
             btnAbrirChamado.UseVisualStyleBackColor = false;
@@ -78,33 +80,36 @@
             // 
             cbxModulo.Cursor = Cursors.Hand;
             cbxModulo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxModulo.Font = new Font("Segoe UI", 12F);
             cbxModulo.FormattingEnabled = true;
             cbxModulo.Items.AddRange(new object[] { "Selecione o módulo...", "Hardware", "Software", "Rede" });
-            cbxModulo.Location = new Point(77, 35);
+            cbxModulo.Location = new Point(126, 41);
             cbxModulo.Name = "cbxModulo";
-            cbxModulo.Size = new Size(330, 23);
+            cbxModulo.Size = new Size(330, 29);
             cbxModulo.TabIndex = 9;
             // 
             // cbxJornada
             // 
             cbxJornada.Cursor = Cursors.Hand;
             cbxJornada.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxJornada.Font = new Font("Segoe UI", 12F);
             cbxJornada.FormattingEnabled = true;
             cbxJornada.Items.AddRange(new object[] { "Selecione a jornada...", "Financeiro", "Marketing", "Recursos Humanos", "Jurídico" });
-            cbxJornada.Location = new Point(77, 79);
+            cbxJornada.Location = new Point(126, 105);
             cbxJornada.Name = "cbxJornada";
-            cbxJornada.Size = new Size(330, 23);
+            cbxJornada.Size = new Size(330, 29);
             cbxJornada.TabIndex = 10;
             // 
             // cbxPrioridade
             // 
             cbxPrioridade.Cursor = Cursors.Hand;
             cbxPrioridade.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxPrioridade.Font = new Font("Segoe UI", 12F);
             cbxPrioridade.FormattingEnabled = true;
             cbxPrioridade.Items.AddRange(new object[] { "Baixa", "Média", "Alta" });
-            cbxPrioridade.Location = new Point(77, 123);
+            cbxPrioridade.Location = new Point(126, 168);
             cbxPrioridade.Name = "cbxPrioridade";
-            cbxPrioridade.Size = new Size(330, 23);
+            cbxPrioridade.Size = new Size(330, 29);
             cbxPrioridade.TabIndex = 11;
             // 
             // button1
@@ -112,10 +117,11 @@
             button1.BackColor = SystemColors.ButtonFace;
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Consolas", 11F);
             button1.ForeColor = Color.Gray;
-            button1.Location = new Point(221, 315);
+            button1.Location = new Point(230, 417);
             button1.Name = "button1";
-            button1.Size = new Size(90, 23);
+            button1.Size = new Size(110, 30);
             button1.TabIndex = 12;
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = false;
@@ -123,50 +129,50 @@
             // lblModulo
             // 
             lblModulo.AutoSize = true;
-            lblModulo.Font = new Font("Consolas", 9F);
-            lblModulo.Location = new Point(66, 17);
+            lblModulo.Font = new Font("Consolas", 13F);
+            lblModulo.Location = new Point(98, 14);
             lblModulo.Name = "lblModulo";
-            lblModulo.Size = new Size(49, 14);
+            lblModulo.Size = new Size(70, 22);
             lblModulo.TabIndex = 13;
             lblModulo.Text = "Módulo";
             // 
             // lblJornada
             // 
             lblJornada.AutoSize = true;
-            lblJornada.Font = new Font("Consolas", 9F);
-            lblJornada.Location = new Point(66, 61);
+            lblJornada.Font = new Font("Consolas", 13F);
+            lblJornada.Location = new Point(98, 77);
             lblJornada.Name = "lblJornada";
-            lblJornada.Size = new Size(49, 14);
+            lblJornada.Size = new Size(70, 22);
             lblJornada.TabIndex = 14;
             lblJornada.Text = "Jonada";
             // 
             // lblPrioridade
             // 
             lblPrioridade.AutoSize = true;
-            lblPrioridade.Font = new Font("Consolas", 9F);
-            lblPrioridade.Location = new Point(66, 105);
+            lblPrioridade.Font = new Font("Consolas", 13F);
+            lblPrioridade.Location = new Point(98, 142);
             lblPrioridade.Name = "lblPrioridade";
-            lblPrioridade.Size = new Size(77, 14);
+            lblPrioridade.Size = new Size(110, 22);
             lblPrioridade.TabIndex = 15;
             lblPrioridade.Text = "Prioridade";
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Consolas", 9F);
-            lblTitulo.Location = new Point(66, 149);
+            lblTitulo.Font = new Font("Consolas", 13F);
+            lblTitulo.Location = new Point(98, 203);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(49, 14);
+            lblTitulo.Size = new Size(70, 22);
             lblTitulo.TabIndex = 16;
             lblTitulo.Text = "Titulo";
             // 
             // lblDescricao
             // 
             lblDescricao.AutoSize = true;
-            lblDescricao.Font = new Font("Consolas", 9F);
-            lblDescricao.Location = new Point(66, 193);
+            lblDescricao.Font = new Font("Consolas", 13F);
+            lblDescricao.Location = new Point(98, 266);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(70, 14);
+            lblDescricao.Size = new Size(100, 22);
             lblDescricao.TabIndex = 17;
             lblDescricao.Text = "Descrição";
             // 
@@ -174,7 +180,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 345);
+            ClientSize = new Size(555, 460);
             Controls.Add(lblDescricao);
             Controls.Add(lblTitulo);
             Controls.Add(lblPrioridade);

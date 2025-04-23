@@ -33,7 +33,6 @@
             txtbEmail = new TextBox();
             txtbSenha = new TextBox();
             btnCadastrar = new Button();
-            lblTituloNovoUsuario = new Label();
             btnCancelarCadastro = new Button();
             lblNome = new Label();
             lblEmail = new Label();
@@ -46,25 +45,31 @@
             // 
             // txtbNome
             // 
-            txtbNome.Location = new Point(157, 79);
+            txtbNome.Font = new Font("Segoe UI", 11F);
+            txtbNome.Location = new Point(140, 65);
             txtbNome.Name = "txtbNome";
-            txtbNome.Size = new Size(198, 23);
+            txtbNome.PlaceholderText = "Insira o nome";
+            txtbNome.Size = new Size(300, 27);
             txtbNome.TabIndex = 0;
             txtbNome.Leave += txtbNome_Leave;
             // 
             // txtbEmail
             // 
-            txtbEmail.Location = new Point(157, 129);
+            txtbEmail.Font = new Font("Segoe UI", 11F);
+            txtbEmail.Location = new Point(140, 160);
             txtbEmail.Name = "txtbEmail";
-            txtbEmail.Size = new Size(198, 23);
+            txtbEmail.PlaceholderText = "Insira o e-mail";
+            txtbEmail.Size = new Size(300, 27);
             txtbEmail.TabIndex = 1;
             txtbEmail.Leave += txtbEmail_Leave;
             // 
             // txtbSenha
             // 
-            txtbSenha.Location = new Point(157, 179);
+            txtbSenha.Font = new Font("Segoe UI", 11F);
+            txtbSenha.Location = new Point(140, 255);
             txtbSenha.Name = "txtbSenha";
-            txtbSenha.Size = new Size(198, 23);
+            txtbSenha.PlaceholderText = "Insira a senha";
+            txtbSenha.Size = new Size(300, 27);
             txtbSenha.TabIndex = 2;
             txtbSenha.Leave += txtbSenha_Leave;
             // 
@@ -75,25 +80,15 @@
             btnCadastrar.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
             btnCadastrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnCadastrar.FlatStyle = FlatStyle.Flat;
+            btnCadastrar.Font = new Font("Consolas", 11.25F);
             btnCadastrar.ForeColor = SystemColors.ControlLightLight;
-            btnCadastrar.Location = new Point(280, 279);
+            btnCadastrar.Location = new Point(330, 403);
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(75, 23);
+            btnCadastrar.Size = new Size(110, 30);
             btnCadastrar.TabIndex = 5;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = false;
             btnCadastrar.Click += btnCadastrar_Click;
-            // 
-            // lblTituloNovoUsuario
-            // 
-            lblTituloNovoUsuario.AutoSize = true;
-            lblTituloNovoUsuario.BackColor = Color.Transparent;
-            lblTituloNovoUsuario.Font = new Font("Consolas", 25F, FontStyle.Bold);
-            lblTituloNovoUsuario.Location = new Point(12, 9);
-            lblTituloNovoUsuario.Name = "lblTituloNovoUsuario";
-            lblTituloNovoUsuario.Size = new Size(245, 40);
-            lblTituloNovoUsuario.TabIndex = 6;
-            lblTituloNovoUsuario.Text = "Novo Usuário";
             // 
             // btnCancelarCadastro
             // 
@@ -101,10 +96,11 @@
             btnCancelarCadastro.FlatAppearance.BorderColor = Color.DarkGray;
             btnCancelarCadastro.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnCancelarCadastro.FlatStyle = FlatStyle.Flat;
+            btnCancelarCadastro.Font = new Font("Consolas", 11.25F);
             btnCancelarCadastro.ForeColor = Color.Gray;
-            btnCancelarCadastro.Location = new Point(157, 279);
+            btnCancelarCadastro.Location = new Point(140, 403);
             btnCancelarCadastro.Name = "btnCancelarCadastro";
-            btnCancelarCadastro.Size = new Size(75, 23);
+            btnCancelarCadastro.Size = new Size(110, 30);
             btnCancelarCadastro.TabIndex = 4;
             btnCancelarCadastro.Text = "Cancelar";
             btnCancelarCadastro.UseVisualStyleBackColor = false;
@@ -114,10 +110,10 @@
             // 
             lblNome.AutoSize = true;
             lblNome.BackColor = Color.Transparent;
-            lblNome.Font = new Font("Consolas", 11F, FontStyle.Bold);
-            lblNome.Location = new Point(111, 84);
+            lblNome.Font = new Font("Consolas", 13F);
+            lblNome.Location = new Point(114, 28);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(40, 18);
+            lblNome.Size = new Size(50, 22);
             lblNome.TabIndex = 7;
             lblNome.Text = "Nome";
             // 
@@ -125,10 +121,10 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.BackColor = Color.Transparent;
-            lblEmail.Font = new Font("Consolas", 11F, FontStyle.Bold);
-            lblEmail.Location = new Point(95, 134);
+            lblEmail.Font = new Font("Consolas", 13F);
+            lblEmail.Location = new Point(114, 123);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(56, 18);
+            lblEmail.Size = new Size(70, 22);
             lblEmail.TabIndex = 8;
             lblEmail.Text = "E-mail";
             // 
@@ -136,10 +132,10 @@
             // 
             lblSenha.AutoSize = true;
             lblSenha.BackColor = Color.Transparent;
-            lblSenha.Font = new Font("Consolas", 11F, FontStyle.Bold);
-            lblSenha.Location = new Point(103, 184);
+            lblSenha.Font = new Font("Consolas", 13F);
+            lblSenha.Location = new Point(114, 218);
             lblSenha.Name = "lblSenha";
-            lblSenha.Size = new Size(48, 18);
+            lblSenha.Size = new Size(60, 22);
             lblSenha.TabIndex = 9;
             lblSenha.Text = "Senha";
             // 
@@ -147,21 +143,22 @@
             // 
             lblTipoUsuario.AutoSize = true;
             lblTipoUsuario.BackColor = Color.Transparent;
-            lblTipoUsuario.Font = new Font("Consolas", 11F, FontStyle.Bold);
-            lblTipoUsuario.Location = new Point(23, 230);
+            lblTipoUsuario.Font = new Font("Consolas", 13F);
+            lblTipoUsuario.Location = new Point(114, 313);
             lblTipoUsuario.Name = "lblTipoUsuario";
-            lblTipoUsuario.Size = new Size(128, 18);
+            lblTipoUsuario.Size = new Size(160, 22);
             lblTipoUsuario.TabIndex = 10;
             lblTipoUsuario.Text = "Tipo de Usuário";
             // 
             // cbbTipoUsuário
             // 
             cbbTipoUsuário.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbTipoUsuário.Font = new Font("Segoe UI", 11F);
             cbbTipoUsuário.FormattingEnabled = true;
             cbbTipoUsuário.Items.AddRange(new object[] { "Funcionário", "Cliente" });
-            cbbTipoUsuário.Location = new Point(157, 229);
+            cbbTipoUsuário.Location = new Point(140, 350);
             cbbTipoUsuário.Name = "cbbTipoUsuário";
-            cbbTipoUsuário.Size = new Size(198, 23);
+            cbbTipoUsuário.Size = new Size(300, 28);
             cbbTipoUsuário.TabIndex = 3;
             cbbTipoUsuário.Leave += cbbTipoUsuário_Leave;
             // 
@@ -175,14 +172,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(480, 345);
+            ClientSize = new Size(555, 460);
             Controls.Add(cbbTipoUsuário);
             Controls.Add(lblTipoUsuario);
             Controls.Add(lblSenha);
             Controls.Add(lblEmail);
             Controls.Add(lblNome);
             Controls.Add(btnCancelarCadastro);
-            Controls.Add(lblTituloNovoUsuario);
             Controls.Add(btnCadastrar);
             Controls.Add(txtbSenha);
             Controls.Add(txtbEmail);
@@ -205,7 +201,6 @@
         private ComboBox cbbTipoUsuário;
         private Button btnCadastrar;
         private Button btnCancelarCadastro;
-        private Label lblTituloNovoUsuario;
         private Label lblNome;
         private Label lblEmail;
         private Label lblSenha;

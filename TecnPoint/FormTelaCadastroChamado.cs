@@ -34,16 +34,16 @@ namespace TecnPoint.Interface
                                                             cbxModulo.SelectedIndex, cbxJornada.SelectedIndex);
             if (cadastrou == true)
             {
-                MessageBox.Show("Abertura de chamado realizada", 
-                                "TECN SOLUTIONS", 
-                                MessageBoxButtons.OK, 
+                MessageBox.Show("Abertura de chamado realizada",
+                                "TECN SOLUTIONS",
+                                MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Abertura de chamado falhou", 
-                                "TECN SOLUTIONS", 
-                                MessageBoxButtons.OK, 
+                MessageBox.Show("Abertura de chamado falhou",
+                                "TECN SOLUTIONS",
+                                MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
             }
         }

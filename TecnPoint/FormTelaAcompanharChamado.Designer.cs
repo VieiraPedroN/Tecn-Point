@@ -47,7 +47,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(480, 345);
+            flowLayoutPanel1.Size = new Size(555, 460);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.Resize += flowLayoutPanel1_Resize;
@@ -56,10 +56,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 345);
+            ClientSize = new Size(555, 460);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
+            ImeMode = ImeMode.NoControl;
             Name = "FormTelaAcompanharChamado";
             Text = "FormTelaAcompanharChamado";
             Load += FormTelaAcompanharChamado_Load;

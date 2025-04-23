@@ -41,10 +41,11 @@
             // 
             NomeUsuario.AutoSize = true;
             NomeUsuario.BackColor = Color.Transparent;
+            NomeUsuario.Font = new Font("Consolas", 11F);
             NomeUsuario.ForeColor = Color.Gainsboro;
-            NomeUsuario.Location = new Point(75, 22);
+            NomeUsuario.Location = new Point(80, 23);
             NomeUsuario.Name = "NomeUsuario";
-            NomeUsuario.Size = new Size(83, 15);
+            NomeUsuario.Size = new Size(104, 18);
             NomeUsuario.TabIndex = 0;
             NomeUsuario.Text = "Nome Usuario";
             // 
@@ -52,10 +53,11 @@
             // 
             EmailUsuario.AutoSize = true;
             EmailUsuario.BackColor = Color.Transparent;
+            EmailUsuario.Font = new Font("Consolas", 11F);
             EmailUsuario.ForeColor = Color.Gainsboro;
-            EmailUsuario.Location = new Point(75, 47);
+            EmailUsuario.Location = new Point(80, 48);
             EmailUsuario.Name = "EmailUsuario";
-            EmailUsuario.Size = new Size(79, 15);
+            EmailUsuario.Size = new Size(112, 18);
             EmailUsuario.TabIndex = 1;
             EmailUsuario.Text = "Email Usuario";
             // 
@@ -67,12 +69,13 @@
             botaoAcompanharChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
             botaoAcompanharChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             botaoAcompanharChamado.FlatStyle = FlatStyle.Flat;
+            botaoAcompanharChamado.Font = new Font("Consolas", 11F);
             botaoAcompanharChamado.ForeColor = Color.Gainsboro;
             botaoAcompanharChamado.Image = Properties.Resources.ChecklistIconActive;
             botaoAcompanharChamado.ImageAlign = ContentAlignment.MiddleLeft;
             botaoAcompanharChamado.Location = new Point(10, 111);
             botaoAcompanharChamado.Name = "botaoAcompanharChamado";
-            botaoAcompanharChamado.Size = new Size(190, 40);
+            botaoAcompanharChamado.Size = new Size(232, 40);
             botaoAcompanharChamado.TabIndex = 3;
             botaoAcompanharChamado.Text = "Acompanhar um chamado";
             botaoAcompanharChamado.TextAlign = ContentAlignment.MiddleRight;
@@ -83,9 +86,9 @@
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Location = new Point(221, -5);
+            panel1.Location = new Point(248, -5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(480, 345);
+            panel1.Size = new Size(555, 460);
             panel1.TabIndex = 4;
             // 
             // groupBox1
@@ -109,7 +112,7 @@
             btnAddUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnAddUser.FlatStyle = FlatStyle.Flat;
             btnAddUser.Image = Properties.Resources.Add_User;
-            btnAddUser.Location = new Point(15, 290);
+            btnAddUser.Location = new Point(12, 408);
             btnAddUser.Name = "btnAddUser";
             btnAddUser.Size = new Size(30, 30);
             btnAddUser.TabIndex = 6;
@@ -123,7 +126,7 @@
             BackColor = Color.FromArgb(100, 52, 144);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 450);
             Controls.Add(btnAddUser);
             Controls.Add(botaoAcompanharChamado);
             Controls.Add(groupBox1);
@@ -132,6 +135,7 @@
             Controls.Add(NomeUsuario);
             DoubleBuffered = true;
             Name = "FormTelaFuncionario";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "FormTelaFuncionario";
             Closed += FormTelaCliente_Closed;
             Load += FormTelaCliente_Load;

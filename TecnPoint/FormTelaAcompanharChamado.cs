@@ -20,6 +20,7 @@ namespace TecnPoint.Interface
             this.usuarioLogado = dadosUsuario;
             InitializeComponent();
         }
+
         private void CarregarChamados()
         {
             ObterChamadosPorUsuario service = new ObterChamadosPorUsuario();
@@ -28,14 +29,14 @@ namespace TecnPoint.Interface
             {
                 GroupBox card = new GroupBox
                 {
-                    Size = new Size(400, 85),
-                    Font = new Font("Segoe UI", 8, FontStyle.Bold),
+                    Size = new Size(500, 85),
+                    Font = new Font("Consolas", 11, FontStyle.Bold),
                 };
 
                 Label lblTitulo = new Label { Text = $"{chamado.Titulo}", Location = new Point(10, 20), AutoSize = true };
                 Label lblCliente = new Label { Text = $"Criado por: {chamado.NomeCliente}", Location = new Point(10, 55), AutoSize = true };
-                Label lblFuncionario = new Label { Text = $"Atribuido: {chamado.NomeFuncionario}", Location = new Point(250, 55), AutoSize = true };
-                Label lblStatus = new Label { Text = $"Status: {chamado.Status}", Location = new Point(250, 20), AutoSize = true };
+                Label lblFuncionario = new Label { Text = $"Atribuido: {chamado.NomeFuncionario}", Location = new Point(275, 55), AutoSize = true };
+                Label lblStatus = new Label { Text = $"Status: {chamado.Status}", Location = new Point(275, 20), AutoSize = true };
 
                 card.Controls.Add(lblTitulo);
                 card.Controls.Add(lblCliente);
@@ -64,6 +65,8 @@ namespace TecnPoint.Interface
                 card.Margin = new Padding(marginHorizontal, 2, 0, 12);
             }
         }
+
+        private void 
 
     }
 }

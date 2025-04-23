@@ -46,9 +46,9 @@ namespace TecnPoint
             botaoEntrarLogin.BackColor = Color.FromArgb(126, 105, 171);
             botaoEntrarLogin.Cursor = Cursors.Hand;
             botaoEntrarLogin.FlatStyle = FlatStyle.Flat;
-            botaoEntrarLogin.Font = new Font("Segoe UI", 9F);
+            botaoEntrarLogin.Font = new Font("Consolas", 11F);
             botaoEntrarLogin.ForeColor = SystemColors.ButtonHighlight;
-            botaoEntrarLogin.Location = new Point(324, 325);
+            botaoEntrarLogin.Location = new Point(325, 327);
             botaoEntrarLogin.Name = "botaoEntrarLogin";
             botaoEntrarLogin.Size = new Size(150, 30);
             botaoEntrarLogin.TabIndex = 0;
@@ -59,23 +59,23 @@ namespace TecnPoint
             // EntradaEmail
             // 
             EntradaEmail.Anchor = AnchorStyles.None;
-            EntradaEmail.Font = new Font("Segoe UI", 9F);
-            EntradaEmail.Location = new Point(264, 185);
+            EntradaEmail.Font = new Font("Consolas", 11F);
+            EntradaEmail.Location = new Point(265, 195);
             EntradaEmail.Name = "EntradaEmail";
-            EntradaEmail.PlaceholderText = "Digite seu e-mail...";
-            EntradaEmail.Size = new Size(270, 23);
+            EntradaEmail.PlaceholderText = "Digite seu e-mail";
+            EntradaEmail.Size = new Size(270, 25);
             EntradaEmail.TabIndex = 1;
             // 
             // EntradaSenha
             // 
             EntradaSenha.Anchor = AnchorStyles.None;
             EntradaSenha.Cursor = Cursors.IBeam;
-            EntradaSenha.Font = new Font("Segoe UI", 9F);
-            EntradaSenha.Location = new Point(264, 260);
+            EntradaSenha.Font = new Font("Consolas", 11F);
+            EntradaSenha.Location = new Point(265, 274);
             EntradaSenha.Name = "EntradaSenha";
             EntradaSenha.PasswordChar = '*';
-            EntradaSenha.PlaceholderText = "Digite sua senha...";
-            EntradaSenha.Size = new Size(270, 23);
+            EntradaSenha.PlaceholderText = "Digite sua senha";
+            EntradaSenha.Size = new Size(270, 25);
             EntradaSenha.TabIndex = 2;
             // 
             // EmailLogin
@@ -83,10 +83,10 @@ namespace TecnPoint
             EmailLogin.Anchor = AnchorStyles.None;
             EmailLogin.AutoSize = true;
             EmailLogin.BackColor = Color.Transparent;
-            EmailLogin.Font = new Font("Consolas", 12F, FontStyle.Bold);
-            EmailLogin.Location = new Point(246, 160);
+            EmailLogin.Font = new Font("Consolas", 13F);
+            EmailLogin.Location = new Point(247, 165);
             EmailLogin.Name = "EmailLogin";
-            EmailLogin.Size = new Size(54, 19);
+            EmailLogin.Size = new Size(60, 22);
             EmailLogin.TabIndex = 3;
             EmailLogin.Text = "Email";
             // 
@@ -95,10 +95,10 @@ namespace TecnPoint
             SenhaLogin.Anchor = AnchorStyles.None;
             SenhaLogin.AutoSize = true;
             SenhaLogin.BackColor = Color.Transparent;
-            SenhaLogin.Font = new Font("Consolas", 12F, FontStyle.Bold);
-            SenhaLogin.Location = new Point(246, 235);
+            SenhaLogin.Font = new Font("Consolas", 13F);
+            SenhaLogin.Location = new Point(247, 244);
             SenhaLogin.Name = "SenhaLogin";
-            SenhaLogin.Size = new Size(54, 19);
+            SenhaLogin.Size = new Size(60, 22);
             SenhaLogin.TabIndex = 4;
             SenhaLogin.Text = "Senha";
             // 
@@ -108,7 +108,7 @@ namespace TecnPoint
             NomeEmpresa.AutoSize = true;
             NomeEmpresa.BackColor = Color.Transparent;
             NomeEmpresa.Font = new Font("Consolas", 30F, FontStyle.Bold);
-            NomeEmpresa.Location = new Point(235, 64);
+            NomeEmpresa.Location = new Point(236, 66);
             NomeEmpresa.Name = "NomeEmpresa";
             NomeEmpresa.Size = new Size(328, 47);
             NomeEmpresa.TabIndex = 5;
@@ -119,11 +119,11 @@ namespace TecnPoint
             DescricaoLogin.Anchor = AnchorStyles.None;
             DescricaoLogin.AutoSize = true;
             DescricaoLogin.BackColor = Color.Transparent;
-            DescricaoLogin.Font = new Font("Consolas", 9F);
+            DescricaoLogin.Font = new Font("Consolas", 10F);
             DescricaoLogin.ForeColor = SystemColors.ControlDarkDark;
-            DescricaoLogin.Location = new Point(305, 121);
+            DescricaoLogin.Location = new Point(291, 123);
             DescricaoLogin.Name = "DescricaoLogin";
-            DescricaoLogin.Size = new Size(189, 14);
+            DescricaoLogin.Size = new Size(216, 17);
             DescricaoLogin.TabIndex = 6;
             DescricaoLogin.Text = "Entre com suas credenciais";
             // 
@@ -132,11 +132,11 @@ namespace TecnPoint
             DescricaoSistema.Anchor = AnchorStyles.None;
             DescricaoSistema.AutoSize = true;
             DescricaoSistema.BackColor = Color.Transparent;
-            DescricaoSistema.Font = new Font("Consolas", 9F);
+            DescricaoSistema.Font = new Font("Consolas", 10F);
             DescricaoSistema.ForeColor = SystemColors.ControlDarkDark;
-            DescricaoSistema.Location = new Point(294, 366);
+            DescricaoSistema.Location = new Point(280, 368);
             DescricaoSistema.Name = "DescricaoSistema";
-            DescricaoSistema.Size = new Size(210, 14);
+            DescricaoSistema.Size = new Size(240, 17);
             DescricaoSistema.TabIndex = 7;
             DescricaoSistema.Text = "Sistema de Suporte ao Cliente";
             // 
