@@ -76,35 +76,35 @@
             // cbxModulo
             // 
             cbxModulo.Cursor = Cursors.Hand;
+            cbxModulo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxModulo.FormattingEnabled = true;
             cbxModulo.Items.AddRange(new object[] { "Selecione o módulo...", "Hardware", "Software", "Rede" });
             cbxModulo.Location = new Point(77, 35);
             cbxModulo.Name = "cbxModulo";
             cbxModulo.Size = new Size(330, 23);
             cbxModulo.TabIndex = 9;
-            cbxModulo.Text = "Módulo";
             // 
             // cbxJornada
             // 
             cbxJornada.Cursor = Cursors.Hand;
+            cbxJornada.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxJornada.FormattingEnabled = true;
             cbxJornada.Items.AddRange(new object[] { "Selecione a jornada...", "Financeiro", "Marketing", "Recursos Humanos", "Jurídico" });
             cbxJornada.Location = new Point(77, 79);
             cbxJornada.Name = "cbxJornada";
             cbxJornada.Size = new Size(330, 23);
             cbxJornada.TabIndex = 10;
-            cbxJornada.Text = "Jornada";
             // 
             // cbxPrioridade
             // 
             cbxPrioridade.Cursor = Cursors.Hand;
+            cbxPrioridade.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxPrioridade.FormattingEnabled = true;
             cbxPrioridade.Items.AddRange(new object[] { "Baixa", "Média", "Alta" });
             cbxPrioridade.Location = new Point(77, 123);
             cbxPrioridade.Name = "cbxPrioridade";
             cbxPrioridade.Size = new Size(330, 23);
             cbxPrioridade.TabIndex = 11;
-            cbxPrioridade.Text = "Prioridade";
             // 
             // button1
             // 
