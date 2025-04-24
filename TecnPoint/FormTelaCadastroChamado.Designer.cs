@@ -94,7 +94,7 @@
             cbxJornada.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxJornada.Font = new Font("Segoe UI", 12F);
             cbxJornada.FormattingEnabled = true;
-            cbxJornada.Items.AddRange(new object[] { "Selecione a jornada...", "Financeiro", "Marketing", "Recursos Humanos", "Jurídico" });
+            cbxJornada.Items.AddRange(new object[] { "Selecione a jornada...", "Financeiro", "Marketing", "Recursos Humanos" });
             cbxJornada.Location = new Point(126, 105);
             cbxJornada.Name = "cbxJornada";
             cbxJornada.Size = new Size(330, 29);

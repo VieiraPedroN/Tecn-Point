@@ -19,11 +19,11 @@ namespace TecnPoint.Interface
         private FormTelaAcompanharChamado formPai;
         private readonly ExibicaoChamado dadosChamado;
 
-        public FormDetalhesChamado(ExibicaoChamado chamado, FormTelaAcompanharChamado acompanharChamado)
+        public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado)
         {
             this.formPai = acompanharChamado;
+            this.dadosChamado = dadosChamado;
             InitializeComponent();
-            dadosChamado = chamado;
             PreencherDetalhes();
         }
 
@@ -33,11 +33,13 @@ namespace TecnPoint.Interface
             label2.Text = dadosChamado.NomeCliente;
             label3.Text = dadosChamado.Status;
             label4.Text = dadosChamado.NomeFuncionario;
+            label5.Text = dadosChamado.Prioridade;
+            label6.Text = dadosChamado.Descricao;
         }
 
         private void FormDetalhesChamado_Load(object sender, EventArgs e)
         {
-
+               
         }
 
         private void button1_Click(object sender, EventArgs e)

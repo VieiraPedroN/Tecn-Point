@@ -17,7 +17,7 @@ namespace TecnPoint.Interface
     {
         private DadosUsuario usuarioLogado;
         public FormTelaAcompanharChamado(DadosUsuario dadosUsuario)
-        {
+        { 
             this.usuarioLogado = dadosUsuario;
             InitializeComponent();
 
@@ -28,45 +28,47 @@ namespace TecnPoint.Interface
         private void CarregarChamados()
         {
             ObterChamadosPorUsuario service = new ObterChamadosPorUsuario();
-            var chamados = service.BuscarChamados(usuarioLogado.IdUsuario, usuarioLogado.TipoUsuario);
-            foreach (var chamado in chamados)
+            var dadosChamados = service.BuscarChamados(usuarioLogado.IdUsuario, usuarioLogado.TipoUsuario);
+            foreach (var dadosChamado in dadosChamados)
             {
                 GroupBox card = new GroupBox
                 {
-                    Size = new Size(500, 85),
+                    Size = new Size(500, 100),
                     Font = new Font("Consolas", 11, FontStyle.Bold),
 
-                    Cursor = Cursors.Hand
+                    Cursor = Cursors.Hand,
+
                 };
 
-                Label lblTitulo = new Label { Text = $"{chamado.Titulo}", Location = new Point(10, 20), AutoSize = true };
-                Label lblCliente = new Label { Text = $"Criado por: {chamado.NomeCliente}", Location = new Point(10, 55), AutoSize = true };
-                Label lblFuncionario = new Label { Text = $"Atribuido: {chamado.NomeFuncionario}", Location = new Point(275, 55), AutoSize = true };
-                Label lblStatus = new Label { Text = $"Status: {chamado.Status}", Location = new Point(275, 20), AutoSize = true };
+                Label lblTitulo = new Label { Text = $"{dadosChamado.Titulo}", Location = new Point(10, 20), AutoSize = false, Size = new Size(250,40)};
+                Label lblCliente = new Label { Text = $"Criado por: {dadosChamado.NomeCliente}", Location = new Point(10, 70), AutoSize = true };
+                Label lblFuncionario = new Label { Text = $"Atribuido: {dadosChamado.NomeFuncionario}", Location = new Point(275, 70), AutoSize = true };
+                Label lblStatus = new Label { Text = $"Status: {dadosChamado.Status}", Location = new Point(275, 20), AutoSize = true };
 
                 card.Controls.Add(lblTitulo);
                 card.Controls.Add(lblCliente);
                 card.Controls.Add(lblFuncionario);
                 card.Controls.Add(lblStatus);
 
-                card.Tag = chamado;
+                card.Tag = dadosChamado;
 
                 card.Click += (s, e) =>
                 {
                     AbrirDetalhes((ExibicaoChamado)card.Tag);
                 };
 
-                lblTitulo.Click += (s, e) => AbrirDetalhes(chamado);
-                lblCliente.Click += (s, e) => AbrirDetalhes(chamado);
-                lblFuncionario.Click += (s, e) => AbrirDetalhes(chamado);
-                lblStatus.Click += (s, e) => AbrirDetalhes(chamado);
+                lblTitulo.Click += (s, e) => AbrirDetalhes(dadosChamado);
+                lblCliente.Click += (s, e) => AbrirDetalhes(dadosChamado);
+                lblFuncionario.Click += (s, e) => AbrirDetalhes(dadosChamado);
+                lblStatus.Click += (s, e) => AbrirDetalhes(dadosChamado);
 
 
-                void AbrirDetalhes(ExibicaoChamado chamado)
+                void AbrirDetalhes(ExibicaoChamado dadosChamado)
                 {
+                    ClassDadosChamado chamados = new ClassDadosChamado();
                     panel1.BringToFront();
 
-                    FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(chamado, this);
+                    FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(dadosChamado, this);
                     detalhesChamado.TopLevel = false;
 
                     panel1.Controls.Clear();

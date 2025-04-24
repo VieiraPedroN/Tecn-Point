@@ -32,16 +32,18 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            button1 = new Button();
+            btnVoltar = new Button();
+            label5 = new Label();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 13F);
-            label1.Location = new Point(167, 177);
+            label1.Font = new Font("Consolas", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(51, 24);
             label1.Name = "label1";
-            label1.Size = new Size(70, 22);
+            label1.Size = new Size(63, 20);
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
@@ -49,7 +51,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Consolas", 13F);
-            label2.Location = new Point(167, 233);
+            label2.Location = new Point(399, 323);
             label2.Name = "label2";
             label2.Size = new Size(70, 22);
             label2.TabIndex = 1;
@@ -59,7 +61,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Consolas", 13F);
-            label3.Location = new Point(281, 177);
+            label3.Location = new Point(448, 22);
             label3.Name = "label3";
             label3.Size = new Size(70, 22);
             label3.TabIndex = 3;
@@ -69,29 +71,52 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Consolas", 13F);
-            label4.Location = new Point(281, 233);
+            label4.Location = new Point(399, 125);
             label4.Name = "label4";
             label4.Size = new Size(70, 22);
             label4.TabIndex = 2;
             label4.Text = "label4";
             // 
-            // button1
+            // btnVoltar
             // 
-            button1.Font = new Font("Consolas", 11F);
-            button1.Location = new Point(12, 413);
-            button1.Name = "button1";
-            button1.Size = new Size(90, 35);
-            button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnVoltar.FlatStyle = FlatStyle.Flat;
+            btnVoltar.Font = new Font("Consolas", 11F);
+            btnVoltar.Location = new Point(12, 413);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(90, 35);
+            btnVoltar.TabIndex = 4;
+            btnVoltar.Text = "Voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += button1_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Consolas", 13F);
+            label5.Location = new Point(87, 74);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 22);
+            label5.TabIndex = 5;
+            label5.Text = "label5";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Consolas", 13F);
+            label6.Location = new Point(87, 125);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 22);
+            label6.TabIndex = 6;
+            label6.Text = "label6";
             // 
             // FormDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 460);
-            Controls.Add(button1);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(btnVoltar);
             Controls.Add(label3);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -110,6 +135,8 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Button button1;
+        private Button btnVoltar;
+        private Label label5;
+        private Label label6;
     }
 }

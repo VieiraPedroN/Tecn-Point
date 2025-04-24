@@ -16,7 +16,7 @@ namespace TecnPoint.Dados.BuscarChamadoPorCliente
 
             using (ClassConexaoBanco conexaoBuscaChamado = new ClassConexaoBanco())
             {
-                string queryBuscaChamadosCliente = "SELECT c.Id_Chamado, c.Titulo, cliente.Nome AS NomeCliente, funcionario.Nome AS NomeFuncionario, c.Status " +
+                string queryBuscaChamadosCliente = "SELECT c.Titulo, cliente.Nome AS NomeCliente, funcionario.Nome AS NomeFuncionario, c.Status, c.Descricao, c.Prioridade " +
                                                     "FROM Chamados c " +
                                                     "JOIN Usuarios cliente ON c.fk_idCliente = cliente.id_Usuario " +
                                                     "JOIN Usuarios funcionario ON c.fk_idFuncionario = funcionario.id_Usuario " +
@@ -39,11 +39,12 @@ namespace TecnPoint.Dados.BuscarChamadoPorCliente
                         {
                             listaRecebeDados.Add(new ExibicaoChamado
                             {
-                                Id = leitor.GetInt16(leitor.GetOrdinal("Id_Chamado")),
                                 Titulo = leitor.GetString(leitor.GetOrdinal("Titulo")),
                                 NomeCliente = leitor.GetString(leitor.GetOrdinal("NomeCliente")),
                                 NomeFuncionario = leitor.GetString(leitor.GetOrdinal("NomeFuncionario")),
                                 Status = leitor.GetString(leitor.GetOrdinal("Status")),
+                                Descricao = leitor.GetString(leitor.GetOrdinal("Descricao")),
+                                Prioridade = leitor.GetString(leitor.GetOrdinal("Prioridade"))
                             });
                         }
                     }
