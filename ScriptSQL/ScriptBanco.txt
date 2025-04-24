@@ -1,18 +1,11 @@
-/*Caso tudo dê errado*/
-DROP TABLE Usuarios;
-DROP TABLE Chamados;
-DROP TABLE Jornada;
-DROP TABLE Modulo;
-DROP TABLE Conversa;
-
 /* Criação das tabelas */
 /*Tabela usuários*/
 CREATE TABLE Usuarios (
 	id_Usuario SERIAL PRIMARY KEY,
-	Nome VARCHAR(45),
-	Email VARCHAR(45) UNIQUE,
-	Senha VARCHAR(45),
-	tipo_Usuario VARCHAR(15),
+	Nome VARCHAR(45) NOT NULL,
+	Email VARCHAR(45) UNIQUE NOT NULL,
+	Senha VARCHAR(45) NOT NULL,
+	tipo_Usuario VARCHAR(15) NOT NULL,
 	CONSTRAINT tipo_usuario_check CHECK (
 		tipo_usuario IN ('Funcionário', 'Cliente')
 	)	
@@ -21,20 +14,20 @@ CREATE TABLE Usuarios (
 /*Tabela chamados*/
 CREATE TABLE Chamados (
 	id_Chamado SERIAL PRIMARY KEY,
-	Titulo VARCHAR(45),
-	Descricao TEXT,
-	Status VARCHAR(10),
-	Prioridade VARCHAR(5),
+	Titulo VARCHAR(45) NOT NULL,
+	Descricao TEXT NOT NULL,
+	Status VARCHAR(10) NOT NULL,
+	Prioridade VARCHAR(5) NOT NULL,
 	CONSTRAINT prioridade_chamado_check CHECK (
 		Prioridade IN ('Baixa', 'Média', 'Alta')
 	),
 	CONSTRAINT status_chamado_check CHECK (
 		Status IN ('Aberto', 'Pendente', 'Resolvido')
 	),
-	fk_idCliente INT,
-	fk_idFuncionario INT,
-	fk_idJornada INT,
-	fk_idModulo INT,
+	fk_idCliente INT NOT NULL,
+	fk_idFuncionario INT NOT NULL,
+	fk_idJornada INT NOT NULL,
+	fk_idModulo INT NOT NULL,
 	FOREIGN KEY (fk_idCliente) REFERENCES Usuarios(id_Usuario),
 	FOREIGN KEY (fk_idFuncionario) REFERENCES Usuarios(id_Usuario),
 	FOREIGN KEY (fk_idJornada) REFERENCES Jornada(id_Jornada),
@@ -101,11 +94,11 @@ VALUES
 	('Software'),
 	('Rede');
 
-/*conversa*/
+/*conversas*/
 INSERT INTO Conversa (Mensagem, fk_idRemetente, fk_idChamado)
 VALUES 
 	('Nós sabemos', 4, 2),
-	('Sou um cliente chato!!', 3, 2),
+	('Sou um cliente irritado!!', 3, 2),
 	('Bom dia, minha internet ainda está muito ruim!', 3, 1),
 	('Olá bom dia, como está a situação da internet?', 1, 1),
 	('Deu certo?', 1, 1),
