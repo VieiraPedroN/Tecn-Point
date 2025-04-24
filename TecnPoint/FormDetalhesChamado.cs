@@ -17,14 +17,13 @@ namespace TecnPoint.Interface
     public partial class FormDetalhesChamado : Form
     {
         private FormTelaAcompanharChamado formPai;
-        private readonly ExibicaoChamado dadosChamado;
+        private ExibicaoChamado dadosChamado;
 
         public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado)
         {
             this.formPai = acompanharChamado;
             this.dadosChamado = dadosChamado;
             InitializeComponent();
-            PreencherDetalhes();
         }
 
         private void PreencherDetalhes()
@@ -34,12 +33,14 @@ namespace TecnPoint.Interface
             label3.Text = dadosChamado.Status;
             label4.Text = dadosChamado.NomeFuncionario;
             label5.Text = dadosChamado.Prioridade;
-            label6.Text = dadosChamado.Descricao;
         }
 
         private void FormDetalhesChamado_Load(object sender, EventArgs e)
         {
-               
+            Label label6 = new Label {Text = $"{dadosChamado.Descricao}" , Location = new Point(51, 70), Size = new Size(250, 200), Font = new Font("Consolas", 13) };
+            Controls.Add(label6);
+            PreencherDetalhes();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
