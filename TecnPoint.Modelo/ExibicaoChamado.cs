@@ -8,6 +8,7 @@ namespace TecnPoint.Modelo
 {
     public class ExibicaoChamado
     {
+        public int IdChamado { get; set; }
         public string Titulo { get; set; }
         public string NomeCliente { get; set; }
         public string NomeFuncionario { get; set; }
