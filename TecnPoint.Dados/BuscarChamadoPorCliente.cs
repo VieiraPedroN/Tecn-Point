@@ -16,11 +16,20 @@ namespace TecnPoint.Dados.BuscarChamadoPorCliente
 
             using (ClassConexaoBanco conexaoBuscaChamado = new ClassConexaoBanco())
             {
-                string queryBuscaChamadosCliente = "SELECT c.Titulo, cliente.Nome AS NomeCliente, funcionario.Nome AS NomeFuncionario, c.Status, c.Descricao, c.Prioridade " +
-                                                    "FROM Chamados c " +
-                                                    "JOIN Usuarios cliente ON c.fk_idCliente = cliente.id_Usuario " +
-                                                    "JOIN Usuarios funcionario ON c.fk_idFuncionario = funcionario.id_Usuario " +
-                                                    "WHERE ";
+                string queryBuscaChamadosCliente = "SELECT chamados.Titulo," +
+                                                            "cliente.Nome AS NomeCliente, " +
+                                                            "funcionario.Nome AS NomeFuncionario, " +
+                                                            "chamados.Status, " +
+                                                            "chamados.Descricao, " +
+                                                            "chamados.Prioridade, " +
+                                                            "jornada.Jornada AS JornadaChamado, " +
+                                                            "modulo.Modulo AS ModuloChamado " +
+                                                            "FROM Chamados chamados " +
+                                                            "JOIN Usuarios cliente ON chamados.fk_idCliente = cliente.id_Usuario " +
+                                                            "JOIN Usuarios funcionario ON chamados.fk_idFuncionario = funcionario.id_Usuario " +
+                                                            "JOIN Jornada jornada ON chamados.fk_idJornada = jornada.id_Jornada " +
+                                                            "JOIN Modulo modulo ON chamados.fk_idModulo = modulo.id_Modulo " +
+                                                            "WHERE ";
                 if (TipoUsuario == "Cliente")
                 {
                     queryBuscaChamadosCliente += "fk_idCliente = @RecebeIdUsuario";
@@ -44,7 +53,9 @@ namespace TecnPoint.Dados.BuscarChamadoPorCliente
                                 NomeFuncionario = leitor.GetString(leitor.GetOrdinal("NomeFuncionario")),
                                 Status = leitor.GetString(leitor.GetOrdinal("Status")),
                                 Descricao = leitor.GetString(leitor.GetOrdinal("Descricao")),
-                                Prioridade = leitor.GetString(leitor.GetOrdinal("Prioridade"))
+                                Prioridade = leitor.GetString(leitor.GetOrdinal("Prioridade")),
+                                NomeJornada = leitor.GetString(leitor.GetOrdinal("JornadaChamado")),
+                                NomeModulo = leitor.GetString(leitor.GetOrdinal("ModuloChamado"))
                             });
                         }
                     }

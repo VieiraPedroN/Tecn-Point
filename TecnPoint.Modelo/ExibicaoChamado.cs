@@ -14,5 +14,7 @@ namespace TecnPoint.Modelo
         public string Status { get; set; }
         public string Descricao { get; set; }
         public string Prioridade { get; set; }
+        public string NomeJornada { get; set; }
+        public string NomeModulo { get; set; }
         }
     }
