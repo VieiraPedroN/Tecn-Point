@@ -7,7 +7,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TecnPoint.Modelo
 {
-    public class ClassDadosChamado
+    public class DadosChamado
     {
         private int _idChamado;
         private string _titulo;
@@ -21,7 +21,7 @@ namespace TecnPoint.Modelo
 
 
         //Construtor que vai receber os chamados (para serem exibidos posteriormente)
-        public ClassDadosChamado(int idChamado, string titulo, string descricao, 
+        public DadosChamado(int idChamado, string titulo, string descricao, 
                                   string status, string prioridade, int idCliente, 
                                  int idFuncionario, int Modulo, int Jornada)
         {
@@ -37,7 +37,7 @@ namespace TecnPoint.Modelo
         }
 
         //Construtor vazio para receber os dados para abertura de chamado
-        public ClassDadosChamado()
+        public DadosChamado()
         {
         }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TecnPoint.Modelo
+namespace TecnPoint.Modelo.DTO
 {
     public class ExibicaoChamado
     {
@@ -17,5 +17,5 @@ namespace TecnPoint.Modelo
         public string Prioridade { get; set; }
         public string NomeJornada { get; set; }
         public string NomeModulo { get; set; }
-        }
     }
+}
