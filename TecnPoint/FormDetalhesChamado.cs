@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System;
 using System.Windows.Forms;
-using TecnPoint.Modelo;
 using TecnPoint.Interface;
+using TecnPoint.Modelo.DTO;
 
 namespace TecnPoint.Interface
 {

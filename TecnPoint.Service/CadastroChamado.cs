@@ -22,7 +22,7 @@ namespace TecnPoint.Service
                                  string prioridade, int idCliente,
                                  int Modulo, int Jornada)
         {
-            ClassDadosChamado chamadoParam = new ClassDadosChamado()
+            DadosChamado chamadoParam = new DadosChamado()
             {
                 Titulo = titulo,
                 Descricao = descricao,

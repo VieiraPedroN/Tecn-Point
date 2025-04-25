@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TecnPoint.Modelo;
 using TecnPoint.Modelo.DadosUsuario;
+using TecnPoint.Modelo.DTO;
 using TecnPoint.Service.ObterChamadosPorUsuario;
 
 namespace TecnPoint.Interface
@@ -65,7 +66,7 @@ namespace TecnPoint.Interface
 
                 void AbrirDetalhes(ExibicaoChamado dadosChamado)
                 {
-                    ClassDadosChamado chamados = new ClassDadosChamado();
+                    DadosChamado chamados = new DadosChamado();
                     panel1.BringToFront();
 
                     FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(dadosChamado, this);
