@@ -16,13 +16,13 @@ CREATE TABLE Chamados (
 	id_Chamado SERIAL PRIMARY KEY,
 	Titulo VARCHAR(45) NOT NULL,
 	Descricao TEXT NOT NULL,
-	Status VARCHAR(10) NOT NULL,
+	Status VARCHAR(15) NOT NULL,
 	Prioridade VARCHAR(5) NOT NULL,
 	CONSTRAINT prioridade_chamado_check CHECK (
 		Prioridade IN ('Baixa', 'Média', 'Alta')
 	),
 	CONSTRAINT status_chamado_check CHECK (
-		Status IN ('Aberto', 'Pendente', 'Resolvido')
+		Status IN ('Aberto', 'Em andamento', 'Pendente', 'Resolvido')
 	),
 	fk_idCliente INT NOT NULL,
 	fk_idFuncionario INT NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE Modulo (
 /*Tabela conversas*/
 CREATE TABLE Conversa (
 	id_Conversa SERIAL PRIMARY KEY,
-	Mensagem VARCHAR(250),
+	Mensagem TEXT,
 	fk_idChamado INT,
 	fk_idRemetente INT,
 	Data_Hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -77,8 +77,8 @@ VALUES
 /*chamados*/
 INSERT INTO Chamados (Titulo, Descricao, Status, Prioridade, fk_idCliente, fk_idFuncionario, fk_idJornada, fk_idModulo)
 VALUES
-	('Instabilidade na internet', 'Estou a um tempao tentando trabalhar, mas a internet não está colaborando', 'Aberto', 'Baixa', 3, 1, 3, 3),
-	('Problema com Monitor', 'Meu monitor está falhando, acredito que seja problema no cabo HDMI!', 'Aberto', 'Baixa', 3, 4, 2, 1);
+	('Instabilidade na internet', 'Estou a um tempao tentando trabalhar, mas a internet não está colaborando', 'Aberto', 'Baixa', 4, 1, 3, 3),
+	('Problema com Monitor', 'Meu monitor está falhando, acredito que seja problema no cabo HDMI!', 'Aberto', 'Baixa', 6, 1, 2, 1);
 
 /*jornada*/
 INSERT INTO Jornada (jornada)
@@ -97,16 +97,15 @@ VALUES
 /*conversas*/
 INSERT INTO Conversa (Mensagem, fk_idRemetente, fk_idChamado)
 VALUES 
-	('Nós sabemos', 4, 2),
-	('Sou um cliente irritado!!', 3, 2),
-	('Bom dia, minha internet ainda está muito ruim!', 3, 1),
-	('Olá bom dia, como está a situação da internet?', 1, 1),
+	('Vamos resolver o seu problema', 4, 2),
+	('Eu preciso da ajuda de vocês!!', 3, 2),
+	('Bom dia, minha internet ainda está muito ruim!', 4, 1),
+	('Olá bom dia, como está a situação da internet?', 3, 1),
 	('Deu certo?', 1, 1),
 	('Minha internet ainda não voltou!', 3, 1), 
 	('Caso ainda não tenha voltado, desative a internet do seu dispositivo e ligue novamente', 1, 1);
 
 /*Consultas*/
-
 SELECT * FROM Usuarios;
 SELECT * FROM Chamados;
 SELECT * FROM Jornada;
