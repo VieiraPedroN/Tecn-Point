@@ -34,6 +34,8 @@
             label4 = new Label();
             btnVoltar = new Button();
             label5 = new Label();
+            cbxNomeFunc = new ComboBox();
+            btnAtribuicao = new Button();
             SuspendLayout();
             // 
             // label1
@@ -70,7 +72,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Consolas", 13F);
-            label4.Location = new Point(399, 125);
+            label4.Location = new Point(399, 109);
             label4.Name = "label4";
             label4.Size = new Size(70, 22);
             label4.TabIndex = 2;
@@ -99,11 +101,31 @@
             label5.TabIndex = 5;
             label5.Text = "label5";
             // 
+            // cbxNomeFunc
+            // 
+            cbxNomeFunc.FormattingEnabled = true;
+            cbxNomeFunc.Location = new Point(360, 134);
+            cbxNomeFunc.Name = "cbxNomeFunc";
+            cbxNomeFunc.Size = new Size(155, 23);
+            cbxNomeFunc.TabIndex = 6;
+            // 
+            // btnAtribuicao
+            // 
+            btnAtribuicao.Location = new Point(399, 163);
+            btnAtribuicao.Name = "btnAtribuicao";
+            btnAtribuicao.Size = new Size(75, 23);
+            btnAtribuicao.TabIndex = 7;
+            btnAtribuicao.Text = "Atribuir";
+            btnAtribuicao.UseVisualStyleBackColor = true;
+            btnAtribuicao.Click += btnAtribuicao_Click;
+            // 
             // FormDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 460);
+            Controls.Add(btnAtribuicao);
+            Controls.Add(cbxNomeFunc);
             Controls.Add(label5);
             Controls.Add(btnVoltar);
             Controls.Add(label3);
@@ -126,5 +148,7 @@
         private Label label4;
         private Button btnVoltar;
         private Label label5;
+        private ComboBox cbxNomeFunc;
+        private Button btnAtribuicao;
     }
 }
