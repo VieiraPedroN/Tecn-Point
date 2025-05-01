@@ -17,9 +17,9 @@ namespace TecnPoint.Dados
             using (ClassConexaoBanco conexao = new ClassConexaoBanco())
             {
                 string query = "SELECT u.Nome," +
-                                      "c.Mensagem, " +
-                                      "FROM Conversa c" +
-                                      "JOIN Usuarios u ON c.fk_idRemetente = u.idUsuario" +
+                                      "c.Mensagem " +
+                                      "FROM Conversa c " +
+                                      "JOIN Usuarios u ON c.fk_idRemetente = u.id_Usuario " +
                                       "WHERE c.fk_idChamado = @RecebeIdChamado";
 
                 using(NpgsqlCommand comando = new NpgsqlCommand(query, conexao.conexao))
