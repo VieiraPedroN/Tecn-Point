@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TecnPoint.Dados;
+using TecnPoint.Modelo;
 
 namespace TecnPoint.Service
 {
@@ -16,9 +17,9 @@ namespace TecnPoint.Service
             enviarMensagem = new InsereMensagemBanco();
         }
 
-        public void EnviarMensagem(string Mensagem, int IdChamado, int IdRemetente)
+        public void EnviarMensagem(DadosMensagens mensagemEnviada)
         {
-            enviarMensagem.InserirMensagem(Mensagem, IdChamado, IdRemetente);
+            enviarMensagem.InserirMensagem(mensagemEnviada);
         }
 
     }

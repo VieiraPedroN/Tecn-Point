@@ -20,7 +20,8 @@ namespace TecnPoint.Dados
                                       "c.Mensagem " +
                                       "FROM Conversa c " +
                                       "JOIN Usuarios u ON c.fk_idRemetente = u.id_Usuario " +
-                                      "WHERE c.fk_idChamado = @RecebeIdChamado";
+                                      "WHERE c.fk_idChamado = @RecebeIdChamado " +
+                                      "ORDER BY c.Data_Hora ASC";
 
                 using(NpgsqlCommand comando = new NpgsqlCommand(query, conexao.conexao))
                 {

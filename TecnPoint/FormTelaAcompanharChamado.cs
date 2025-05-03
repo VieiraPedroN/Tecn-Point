@@ -17,8 +17,9 @@ namespace TecnPoint.Interface
     public partial class FormTelaAcompanharChamado : Form
     {
         private DadosUsuario usuarioLogado;
+
         public FormTelaAcompanharChamado(DadosUsuario dadosUsuario)
-        { 
+        {
             this.usuarioLogado = dadosUsuario;
             InitializeComponent();
 
@@ -66,10 +67,12 @@ namespace TecnPoint.Interface
 
                 void AbrirDetalhes(ExibicaoChamado dadosChamado)
                 {
+                    DadosUsuario usuarioParam = new DadosUsuario();
+                    usuarioParam = usuarioLogado;
                     DadosChamado chamados = new DadosChamado();
                     panel1.BringToFront();
 
-                    FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(dadosChamado, this);
+                    FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(dadosChamado, this, usuarioParam);
                     detalhesChamado.TopLevel = false;
 
                     panel1.Controls.Clear();

@@ -103,6 +103,46 @@ namespace TecnPoint.Interface.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_enviado_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-enviado-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_enviado_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-enviado-501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_enviar_e_mail_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-enviar-e-mail-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_enviar_e_mail_201 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-enviar-e-mail-201", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PlusIconActive {
             get {
                 object obj = ResourceManager.GetObject("PlusIconActive", resourceCulture);
