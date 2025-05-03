@@ -36,6 +36,9 @@
             label5 = new Label();
             cbxNomeFunc = new ComboBox();
             btnAtribuicao = new Button();
+            PanelMsg = new FlowLayoutPanel();
+            tbxMensagem = new TextBox();
+            btnEnviar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -119,11 +122,42 @@
             btnAtribuicao.UseVisualStyleBackColor = true;
             btnAtribuicao.Click += btnAtribuicao_Click;
             // 
+            // PanelMsg
+            // 
+            PanelMsg.AutoScroll = true;
+            PanelMsg.BackColor = SystemColors.ScrollBar;
+            PanelMsg.FlowDirection = FlowDirection.TopDown;
+            PanelMsg.Location = new Point(108, 149);
+            PanelMsg.Name = "PanelMsg";
+            PanelMsg.Size = new Size(249, 276);
+            PanelMsg.TabIndex = 8;
+            PanelMsg.WrapContents = false;
+            // 
+            // tbxMensagem
+            // 
+            tbxMensagem.Location = new Point(108, 431);
+            tbxMensagem.Name = "tbxMensagem";
+            tbxMensagem.Size = new Size(194, 23);
+            tbxMensagem.TabIndex = 0;
+            // 
+            // btnEnviar
+            // 
+            btnEnviar.Image = Properties.Resources.icons8_enviar_e_mail_201;
+            btnEnviar.Location = new Point(308, 431);
+            btnEnviar.Name = "btnEnviar";
+            btnEnviar.Size = new Size(49, 26);
+            btnEnviar.TabIndex = 9;
+            btnEnviar.UseVisualStyleBackColor = true;
+            btnEnviar.Click += btnEnviar_Click;
+            // 
             // FormDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 460);
+            Controls.Add(btnEnviar);
+            Controls.Add(tbxMensagem);
+            Controls.Add(PanelMsg);
             Controls.Add(btnAtribuicao);
             Controls.Add(cbxNomeFunc);
             Controls.Add(label5);
@@ -150,5 +184,8 @@
         private Label label5;
         private ComboBox cbxNomeFunc;
         private Button btnAtribuicao;
+        private FlowLayoutPanel PanelMsg;
+        private TextBox tbxMensagem;
+        private Button btnEnviar;
     }
 }
