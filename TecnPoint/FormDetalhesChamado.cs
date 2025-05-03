@@ -60,7 +60,7 @@ namespace TecnPoint.Interface
             ServCarregaPrioridade.CarregaPrioridade(cbxPrioridade);
             CarregaMensagem();
             carregandoCombo = false;
-            MessageBox.Show("teste");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
