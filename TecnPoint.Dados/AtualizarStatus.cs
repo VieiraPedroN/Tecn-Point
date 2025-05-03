@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 
 namespace TecnPoint.Dados
 {
-    public class AtualizaFuncionario
+    public class AtualizarStatus
     {
-
-        public void AtualizaFunc(int idChamado, int idFunc)
+        public void AtualizaStatus(int idChamado, string status)
         {
             using (ClassConexaoBanco conexao = new ClassConexaoBanco())
             {
-                string query = "UPDATE Chamados SET fk_idFuncionario = @RecebeIdFunc WHERE id_Chamado = @RecebeIdChamado";
+                string query = "UPDATE Chamados SET Status = @RecebeStatus WHERE id_Chamado = @RecebeIdChamado";
 
                 using (NpgsqlCommand comando = new NpgsqlCommand(query, conexao.conexao))
                 {
-                    comando.Parameters.AddWithValue("@RecebeIdFunc", idFunc);
+                    comando.Parameters.AddWithValue("@RecebeStatus", status);
                     comando.Parameters.AddWithValue("@RecebeIdChamado", idChamado);
 
                     int linhasAlteradas = comando.ExecuteNonQuery();

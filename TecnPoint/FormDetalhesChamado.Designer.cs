@@ -35,14 +35,18 @@
             btnVoltar = new Button();
             label5 = new Label();
             cbxNomeFunc = new ComboBox();
-            btnAtribuicao = new Button();
+            PanelMsg = new FlowLayoutPanel();
+            tbxMensagem = new TextBox();
+            btnEnviar = new Button();
+            cbxStatus = new ComboBox();
+            cbxPrioridade = new ComboBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Consolas", 15F, FontStyle.Bold);
-            label1.Location = new Point(26, 17);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(76, 23);
             label1.TabIndex = 0;
@@ -52,7 +56,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Consolas", 13F);
-            label2.Location = new Point(399, 323);
+            label2.Location = new Point(388, 273);
             label2.Name = "label2";
             label2.Size = new Size(70, 22);
             label2.TabIndex = 1;
@@ -62,7 +66,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Consolas", 11F);
-            label3.Location = new Point(367, 22);
+            label3.Location = new Point(395, 22);
             label3.Name = "label3";
             label3.Size = new Size(56, 18);
             label3.TabIndex = 3;
@@ -72,7 +76,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Consolas", 13F);
-            label4.Location = new Point(399, 109);
+            label4.Location = new Point(388, 109);
             label4.Name = "label4";
             label4.Size = new Size(70, 22);
             label4.TabIndex = 2;
@@ -82,10 +86,10 @@
             // 
             btnVoltar.Cursor = Cursors.Hand;
             btnVoltar.FlatStyle = FlatStyle.Flat;
-            btnVoltar.Font = new Font("Consolas", 11F);
-            btnVoltar.Location = new Point(12, 413);
+            btnVoltar.Font = new Font("Consolas", 8F);
+            btnVoltar.Location = new Point(12, 420);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(90, 35);
+            btnVoltar.Size = new Size(55, 28);
             btnVoltar.TabIndex = 4;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
@@ -95,7 +99,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Consolas", 11F);
-            label5.Location = new Point(443, 22);
+            label5.Location = new Point(471, 22);
             label5.Name = "label5";
             label5.Size = new Size(56, 18);
             label5.TabIndex = 5;
@@ -103,28 +107,76 @@
             // 
             // cbxNomeFunc
             // 
+            cbxNomeFunc.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxNomeFunc.FormattingEnabled = true;
-            cbxNomeFunc.Location = new Point(360, 134);
+            cbxNomeFunc.Location = new Point(388, 134);
             cbxNomeFunc.Name = "cbxNomeFunc";
             cbxNomeFunc.Size = new Size(155, 23);
             cbxNomeFunc.TabIndex = 6;
+            cbxNomeFunc.SelectedIndexChanged += cbxNomeFunc_SelectedIndexChanged;
             // 
-            // btnAtribuicao
+            // PanelMsg
             // 
-            btnAtribuicao.Location = new Point(399, 163);
-            btnAtribuicao.Name = "btnAtribuicao";
-            btnAtribuicao.Size = new Size(75, 23);
-            btnAtribuicao.TabIndex = 7;
-            btnAtribuicao.Text = "Atribuir";
-            btnAtribuicao.UseVisualStyleBackColor = true;
-            btnAtribuicao.Click += btnAtribuicao_Click;
+            PanelMsg.AutoScroll = true;
+            PanelMsg.BackColor = Color.Gainsboro;
+            PanelMsg.FlowDirection = FlowDirection.TopDown;
+            PanelMsg.Location = new Point(26, 109);
+            PanelMsg.Name = "PanelMsg";
+            PanelMsg.Size = new Size(356, 276);
+            PanelMsg.TabIndex = 8;
+            PanelMsg.WrapContents = false;
+            // 
+            // tbxMensagem
+            // 
+            tbxMensagem.Font = new Font("Consolas", 9F);
+            tbxMensagem.Location = new Point(96, 402);
+            tbxMensagem.Multiline = true;
+            tbxMensagem.Name = "tbxMensagem";
+            tbxMensagem.ScrollBars = ScrollBars.Vertical;
+            tbxMensagem.Size = new Size(222, 46);
+            tbxMensagem.TabIndex = 0;
+            // 
+            // btnEnviar
+            // 
+            btnEnviar.Image = Properties.Resources.icons8_enviar_e_mail_2011;
+            btnEnviar.Location = new Point(333, 420);
+            btnEnviar.Name = "btnEnviar";
+            btnEnviar.Size = new Size(49, 26);
+            btnEnviar.TabIndex = 9;
+            btnEnviar.UseVisualStyleBackColor = true;
+            btnEnviar.Click += btnEnviar_Click;
+            // 
+            // cbxStatus
+            // 
+            cbxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxStatus.FormattingEnabled = true;
+            cbxStatus.Items.AddRange(new object[] { "Baixa", "Média", "Alta" });
+            cbxStatus.Location = new Point(358, 43);
+            cbxStatus.Name = "cbxStatus";
+            cbxStatus.Size = new Size(84, 23);
+            cbxStatus.TabIndex = 10;
+            // 
+            // cbxPrioridade
+            // 
+            cbxPrioridade.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxPrioridade.FormattingEnabled = true;
+            cbxPrioridade.Items.AddRange(new object[] { "Aberto", "Pendente", "Resolvido" });
+            cbxPrioridade.Location = new Point(459, 43);
+            cbxPrioridade.Name = "cbxPrioridade";
+            cbxPrioridade.Size = new Size(84, 23);
+            cbxPrioridade.TabIndex = 11;
+            cbxPrioridade.SelectedIndexChanged += cbxPrioridade_SelectedIndexChanged;
             // 
             // FormDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 460);
-            Controls.Add(btnAtribuicao);
+            Controls.Add(cbxPrioridade);
+            Controls.Add(cbxStatus);
+            Controls.Add(btnEnviar);
+            Controls.Add(tbxMensagem);
+            Controls.Add(PanelMsg);
             Controls.Add(cbxNomeFunc);
             Controls.Add(label5);
             Controls.Add(btnVoltar);
@@ -149,6 +201,10 @@
         private Button btnVoltar;
         private Label label5;
         private ComboBox cbxNomeFunc;
-        private Button btnAtribuicao;
+        private FlowLayoutPanel PanelMsg;
+        private TextBox tbxMensagem;
+        private Button btnEnviar;
+        private ComboBox cbxStatus;
+        private ComboBox cbxPrioridade;
     }
 }
