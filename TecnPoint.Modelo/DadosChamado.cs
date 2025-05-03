@@ -44,7 +44,7 @@ namespace TecnPoint.Modelo
         public int IdChamado
         {
             get { return _idChamado; }
-            set { IdChamado = value; }
+            set { _idChamado = value; }
         }
         public string Titulo
         {

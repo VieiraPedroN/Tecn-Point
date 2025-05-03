@@ -46,7 +46,7 @@
             // txtbNome
             // 
             txtbNome.Font = new Font("Segoe UI", 11F);
-            txtbNome.Location = new Point(140, 65);
+            txtbNome.Location = new Point(140, 76);
             txtbNome.Name = "txtbNome";
             txtbNome.PlaceholderText = "Insira o nome";
             txtbNome.Size = new Size(300, 27);
@@ -56,7 +56,7 @@
             // txtbEmail
             // 
             txtbEmail.Font = new Font("Segoe UI", 11F);
-            txtbEmail.Location = new Point(140, 160);
+            txtbEmail.Location = new Point(140, 157);
             txtbEmail.Name = "txtbEmail";
             txtbEmail.PlaceholderText = "Insira o e-mail";
             txtbEmail.Size = new Size(300, 27);
@@ -66,7 +66,7 @@
             // txtbSenha
             // 
             txtbSenha.Font = new Font("Segoe UI", 11F);
-            txtbSenha.Location = new Point(140, 255);
+            txtbSenha.Location = new Point(140, 238);
             txtbSenha.Name = "txtbSenha";
             txtbSenha.PlaceholderText = "Insira a senha";
             txtbSenha.Size = new Size(300, 27);
@@ -111,7 +111,7 @@
             lblNome.AutoSize = true;
             lblNome.BackColor = Color.Transparent;
             lblNome.Font = new Font("Consolas", 13F);
-            lblNome.Location = new Point(114, 28);
+            lblNome.Location = new Point(114, 38);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(50, 22);
             lblNome.TabIndex = 7;
@@ -122,7 +122,7 @@
             lblEmail.AutoSize = true;
             lblEmail.BackColor = Color.Transparent;
             lblEmail.Font = new Font("Consolas", 13F);
-            lblEmail.Location = new Point(114, 123);
+            lblEmail.Location = new Point(114, 119);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(70, 22);
             lblEmail.TabIndex = 8;
@@ -133,7 +133,7 @@
             lblSenha.AutoSize = true;
             lblSenha.BackColor = Color.Transparent;
             lblSenha.Font = new Font("Consolas", 13F);
-            lblSenha.Location = new Point(114, 218);
+            lblSenha.Location = new Point(114, 200);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(60, 22);
             lblSenha.TabIndex = 9;
@@ -144,7 +144,7 @@
             lblTipoUsuario.AutoSize = true;
             lblTipoUsuario.BackColor = Color.Transparent;
             lblTipoUsuario.Font = new Font("Consolas", 13F);
-            lblTipoUsuario.Location = new Point(114, 313);
+            lblTipoUsuario.Location = new Point(114, 281);
             lblTipoUsuario.Name = "lblTipoUsuario";
             lblTipoUsuario.Size = new Size(160, 22);
             lblTipoUsuario.TabIndex = 10;
@@ -156,7 +156,7 @@
             cbbTipoUsuário.Font = new Font("Segoe UI", 11F);
             cbbTipoUsuário.FormattingEnabled = true;
             cbbTipoUsuário.Items.AddRange(new object[] { "Funcionário", "Cliente" });
-            cbbTipoUsuário.Location = new Point(140, 350);
+            cbbTipoUsuário.Location = new Point(140, 319);
             cbbTipoUsuário.Name = "cbbTipoUsuário";
             cbbTipoUsuário.Size = new Size(300, 28);
             cbbTipoUsuário.TabIndex = 3;

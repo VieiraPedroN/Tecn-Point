@@ -21,7 +21,11 @@ namespace TecnPoint.Interface
     {
         private FormTelaAcompanharChamado formPai;
         private ExibicaoChamado dadosChamado;
-        public CarregaComboBox ServCarregaNomesFunc = new CarregaComboBox();
+        public CarregaCbxStatus ServCarregaStatus = new CarregaCbxStatus();
+        public CarregaCbxFunc ServCarregaNomesFunc = new CarregaCbxFunc();
+        public CarregaCbxPrioridade ServCarregaPrioridade = new CarregaCbxPrioridade();
+        public AtribuiPrioridade ServAtribuiPrioridade = new AtribuiPrioridade();
+        public AtribuiStatus ServAtribuiStatus = new AtribuiStatus();
         public AtribuicaoChamado ServAtribuiCham = new AtribuicaoChamado();
         public ServCarregarMensagens ServCarregarMensagens = new ServCarregarMensagens();
         public ServEnviarMensagem ServEnviarMensagem = new ServEnviarMensagem();
@@ -35,10 +39,12 @@ namespace TecnPoint.Interface
             InitializeComponent();
         }
 
+        private bool carregandoCombo = true;
+
         private void PreencherDetalhes()
         {
             label1.Text = dadosChamado.Titulo;
-            label2.Text = dadosChamado.Descricao;
+            label2.Text = dadosChamado.NomeCliente;
             label3.Text = dadosChamado.Status;
             label4.Text = dadosChamado.NomeFuncionario;
             label5.Text = dadosChamado.Prioridade;
@@ -47,20 +53,58 @@ namespace TecnPoint.Interface
         private void FormDetalhesChamado_Load(object sender, EventArgs e)
         {
             PreencherDetalhes();
-            Label label6 = new Label { Text = $"{dadosChamado.Descricao}", Location = new Point(51, 70), Size = new Size(250, 200), Font = new Font("Consolas", 13) };
+            Label label6 = new Label { Text = $"{dadosChamado.Descricao}", Location = new Point(22, 40), Size = new Size(250, 200), Font = new Font("Consolas", 9) };
             Controls.Add(label6);
-            ServCarregaNomesFunc.CarregaNomeFunc(cbxNomeFunc);//Carregando nome dos clientes para o combobox
-            CarregaMensagem();//Carregando mensagens para o FlowlayoutPanel
+            ServCarregaStatus.CarregaStatus(cbxStatus);
+            ServCarregaNomesFunc.CarregaNomeFunc(cbxNomeFunc);
+            ServCarregaPrioridade.CarregaPrioridade(cbxPrioridade);
+            CarregaMensagem();
+            carregandoCombo = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            formPai.CarregarChamados();
             formPai.MostrarCards();
         }
 
-        private void btnAtribuicao_Click(object sender, EventArgs e)
+        private void cbxNomeFunc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ServAtribuiCham.AtribuiChamado(dadosChamado.IdChamado, (int)cbxNomeFunc.SelectedValue);
+            if (!carregandoCombo && cbxNomeFunc.SelectedItem != null)
+            {
+                var funcionarioSelecionado = cbxNomeFunc.SelectedItem as DadosUsuario;
+                if (funcionarioSelecionado != null)
+                {
+                    ServAtribuiCham.AtribuiChamado(dadosChamado.IdChamado, funcionarioSelecionado.IdUsuario);
+                    label4.Text = funcionarioSelecionado.Nome;
+                }
+            }
+        }
+
+        private void cbxStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!carregandoCombo && cbxStatus.SelectedItem != null)
+            {
+                var statusSelecionado = cbxStatus.SelectedItem as DadosChamado;
+                if (statusSelecionado != null)
+                {
+                    ServAtribuiStatus.AtribuirStatus(dadosChamado.IdChamado, statusSelecionado.Status);
+                    label3.Text = statusSelecionado.Status;
+                }
+            }
+        }
+        private void cbxPrioridade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!carregandoCombo && cbxPrioridade.SelectedItem != null)
+            {
+                var prioridadeSelecionada = cbxPrioridade.SelectedItem as DadosChamado;
+                if (prioridadeSelecionada != null)
+                {
+                    ServAtribuiPrioridade.AtribuirPrioridades(dadosChamado.IdChamado, prioridadeSelecionada.Prioridade);
+                    label5.Text = prioridadeSelecionada.Prioridade;
+                }
+            }
         }
 
         private void CarregaMensagem()
@@ -81,7 +125,7 @@ namespace TecnPoint.Interface
             ExibeMensagens(usuarioLogado.Nome, tbxMensagem.Text);//exibe a mensagem que o usuárioLogado acabou de enviar
             tbxMensagem.Clear();
         }
-        
+
         private void ExibeMensagens(string nomeRemetente, string Mensagem)
         {
             Panel mensagemNoPanel = new Panel()
@@ -105,6 +149,8 @@ namespace TecnPoint.Interface
             PanelMsg.Controls.Add(mensagemNoPanel);//adiciona panel no flowlayoutpanel
             PanelMsg.ScrollControlIntoView(mensagemNoPanel);//vai pra úlitma mensagem
         }
+
+        
     }
 }
 

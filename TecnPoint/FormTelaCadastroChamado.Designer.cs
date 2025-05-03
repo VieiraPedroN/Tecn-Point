@@ -58,6 +58,7 @@
             txtbDescricao.Multiline = true;
             txtbDescricao.Name = "txtbDescricao";
             txtbDescricao.PlaceholderText = "Descreva o que ocorreu e como ocorreu";
+            txtbDescricao.ScrollBars = ScrollBars.Vertical;
             txtbDescricao.Size = new Size(330, 97);
             txtbDescricao.TabIndex = 1;
             // 

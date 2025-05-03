@@ -27,7 +27,7 @@ namespace TecnPoint.Interface
             this.Dock = DockStyle.Fill;
         }
 
-        private void CarregarChamados()
+        public void CarregarChamados()
         {
             ObterChamadosPorUsuario service = new ObterChamadosPorUsuario();
             var dadosChamados = service.BuscarChamados(usuarioLogado.IdUsuario, usuarioLogado.TipoUsuario);
@@ -85,6 +85,7 @@ namespace TecnPoint.Interface
                 card.Margin = new Padding(marginHorizontal, 2, 0, 12);
 
                 flowLayoutPanel1.Controls.Add(card);
+                flowLayoutPanel1.Controls.SetChildIndex(card, 0);
             }
         }
 

@@ -7,10 +7,10 @@ using TecnPoint.Dados;
 
 namespace TecnPoint.Service
 {
-    public class CarregaComboBox
+    public class CarregaCbxFunc
     {
         CarregarFuncionarios carregaFunc;
-        public CarregaComboBox()
+        public CarregaCbxFunc()
         {
             carregaFunc = new CarregarFuncionarios(); 
         }
