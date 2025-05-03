@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetalhesChamado));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -66,7 +67,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Consolas", 11F);
-            label3.Location = new Point(395, 22);
+            label3.Location = new Point(354, 34);
             label3.Name = "label3";
             label3.Size = new Size(56, 18);
             label3.TabIndex = 3;
@@ -99,7 +100,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Consolas", 11F);
-            label5.Location = new Point(471, 22);
+            label5.Location = new Point(455, 34);
             label5.Name = "label5";
             label5.Size = new Size(56, 18);
             label5.TabIndex = 5;
@@ -138,7 +139,7 @@
             // 
             // btnEnviar
             // 
-            btnEnviar.Image = Properties.Resources.icons8_enviar_e_mail_2011;
+            btnEnviar.Image = (Image)resources.GetObject("btnEnviar.Image");
             btnEnviar.Location = new Point(333, 420);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(49, 26);
@@ -150,18 +151,19 @@
             // 
             cbxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxStatus.FormattingEnabled = true;
-            cbxStatus.Items.AddRange(new object[] { "Baixa", "Média", "Alta" });
-            cbxStatus.Location = new Point(358, 43);
+            cbxStatus.Items.AddRange(new object[] { "Selecione...", "Aberto", "Em andamento", "Pendente", "Resolvido" });
+            cbxStatus.Location = new Point(354, 55);
             cbxStatus.Name = "cbxStatus";
             cbxStatus.Size = new Size(84, 23);
             cbxStatus.TabIndex = 10;
+            cbxStatus.SelectedIndexChanged += cbxStatus_SelectedIndexChanged;
             // 
             // cbxPrioridade
             // 
             cbxPrioridade.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxPrioridade.FormattingEnabled = true;
-            cbxPrioridade.Items.AddRange(new object[] { "Aberto", "Pendente", "Resolvido" });
-            cbxPrioridade.Location = new Point(459, 43);
+            cbxPrioridade.Items.AddRange(new object[] { "Selecione...", "Baixa", "Média", "Alta" });
+            cbxPrioridade.Location = new Point(455, 55);
             cbxPrioridade.Name = "cbxPrioridade";
             cbxPrioridade.Size = new Size(84, 23);
             cbxPrioridade.TabIndex = 11;

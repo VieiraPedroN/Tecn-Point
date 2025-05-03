@@ -23,11 +23,11 @@ namespace TecnPoint.Dados
                     int linhasAlteradas = comando.ExecuteNonQuery();
                     if (linhasAlteradas == 1)
                     {
-                        MessageBox.Show("Funcionário atribuído ao chamado com sucesso!", "TECN POINT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Prioridade atribuída ao chamado com sucesso!", "TECN POINT", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Erro ao atribuir funcionário ao chamado!", "TECN POINT", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Erro ao atribuir prioridade ao chamado!", "TECN POINT", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

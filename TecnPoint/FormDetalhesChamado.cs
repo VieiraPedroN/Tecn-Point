@@ -55,12 +55,13 @@ namespace TecnPoint.Interface
             PreencherDetalhes();
             Label label6 = new Label { Text = $"{dadosChamado.Descricao}", Location = new Point(22, 40), Size = new Size(250, 200), Font = new Font("Consolas", 9) };
             Controls.Add(label6);
-            ServCarregaStatus.CarregaStatus(cbxStatus);
+            //ServCarregaStatus.CarregaStatus(cbxStatus);
             ServCarregaNomesFunc.CarregaNomeFunc(cbxNomeFunc);
-            ServCarregaPrioridade.CarregaPrioridade(cbxPrioridade);
+            //ServCarregaPrioridade.CarregaPrioridade(cbxPrioridade);
             CarregaMensagem();
             carregandoCombo = false;
-
+            cbxStatus.SelectedIndex = 0;
+            cbxPrioridade.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,23 +87,24 @@ namespace TecnPoint.Interface
         {
             if (!carregandoCombo && cbxStatus.SelectedItem != null)
             {
-                var statusSelecionado = cbxStatus.SelectedItem as DadosChamado;
-                if (statusSelecionado != null)
+                if (cbxStatus.SelectedIndex != 0)
                 {
-                    ServAtribuiStatus.AtribuirStatus(dadosChamado.IdChamado, statusSelecionado.Status);
-                    label3.Text = statusSelecionado.Status;
+                    string statusAtualizado = cbxStatus.Text;
+                    ServAtribuiStatus.AtribuirStatus(dadosChamado.IdChamado, statusAtualizado);
+                    label3.Text = statusAtualizado;
                 }
             }
         }
+
         private void cbxPrioridade_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!carregandoCombo && cbxPrioridade.SelectedItem != null)
             {
-                var prioridadeSelecionada = cbxPrioridade.SelectedItem as DadosChamado;
-                if (prioridadeSelecionada != null)
-                {
-                    ServAtribuiPrioridade.AtribuirPrioridades(dadosChamado.IdChamado, prioridadeSelecionada.Prioridade);
-                    label5.Text = prioridadeSelecionada.Prioridade;
+                if(cbxPrioridade.SelectedIndex != 0)
+                { 
+                    string prioridadeAtualizada = cbxPrioridade.Text;
+                    ServAtribuiPrioridade.AtribuirPrioridades(dadosChamado.IdChamado, prioridadeAtualizada);
+                    label5.Text = prioridadeAtualizada;
                 }
             }
         }
