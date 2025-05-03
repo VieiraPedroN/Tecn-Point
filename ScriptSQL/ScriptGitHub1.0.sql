@@ -1,5 +1,5 @@
-/* CriaÁ„o das tabelas */
-/*Tabela usu·rios*/
+/* Cria√ß√£o das tabelas */
+/*Tabela usu√°rios*/
 CREATE TABLE Usuarios (
 	id_Usuario SERIAL PRIMARY KEY,
 	Nome VARCHAR(100) NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE Usuarios (
 	Senha VARCHAR(100) NOT NULL,
 	tipo_Usuario VARCHAR(15) NOT NULL,
 	CONSTRAINT tipo_usuario_check CHECK (
-		tipo_usuario IN ('Funcion·rio', 'Cliente')
+		tipo_usuario IN ('Funcion√°rio', 'Cliente')
 	)	
 );
 
@@ -19,7 +19,7 @@ CREATE TABLE Chamados (
 	Status VARCHAR(15) NOT NULL,
 	Prioridade VARCHAR(5) NOT NULL,
 	CONSTRAINT prioridade_chamado_check CHECK (
-		Prioridade IN ('Baixa', 'MÈdia', 'Alta')
+		Prioridade IN ('Baixa', 'M√©dia', 'Alta')
 	),
 	CONSTRAINT status_chamado_check CHECK (
 		Status IN ('Aberto', 'Em andamento', 'Pendente', 'Resolvido')
@@ -43,7 +43,7 @@ CREATE TABLE Jornada (
 	)
 );
 
-/*Tabela mÛdulo*/
+/*Tabela m√≥dulo*/
 CREATE TABLE Modulo (
 	id_Modulo SERIAL PRIMARY KEY,
 	modulo VARCHAR(25),
@@ -63,23 +63,23 @@ CREATE TABLE Conversa (
 	FOREIGN KEY (fk_idChamado) REFERENCES Chamados(id_Chamado)	
 );
 
-/*InserÁ„o de valores nas tabelas*/
-/*usu·rios*/
+/*Inser√ß√£o de valores nas tabelas*/
+/*usu√°rios*/
 INSERT INTO Usuarios (Nome, Email, Senha, tipo_Usuario)
 VALUES 
-	('Suporte Tech', 'TechSolution@gmail.com', 'techs', 'Funcion·rio'),
+	('Suporte Tech', 'TechSolution@gmail.com', 'techs', 'Funcion√°rio'),
 	('cliente', '@.', '123', 'Cliente'),
-	('teste', 'testefunc@gmail.com', 'teste', 'Funcion·rio'),
-	('Danilo Alves da Silva', 'danalvessilva@gmail.com.br', 'dan163', 'Funcion·rio'),
+	('teste', 'testefunc@gmail.com', 'teste', 'Funcion√°rio'),
+	('Danilo Alves da Silva', 'danalvessilva@gmail.com.br', 'dan163', 'Funcion√°rio'),
 	('Michael do Valle', 'valledomichael@gmail.com', 'senhamaisforte', 'Cliente'),
-	('Leonardo Miranda', 'leomiranda@gmail.com', 'sanheforte', 'Funcion·rio'),
+	('Leonardo Miranda', 'leomiranda@gmail.com', 'sanheforte', 'Funcion√°rio'),
 	('Aroldo Carlos', 'caroldo@gmail.com', '99008760', 'Cliente');
 
 /*chamados*/
 INSERT INTO Chamados (Titulo, Descricao, Status, Prioridade, fk_idCliente, fk_idFuncionario, fk_idJornada, fk_idModulo)
 VALUES
-	('Instabilidade na internet', 'Estou a um tempao tentando trabalhar, mas a internet n„o est· colaborando', 'Aberto', 'Baixa', 7, 1, 3, 3),
-	('Problema com Monitor', 'Meu monitor est· falhando, acredito que seja problema no cabo HDMI!', 'Aberto', 'Baixa', 5, 1, 2, 1);
+	('Instabilidade na internet', 'Estou a um tempao tentando trabalhar, mas a internet n√£o est√° colaborando', 'Aberto', 'Baixa', 7, 1, 3, 3),
+	('Problema com Monitor', 'Meu monitor est√° falhando, acredito que seja problema no cabo HDMI!', 'Aberto', 'Baixa', 5, 1, 2, 1);
 
 /*jornada*/
 INSERT INTO Jornada (jornada)
@@ -88,7 +88,7 @@ VALUES
 	('Financeiro'),
 	('Recursos Humanos');
 
-/*mÛdulo*/
+/*m√≥dulo*/
 INSERT INTO Modulo (modulo)
 VALUES 
 	('Hardware'),
