@@ -20,8 +20,8 @@ namespace TecnPoint.Interface
             this.usuarioLogado = dadosUsuario;
             InitializeComponent();
         }
-        private void CarregarFormularioForm(Form form) 
-        { 
+        private void CarregarFormularioForm(Form form)
+        {
             panel1.Controls.Clear();
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
@@ -54,6 +54,12 @@ namespace TecnPoint.Interface
             AlternarBotoes(botaoAcompanharChamado, botaoCriarChamado);
             CarregarFormularioForm(new FormTelaAcompanharChamado(usuarioLogado));
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormTelaChatbot telachatbot = new FormTelaChatbot();
+            telachatbot.Show();
+        }
     }
-        
+
 }

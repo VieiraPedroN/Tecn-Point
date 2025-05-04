@@ -21,9 +21,7 @@ namespace TecnPoint.Interface
     {
         private FormTelaAcompanharChamado formPai;
         private ExibicaoChamado dadosChamado;
-        public CarregaCbxStatus ServCarregaStatus = new CarregaCbxStatus();
         public CarregaCbxFunc ServCarregaNomesFunc = new CarregaCbxFunc();
-        public CarregaCbxPrioridade ServCarregaPrioridade = new CarregaCbxPrioridade();
         public AtribuiPrioridade ServAtribuiPrioridade = new AtribuiPrioridade();
         public AtribuiStatus ServAtribuiStatus = new AtribuiStatus();
         public AtribuicaoChamado ServAtribuiCham = new AtribuicaoChamado();
@@ -55,9 +53,7 @@ namespace TecnPoint.Interface
             PreencherDetalhes();
             Label label6 = new Label { Text = $"{dadosChamado.Descricao}", Location = new Point(22, 40), Size = new Size(250, 200), Font = new Font("Consolas", 9) };
             Controls.Add(label6);
-            //ServCarregaStatus.CarregaStatus(cbxStatus);
             ServCarregaNomesFunc.CarregaNomeFunc(cbxNomeFunc);
-            //ServCarregaPrioridade.CarregaPrioridade(cbxPrioridade);
             CarregaMensagem();
             carregandoCombo = false;
             cbxStatus.SelectedIndex = 0;
