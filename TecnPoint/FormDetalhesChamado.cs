@@ -66,6 +66,7 @@ namespace TecnPoint.Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
+            formPai.flowLayoutPanel1.Controls.Clear();
             formPai.CarregarChamados();
             formPai.MostrarCards();
         }
