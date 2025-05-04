@@ -21,9 +21,9 @@ namespace TecnPoint.Interface
     {
         private FormTelaAcompanharChamado formPai;
         private ExibicaoChamado dadosChamado;
-        public CarregaCbxStatus ServCarregaStatus = new CarregaCbxStatus();
+        //public CarregaCbxStatus ServCarregaStatus = new CarregaCbxStatus();
         public CarregaCbxFunc ServCarregaNomesFunc = new CarregaCbxFunc();
-        public CarregaCbxPrioridade ServCarregaPrioridade = new CarregaCbxPrioridade();
+        //public CarregaCbxPrioridade ServCarregaPrioridade = new CarregaCbxPrioridade();
         public AtribuiPrioridade ServAtribuiPrioridade = new AtribuiPrioridade();
         public AtribuiStatus ServAtribuiStatus = new AtribuiStatus();
         public AtribuicaoChamado ServAtribuiCham = new AtribuicaoChamado();

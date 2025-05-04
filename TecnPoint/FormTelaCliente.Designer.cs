@@ -35,6 +35,7 @@
             botaoAcompanharChamado = new Button();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // NomeUsuario
@@ -123,6 +124,16 @@
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             // 
+            // button1
+            // 
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(10, 400);
+            button1.Name = "button1";
+            button1.Size = new Size(44, 38);
+            button1.TabIndex = 6;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // FormTelaCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -131,6 +142,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(botaoAcompanharChamado);
             Controls.Add(botaoCriarChamado);
             Controls.Add(groupBox1);
@@ -155,5 +167,6 @@
         private Button botaoAcompanharChamado;
         private Panel panel1;
         private GroupBox groupBox1;
+        private Button button1;
     }
 }
