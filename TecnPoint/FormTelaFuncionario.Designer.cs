@@ -134,6 +134,7 @@
             Controls.Add(EmailUsuario);
             Controls.Add(NomeUsuario);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormTelaFuncionario";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FormTelaFuncionario";

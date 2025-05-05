@@ -150,6 +150,7 @@
             Controls.Add(EmailUsuario);
             Controls.Add(NomeUsuario);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormTelaCliente";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormTelaCliente";

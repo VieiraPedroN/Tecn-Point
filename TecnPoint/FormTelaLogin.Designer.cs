@@ -157,6 +157,7 @@ namespace TecnPoint
             Controls.Add(EntradaEmail);
             Controls.Add(botaoEntrarLogin);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormTelaLogin";
             StartPosition = FormStartPosition.CenterScreen;
