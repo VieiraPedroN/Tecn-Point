@@ -22,7 +22,7 @@ namespace TecnPoint.Interface
         private void FormTelaChatbot_Load(object sender, EventArgs e)
         {
             AdicionaMensagem("TecnBot", "Olá! sou o TecnBot, que pena que está com problemas :(\nmas estou aqui para te ajudar! Onde está o problema? " +
-                            "\n\t1 - Software\n\t2 - Hardware\n\t3 - Rede");
+                            "\n\t1 - Sistema\n\t2 - Equipamentos\n\t3 - Rede");
         }
 
         private void btnEnviarMensagem_Click(object sender, EventArgs e)
