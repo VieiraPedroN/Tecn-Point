@@ -95,19 +95,39 @@ namespace TecnPoint.Interface
                             "\n• Verifique com o responsável pelo sistema ou setor de TI se você tem acesso autorizado." +
                             "\n• Se for um programa novo, peça que enviem a senha ou licença correta.";
                     }
-                    else if(opcaoUsuario == "5")
+                        else if(opcaoUsuario == "5")
                     {
                         return "5 - Como cadastrar um novo usuário ❓\n" +
-                            "Para cadastrar um novo usuário, por favor encaminhar um chamado para o suporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.";
+                            "• Para cadastrar um novo usuário, por favor encaminhar um chamado para o suporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.";
                     }
                     else
                     {
-                        return "Opção inválida";
+                        return "Opção inválida! Insira uma das respostas acima";
+                    }
+                case "sub_Hardware":
+                    if(opcaoUsuario == "1")
+                    {
+                        return "1 - Teclado ou mouse não funcionam\n• Desconecte e conecte novamente. Tente trocar de porta USB. Se for sem fio, verifique a bateria.";
+                    } else if(opcaoUsuario == "2")
+                    {
+                        return "2 - Monitor sem imagem\n• Verifique se o cabo de vídeo está bem conectado e se o monitor está ligado. Tente reiniciar o computador.";
+                    }else if(opcaoUsuario == "3")
+                    {
+                        return "3 - Impressora não está imprimindo\n• Verifique se a impressora está conectada corretamente e ligada. Confira também se há papel e tinta/cartucho.";
+                    }else if(opcaoUsuario == "4")
+                    {
+                        return "4 - Falhas no som (alto-falante/fone)\n• Veja se o volume está ativado e se o dispositivo correto está selecionado\n (clique no ícone de som no canto inferior direito >> seta para cima >> selecione o dispositvo). Teste com outro fone ou alto-falante.";
+                    }else if(opcaoUsuario == "5")
+                    {
+                        return "5 - Superaquecimento do computador\n• Verifique se a ventoinha que se localiza na parte de trás do gabinete (caixa do computador) está funcionando. Caso não esteja funcionando (girando), abra um chamado para o suporte.";
+                    }else
+                    {
+                        return "Opção inválida! Insira uma das respostas acima";
                     }
                         default:
                     return "default";
             }
-        }
+    }
 
         //Método para exibir as mensagens no FlowLayoutPanel (apenas)
         private void AdicionaMensagem(string mensagem)
