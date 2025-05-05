@@ -21,16 +21,16 @@ namespace TecnPoint.Interface
 
         private void FormTelaChatbot_Load(object sender, EventArgs e)
         {
-            AdicionaMensagem("TecnBot", "Olá! sou o TecnBot, que pena que está com problemas :(\nmas estou aqui para te ajudar! Onde está o problema? " +
-                            "\n\t1 - Sistema\n\t2 - Equipamentos\n\t3 - Rede");
+            AdicionaMensagem("Olá! sou o TecnBot, que pena que está com problemas :(\nmas estou aqui para te ajudar! Onde está o problema? " +
+                            "\n\t1 - Software\n\t2 - Hardware\n\t3 - Rede");
         }
 
         private void btnEnviarMensagem_Click(object sender, EventArgs e)
         {
             //adicionar usuarioLogado
-            AdicionaMensagem("Paulo", tbxMensagem.Text);
+            AdicionaMensagem(tbxMensagem.Text);
             string respostaBot = RetornaRespostaBot(tbxMensagem.Text);
-            AdicionaMensagem("TecnBot", respostaBot);
+            AdicionaMensagem(respostaBot);
             tbxMensagem.Clear();
         }
 
@@ -45,25 +45,26 @@ namespace TecnPoint.Interface
                     {
                         //faz o chat começar lá embaixo, quando o estadoChat está definido como subopções_Software
                         estadoChat = "sub_Software";
-                        return "O seu problema é relacionado a Software??\nUm programa não abre ❓\nUm programa está travando ❓" +
+                        return "O seu problema está relacionado a algum Software ❓ \nUm programa não abre \nUm programa está travando ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Programa/Aplicativo não está abrindo\n2 - Programa apresentando lentidão e falhas\n3 - Problemas com login";
+                            "\n1 - Aplicativo externo não está abrindo\n2 - Dificuldade em encontrar funções básicas\n3 - Lentidão e travamentos frequentes do sistema ou aplicativos\n4 - Aparece uma mensagem de erro e você não sabe o que é\n 5 - Como cadastrar um novo usuário";
                     }
                     else if (opcaoUsuario == "2")
                     {
                         //faz o chat começar lá embaixo, quando o estado está definido como subopções de hardware
                         estadoChat = "sub_Hardware";
-                        return "O seu problema é relacionado a Hardware??\nUm componente está apresentando falhas ❓" +
+                        return "O seu problema está relacionado a Hardware??\nUm componente está apresentando falhas ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Problemas com teclado/mouse/monitor/fone\n2 - Nenhum problema relacionado aos componentes externos";
+                            "\n1 - Problemas com teclado/mouse\n2 - Monitor sem imagem\n3 - Impressora não está imprimindo" +
+                            "\n4 - Falhas no som (alto-falante/fone)\n5 - Superaquecimento do computador";
                     }
                     else if (opcaoUsuario == "3")
                     {
                         //também faz o chat começar lá embaixo nas subopções de redes
                         estadoChat = "sub_Rede";
-                        return "O seu problema é relacionado a Rede??\nA sua internet está lenta ❓" +
+                        return "O seu problema está relacionado à Rede??\nA sua internet está lenta ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Sem conexão com a internet\n2 - Lentidão na internet";
+                            "\n1 - Sem conexão com a internet\n2 - Lentidão na internet\n3 - Conexão instável\n4 - Acesso negado em sites específicos\n5 - ";
                     }
                     else
                     {
@@ -73,27 +74,42 @@ namespace TecnPoint.Interface
                 case "sub_Software":
                     if (opcaoUsuario == "1")
                     {
-                        return "1 - Programa/Aplicativo não está abrindo\n[SOLUÇÂO]";
+                        return "1 - Programa/Aplicativo não está abrindo\n• Tente reiniciar o computador e abrir o programa novamente. " +
+                            "\nSe o problema persistir, verifique se há atualizações pendentes do próprio programa.";
                     }
                     else if (opcaoUsuario == "2")
                     {
-                        return "2 - Programa apresentando lentidão e falhas\n[SOLUÇÂO]";
+                        return "2 - Lentidão e travamentos frequentes do sistema ou aplicativos\n• Reiniciar o programa ou o computador para eliminar erros temporários." +
+                            "";
                     }
                     else if (opcaoUsuario == "3")
                     {
-                        return "3 - Problemas com login\n[SOLUÇÃO]";
+                        return "3 - Problemas com login\nVerifique se está digitando corretamente o usuário e a senha. " +
+                            "\nNão esqueça de colocar o \"@\" e do ponto final em \".com\" no seu e-mail";
+                    }
+                    else if(opcaoUsuario == "4")
+                    {
+                        return "4 - Programa não responde (fica \"congelado\")" +
+                            "\nAguarde alguns minutos para ver se o programa volta a responder. " +
+                            "\nCaso não volte, finalize o processo pelo Gerenciador de Tarefas e reinicie o aplicativo." +
+                            "\nComo acessar o Gerenciador de tarefa: Ctrl+Shift+ESC >> Vá para aba processos >> procure o nome do programa que não está respondendo >> clique nele com botão direito >> \"Finalizar tarefa\"";
+                    }
+                    else if(opcaoUsuario == "5")
+                    {
+                        return "5 - Como cadastrar um novo usuário ❓\n" +
+                            "Para cadastrar um novo usuário, por favor encaminhar um chamado para o suporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.";
                     }
                     else
                     {
                         return "Opção inválida";
                     }
-                default:
+                        default:
                     return "default";
             }
         }
 
         //Método para exibir as mensagens no FlowLayoutPanel (apenas)
-        private void AdicionaMensagem(string remetente, string mensagem)
+        private void AdicionaMensagem(string mensagem)
         {
             Panel mensagemNoPanel = new Panel()
             {
@@ -106,7 +122,7 @@ namespace TecnPoint.Interface
 
             Label lblMensagem = new Label()
             {
-                Text = $"{remetente}: {mensagem}",
+                Text = $"{mensagem}",
                 AutoSize = true,
                 Font = new Font("Segoe UI", 10)
             };
