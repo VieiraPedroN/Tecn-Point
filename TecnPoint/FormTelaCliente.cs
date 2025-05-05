@@ -58,7 +58,7 @@ namespace TecnPoint.Interface
         private void button1_Click(object sender, EventArgs e)
         {
             FormTelaChatbot telachatbot = new FormTelaChatbot();
-            telachatbot.Show();
+            telachatbot.ShowDialog();
         }
     }
 

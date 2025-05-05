@@ -107,7 +107,9 @@
             Controls.Add(tbxMensagem);
             Controls.Add(panel1);
             Controls.Add(flpChatbot);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormTelaChatbot";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormTelaChatbot";
             Load += FormTelaChatbot_Load;
             panel1.ResumeLayout(false);

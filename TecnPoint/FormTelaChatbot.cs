@@ -47,7 +47,7 @@ namespace TecnPoint.Interface
                         estadoChat = "sub_Software";
                         return "O seu problema está relacionado a algum Software ❓ \nUm programa não abre \nUm programa está travando ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Aplicativo externo não está abrindo\n2 - Dificuldade em encontrar funções básicas\n3 - Lentidão e travamentos frequentes do sistema ou aplicativos\n4 - Aparece uma mensagem de erro e você não sabe o que é\n 5 - Como cadastrar um novo usuário";
+                            "\n1 - Aplicativo externo não está abrindo\n2 - Lentidão e travamentos frequentes do sistema ou aplicativos\n3 - Aparece uma mensagem de erro e você não sabe o que é\n4 - Um programa externo pede uma senha ou código que você não tem\n 5 - Como cadastrar um novo usuário";
                     }
                     else if (opcaoUsuario == "2")
                     {
@@ -74,25 +74,26 @@ namespace TecnPoint.Interface
                 case "sub_Software":
                     if (opcaoUsuario == "1")
                     {
-                        return "1 - Programa/Aplicativo não está abrindo\n• Tente reiniciar o computador e abrir o programa novamente. " +
-                            "\nSe o problema persistir, verifique se há atualizações pendentes do próprio programa.";
+                        return "1 - Aplicativo externo não está abrindo\n• Tente reiniciar o computador e abrir o programa novamente. " +
+                            "\nSe o problema continuar, pode ser necessário atualizar o computador ou consultar \no suporte.";
                     }
                     else if (opcaoUsuario == "2")
                     {
-                        return "2 - Lentidão e travamentos frequentes do sistema ou aplicativos\n• Reiniciar o programa ou o computador para eliminar erros temporários." +
-                            "";
+                        return "2 - Lentidão e travamentos frequentes do sistema ou aplicativos\n" +
+                            "• Reiniciar o programa ou o computador para eliminar erros temporários.";
                     }
                     else if (opcaoUsuario == "3")
                     {
-                        return "3 - Problemas com login\nVerifique se está digitando corretamente o usuário e a senha. " +
-                            "\nNão esqueça de colocar o \"@\" e do ponto final em \".com\" no seu e-mail";
+                        return "3 - Aparece uma mensagem de erro e você não sabe o que é\n" +
+                            "• Reiniciar o aplicativo e, se necessário, o computador." +
+                            "• Desinstalar e reinstalar o aplicativo para corrigir arquivos corrompidos" +
+                            "• Se o erro continuar, informe a mensagem para o suporte técnico.";
                     }
                     else if(opcaoUsuario == "4")
                     {
-                        return "4 - Programa não responde (fica \"congelado\")" +
-                            "\nAguarde alguns minutos para ver se o programa volta a responder. " +
-                            "\nCaso não volte, finalize o processo pelo Gerenciador de Tarefas e reinicie o aplicativo." +
-                            "\nComo acessar o Gerenciador de tarefa: Ctrl+Shift+ESC >> Vá para aba processos >> procure o nome do programa que não está respondendo >> clique nele com botão direito >> \"Finalizar tarefa\"";
+                        return "4 - O programa pede uma senha ou código que você não tem" +
+                            "\n• Verifique com o responsável pelo sistema ou setor de TI se você tem acesso autorizado." +
+                            "\n• Se for um programa novo, peça que enviem a senha ou licença correta.";
                     }
                     else if(opcaoUsuario == "5")
                     {
@@ -117,14 +118,14 @@ namespace TecnPoint.Interface
                 AutoSize = true,
                 Margin = new Padding(5),
                 Padding = new Padding(10),
-                MaximumSize = new Size(flpChatbot.Width - 30, 0)
+                MaximumSize = new Size(flpChatbot.Width - 30, 0),
             };
 
             Label lblMensagem = new Label()
             {
                 Text = $"{mensagem}",
                 AutoSize = true,
-                Font = new Font("Segoe UI", 10)
+                Font = new Font("Segoe UI", 10),
             };
 
             mensagemNoPanel.Controls.Add(lblMensagem);
