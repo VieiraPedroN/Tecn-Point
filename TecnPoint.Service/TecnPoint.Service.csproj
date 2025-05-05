@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TecnPoint.Dados\TecnPoint.Dados.csproj" />
+    <ProjectReference Include="..\TecnPoint.Modelo\TecnPoint.Modelo.csproj" />
+  </ItemGroup>
+
+</Project>
