@@ -47,7 +47,7 @@ namespace TecnPoint.Interface
                         estadoChat = "sub_Software";
                         return "O seu problema está relacionado a algum Software ❓ \nUm programa não abre \nUm programa está travando ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Aplicativo externo não está abrindo\n2 - Dificuldade em encontrar funções básicas\n3 - Lentidão e travamentos frequentes do sistema ou aplicativos\n4 - Aparece uma mensagem de erro e você não sabe o que é\n 5 - Programa fecha sozinho ao ser aberto";
+                            "\n1 - Aplicativo externo não está abrindo\n2 - Dificuldade em encontrar funções básicas\n3 - Lentidão e travamentos frequentes do sistema ou aplicativos\n4 - Aparece uma mensagem de erro e você não sabe o que é\n 5 - Como cadastrar um novo usuário";
                     }
                     else if (opcaoUsuario == "2")
                     {
@@ -96,8 +96,8 @@ namespace TecnPoint.Interface
                     }
                     else if(opcaoUsuario == "5")
                     {
-                        return "5 - Programa fecha sozinho ao ser aberto\n" +
-                            "";
+                        return "5 - Como cadastrar um novo usuário ❓\n" +
+                            "Para cadastrar um novo usuário, por favor encaminhar um chamado para o suporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.";
                     }
                     else
                     {
