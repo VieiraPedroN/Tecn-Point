@@ -47,7 +47,7 @@ namespace TecnPoint.Interface
                         estadoChat = "sub_Software";
                         return "O seu problema está relacionado a algum Software ❓ \nUm programa não abre \nUm programa está travando ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Aplicativo externo não está abrindo\n2 - Lentidão e travamentos frequentes do sistema ou aplicativos\n3 - Aparece uma mensagem de erro e você não sabe o que é\n4 - Um programa externo pede uma senha ou código que você não tem\n 5 - Como cadastrar um novo usuário";
+                            "\n1 - Aplicativo externo não está abrindo\n2 - Lentidão e travamentos frequentes do sistema ou aplicativos\n3 - Aparece uma mensagem de erro e você não sabe o que é\n4 - Um programa externo pede uma senha ou código que você não tem\n5 - Como cadastrar um novo usuário";
                     }
                     else if (opcaoUsuario == "2")
                     {
@@ -87,23 +87,23 @@ namespace TecnPoint.Interface
                     else if (opcaoUsuario == "3")
                     {
                         estadoChat = "final";
-                        return "3 - Aparece uma mensagem de erro e você não sabe o que é\n" +
-                            "• Reiniciar o aplicativo e, se necessário, o computador." +
-                            "• Desinstalar e reinstalar o aplicativo para corrigir arquivos corrompidos" +
-                            "• Se o erro continuar, informe a mensagem para o suporte técnico.";
+                        return "3 - Aparece uma mensagem de erro e você não sabe o que é" +
+                            "\n• Reiniciar o aplicativo e, se necessário, o computador." +
+                            "\n• Desinstalar e reinstalar o aplicativo para corrigir arquivos corrompidos." +
+                            "\n• Se o erro continuar, informe a mensagem para o suporte técnico.";
                     }
                     else if(opcaoUsuario == "4")
                     {
                         estadoChat = "final";
                         return "4 - O programa pede uma senha ou código que você não tem" +
-                            "\n• Verifique com o responsável pelo sistema ou setor de TI se você tem acesso autorizado." +
+                            "\n• Verifique com o responsável pelo sistema ou setor de TI se você tem \nacesso autorizado." +
                             "\n• Se for um programa novo, peça que enviem a senha ou licença correta.";
                     }
                     else if(opcaoUsuario == "5")
                     {
                         estadoChat = "final";
                         return "5 - Como cadastrar um novo usuário ❓\n" +
-                            "• Para cadastrar um novo usuário, por favor encaminhar um chamado para o suporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.";
+                            "• Para cadastrar um novo usuário, por favor encaminhar um chamado para o \nsuporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.";
                     }
                     else
                     {
@@ -113,23 +113,23 @@ namespace TecnPoint.Interface
                     if(opcaoUsuario == "1")
                     {
                         estadoChat = "final";
-                        return "1 - Teclado ou mouse não funcionam\n• Desconecte e conecte novamente. Tente trocar de porta USB. Se for sem fio, verifique a bateria.";
+                        return "1 - Teclado ou mouse não funcionam\n• Desconecte e conecte novamente. Tente trocar de porta USB. \nSe for sem fio, verifique a bateria.";
                     } else if(opcaoUsuario == "2")
                     {
                         estadoChat = "final";
-                        return "2 - Monitor sem imagem\n• Verifique se o cabo de vídeo está bem conectado e se o monitor está ligado. Tente reiniciar o computador.";
+                        return "2 - Monitor sem imagem\n• Verifique se o cabo de vídeo está bem conectado e se o monitor está ligado. \nTente reiniciar o computador.";
                     }else if(opcaoUsuario == "3")
                     {
                         estadoChat = "final";
-                        return "3 - Impressora não está imprimindo\n• Verifique se a impressora está conectada corretamente e ligada. Confira também se há papel e tinta/cartucho.";
+                        return "3 - Impressora não está imprimindo\n• Verifique se a impressora está conectada corretamente e ligada. \nConfira também se há papel e tinta/cartucho.";
                     }else if(opcaoUsuario == "4")
                     {
                         estadoChat = "final";
-                        return "4 - Falhas no som (alto-falante/fone)\n• Veja se o volume está ativado e se o dispositivo correto está selecionado\n (clique no ícone de som no canto inferior direito >> seta para cima >> selecione o dispositvo). Teste com outro fone ou alto-falante.";
+                        return "4 - Falhas no som (alto-falante/fone)\n• Veja se o volume está ativado e se o dispositivo correto está selecionado \n(clique no ícone de som no canto inferior direito >> seta para cima >> selecione \no dispositvo). Teste com outro fone ou alto-falante.";
                     }else if(opcaoUsuario == "5")
                     {
                         estadoChat = "final";
-                        return "5 - Superaquecimento do computador\n• Verifique se a ventoinha que se localiza na parte de trás do gabinete (caixa do computador) está funcionando. Caso não esteja funcionando (girando), abra um chamado para o suporte.";
+                        return "5 - Superaquecimento do computador\n• Verifique se a ventoinha que se localiza na parte de trás do gabinete \n(caixa do computador) está funcionando. Caso não esteja funcionando (girando), \nabra um chamado para o suporte.";
                     }else
                     {
                         return "Opção inválida! Insira uma das respostas acima";
@@ -138,23 +138,23 @@ namespace TecnPoint.Interface
                     if(opcaoUsuario == "1")
                     {
                         estadoChat = "final";
-                        return "1 - Sem conexão com a internet\n• Tente se reconectar à rede Wi-Fi ou \nconectar o cabo de rede (cabo azul com a ponta transparente) no computador novamente.";
+                        return "1 - Sem conexão com a internet\n• Tente se reconectar à rede Wi-Fi ou conectar o cabo de rede (cabo azul com a \nponta transparente) no computador novamente.";
                     }else if(opcaoUsuario == "2")
                     {
                         estadoChat = "final";
-                        return "2 - Conexão instável (cai toda hora)\n• Pode ser interferência ou sinal fraco. Tente se aproximar do roteador ou reconectar o cabo de rede se possível.";
+                        return "2 - Conexão instável (cai toda hora)\n• Pode ser interferência ou sinal fraco. Tente se aproximar do roteador ou reconectar \no cabo de rede se possível.";
                     }else if(opcaoUsuario == "3")
                     {
                         estadoChat = "final";
-                        return "3 - Acesso negado a sites específicos\n• Teste o acesso com outro navegador ou dispositivo. Se o problema persistir, verifique se há restrições no antivírus ou na rede com um suporte";
+                        return "3 - Acesso negado a sites específicos\n• Teste o acesso com outro navegador ou dispositivo. Se o problema persistir, \nverifique se há restrições no antivírus ou na rede com um suporte";
                     }else if(opcaoUsuario == "4")
                     {
                         estadoChat = "final";
-                        return "4 - Internet muito lenta\n• Desconecte os dispositivos que não estão em uso. Se o problema persistir, contate um suporte";
+                        return "4 - Internet muito lenta\n• Desconecte os dispositivos que não estão em uso. Se o problema persistir, \ncontate um suporte";
                     }else if(opcaoUsuario == "5")
                     {
                         estadoChat = "final";
-                        return "5 - Ícone de rede não aparece no computador\n• Verifique se o Wi-Fi está ativado no seu dispositivo. Se estiver, tente reiniciar o computador. Caso esteja usando conexão cabeada, desconecte e reconecte o cabo de rede com cuidado para garantir um bom encaixe. Se o problema persistir contate o suporte.";
+                        return "5 - Ícone de rede não aparece no computador\n• Verifique se o Wi-Fi está ativado no seu dispositivo. Se estiver, tente reiniciar \no computador. Caso esteja usando conexão cabeada, desconecte e reconecte o cabo \nde rede com cuidado para garantir um bom encaixe. Se o problema persistir contate \no suporte.";
                     }
                     else
                     {
