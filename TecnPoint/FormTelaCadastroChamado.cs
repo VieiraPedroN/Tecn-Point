@@ -9,16 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TecnPoint.Modelo.DadosUsuario;
 using TecnPoint.Service;
+using TecnPoint.Interface;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaCadastroChamado : Form
     {
+        private FormTelaCliente telaCliente;
         private DadosUsuario usuarioLogado;
         CadastroChamado cadastroChamado;
-        public FormTelaCadastroChamado(DadosUsuario dadosUsuario)
+
+        public FormTelaCadastroChamado(DadosUsuario dadosUsuario, FormTelaCliente tela)
         {
             this.usuarioLogado = dadosUsuario;
+            this.telaCliente = tela;
             InitializeComponent();
             cadastroChamado = new CadastroChamado();
             cbxModulo.SelectedIndex = 0;
@@ -38,6 +42,7 @@ namespace TecnPoint.Interface
                                 "TECN SOLUTIONS",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                telaCliente.botaoAcompanharChamado_Click(null, null);
             }
             else
             {
@@ -46,6 +51,11 @@ namespace TecnPoint.Interface
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

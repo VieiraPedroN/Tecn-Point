@@ -49,7 +49,7 @@
             txtbTitulo.Name = "txtbTitulo";
             txtbTitulo.PlaceholderText = "Descreva o problema de forma resumida";
             txtbTitulo.Size = new Size(330, 29);
-            txtbTitulo.TabIndex = 0;
+            txtbTitulo.TabIndex = 4;
             // 
             // txtbDescricao
             // 
@@ -60,7 +60,7 @@
             txtbDescricao.PlaceholderText = "Descreva o que ocorreu e como ocorreu";
             txtbDescricao.ScrollBars = ScrollBars.Vertical;
             txtbDescricao.Size = new Size(330, 97);
-            txtbDescricao.TabIndex = 1;
+            txtbDescricao.TabIndex = 5;
             // 
             // btnAbrirChamado
             // 
@@ -72,7 +72,7 @@
             btnAbrirChamado.Location = new Point(346, 417);
             btnAbrirChamado.Name = "btnAbrirChamado";
             btnAbrirChamado.Size = new Size(110, 30);
-            btnAbrirChamado.TabIndex = 8;
+            btnAbrirChamado.TabIndex = 6;
             btnAbrirChamado.Text = "Enviar";
             btnAbrirChamado.UseVisualStyleBackColor = false;
             btnAbrirChamado.Click += btnAbrirChamado_Click;
@@ -87,7 +87,7 @@
             cbxModulo.Location = new Point(126, 41);
             cbxModulo.Name = "cbxModulo";
             cbxModulo.Size = new Size(330, 29);
-            cbxModulo.TabIndex = 9;
+            cbxModulo.TabIndex = 1;
             // 
             // cbxJornada
             // 
@@ -99,7 +99,7 @@
             cbxJornada.Location = new Point(126, 105);
             cbxJornada.Name = "cbxJornada";
             cbxJornada.Size = new Size(330, 29);
-            cbxJornada.TabIndex = 10;
+            cbxJornada.TabIndex = 2;
             // 
             // cbxPrioridade
             // 
@@ -111,7 +111,7 @@
             cbxPrioridade.Location = new Point(126, 168);
             cbxPrioridade.Name = "cbxPrioridade";
             cbxPrioridade.Size = new Size(330, 29);
-            cbxPrioridade.TabIndex = 11;
+            cbxPrioridade.TabIndex = 3;
             // 
             // button1
             // 
@@ -123,9 +123,10 @@
             button1.Location = new Point(230, 417);
             button1.Name = "button1";
             button1.Size = new Size(110, 30);
-            button1.TabIndex = 12;
+            button1.TabIndex = 7;
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // lblModulo
             // 

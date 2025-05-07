@@ -46,10 +46,10 @@ namespace TecnPoint.Interface
         private void botaoCriarChamado_Click(object sender, EventArgs e)
         {
             AlternarBotoes(botaoCriarChamado, botaoAcompanharChamado);
-            CarregarFormularioForm(new FormTelaCadastroChamado(usuarioLogado));
+            CarregarFormularioForm(new FormTelaCadastroChamado(usuarioLogado, this));
 
         }
-        private void botaoAcompanharChamado_Click(object sender, EventArgs e)
+        public void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {
             AlternarBotoes(botaoAcompanharChamado, botaoCriarChamado);
             CarregarFormularioForm(new FormTelaAcompanharChamado(usuarioLogado));
