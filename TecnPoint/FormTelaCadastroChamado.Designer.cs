@@ -143,9 +143,9 @@
             lblJornada.Font = new Font("Consolas", 13F);
             lblJornada.Location = new Point(98, 77);
             lblJornada.Name = "lblJornada";
-            lblJornada.Size = new Size(70, 22);
+            lblJornada.Size = new Size(80, 22);
             lblJornada.TabIndex = 14;
-            lblJornada.Text = "Jonada";
+            lblJornada.Text = "Jornada";
             // 
             // lblPrioridade
             // 
@@ -165,7 +165,7 @@
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(70, 22);
             lblTitulo.TabIndex = 16;
-            lblTitulo.Text = "Titulo";
+            lblTitulo.Text = "Título";
             // 
             // lblDescricao
             // 
