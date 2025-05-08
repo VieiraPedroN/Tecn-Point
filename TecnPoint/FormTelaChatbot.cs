@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TecnPoint.Modelo.DadosUsuario;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaChatbot : Form
     {
+        private string MensagemFinal = "Espero que eu tenha resolvido o seu problema" +
+                        "\nGostaria de abrir um chamado?" +
+                        "\n1 - Sim 2 - Não";
         private string estadoChat = "inicio";
 
         public FormTelaChatbot()
@@ -75,35 +79,44 @@ namespace TecnPoint.Interface
                     if (opcaoUsuario == "1")
                     {
                         estadoChat = "final";
-                        return "1 - Aplicativo externo não está abrindo\n• Tente reiniciar o computador e abrir o programa novamente. " +
-                            "\nSe o problema continuar, pode ser necessário atualizar o computador ou consultar \no suporte.";
+                        AdicionaMensagem("1 - Aplicativo externo não está abrindo." +
+                            "\nTente reiniciar o computador e abrir o programa novamente. " +
+                            "\nSe o problema continuar, pode ser necessário atualizar o computador ou consultar " +
+                            "\no suporte.");
+                        return $"{MensagemFinal}";
                     }
                     else if (opcaoUsuario == "2")
                     {
                         estadoChat = "final";
-                        return "2 - Lentidão e travamentos frequentes do sistema ou aplicativos\n" +
-                            "• Reiniciar o programa ou o computador para eliminar erros temporários.";
+                        AdicionaMensagem("2 - Lentidão e travamentos frequentes do sistema ou aplicativos." +
+                            "\nReiniciar o programa ou o computador para eliminar erros temporários.");
+                        return $"{MensagemFinal}";
                     }
                     else if (opcaoUsuario == "3")
                     {
                         estadoChat = "final";
-                        return "3 - Aparece uma mensagem de erro e você não sabe o que é" +
+                        AdicionaMensagem("3 - Aparece uma mensagem de erro e você não sabe o que é" +
                             "\n• Reiniciar o aplicativo e, se necessário, o computador." +
                             "\n• Desinstalar e reinstalar o aplicativo para corrigir arquivos corrompidos." +
-                            "\n• Se o erro continuar, informe a mensagem para o suporte técnico.";
+                            "\n• Se o erro continuar, informe a mensagem para o suporte técnico.");
+                        return $"{MensagemFinal}";
                     }
                     else if(opcaoUsuario == "4")
                     {
                         estadoChat = "final";
-                        return "4 - O programa pede uma senha ou código que você não tem" +
-                            "\n• Verifique com o responsável pelo sistema ou setor de TI se você tem \nacesso autorizado." +
-                            "\n• Se for um programa novo, peça que enviem a senha ou licença correta.";
+                        AdicionaMensagem("4 - O programa pede uma senha ou código que você não tem" +
+                            "\n• Verifique com o responsável pelo sistema ou setor de TI se você tem " +
+                            "\nacesso autorizado." +
+                            "\nSe for um programa novo, peça que enviem a senha ou licença correta.");
+                        return $"{MensagemFinal}";
                     }
                     else if(opcaoUsuario == "5")
                     {
                         estadoChat = "final";
-                        return "5 - Como cadastrar um novo usuário ❓\n" +
-                            "• Para cadastrar um novo usuário, por favor encaminhar um chamado para o \nsuporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.";
+                        AdicionaMensagem("5 - Como cadastrar um novo usuário ❓" +
+                            "\nPara cadastrar um novo usuário, por favor encaminhar um chamado para o " +
+                            "\nsuporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.");
+                        return $"{MensagemFinal}";
                     }
                     else
                     {
@@ -113,23 +126,40 @@ namespace TecnPoint.Interface
                     if(opcaoUsuario == "1")
                     {
                         estadoChat = "final";
-                        return "1 - Teclado ou mouse não funcionam\n• Desconecte e conecte novamente. Tente trocar de porta USB. \nSe for sem fio, verifique a bateria.";
+                        AdicionaMensagem("1 - Teclado ou mouse não funcionam" +
+                            "\n• Desconecte e conecte novamente. Tente trocar de porta USB. " +
+                            "\nSe for sem fio, verifique a bateria.");
+                        return $"{MensagemFinal}";
                     } else if(opcaoUsuario == "2")
                     {
                         estadoChat = "final";
-                        return "2 - Monitor sem imagem\n• Verifique se o cabo de vídeo está bem conectado e se o monitor está ligado. \nTente reiniciar o computador.";
+                        AdicionaMensagem("2 - Monitor sem imagem" +
+                            "\n• Verifique se o cabo de vídeo está bem conectado e se o monitor está ligado. " +
+                            "\nTente reiniciar o computador.");
+                        return $"{MensagemFinal}";
                     }else if(opcaoUsuario == "3")
                     {
                         estadoChat = "final";
-                        return "3 - Impressora não está imprimindo\n• Verifique se a impressora está conectada corretamente e ligada. \nConfira também se há papel e tinta/cartucho.";
+                        AdicionaMensagem("3 - Impressora não está imprimindo" +
+                            "\n• Verifique se a impressora está conectada corretamente e ligada. " +
+                            "\nConfira também se há papel e tinta/cartucho.");
+                        return $"{MensagemFinal}";
                     }else if(opcaoUsuario == "4")
                     {
                         estadoChat = "final";
-                        return "4 - Falhas no som (alto-falante/fone)\n• Veja se o volume está ativado e se o dispositivo correto está selecionado \n(clique no ícone de som no canto inferior direito >> seta para cima >> selecione \no dispositvo). Teste com outro fone ou alto-falante.";
+                        AdicionaMensagem("4 - Falhas no som (alto-falante/fone)" +
+                            "\n• Veja se o volume está ativado e se o dispositivo correto está selecionado " +
+                            "\n(clique no ícone de som no canto inferior direito >> seta para cima >> selecione " +
+                            "\no dispositvo). Teste com outro fone ou alto-falante.");
+                        return $"{MensagemFinal}";
                     }else if(opcaoUsuario == "5")
                     {
                         estadoChat = "final";
-                        return "5 - Superaquecimento do computador\n• Verifique se a ventoinha que se localiza na parte de trás do gabinete \n(caixa do computador) está funcionando. Caso não esteja funcionando (girando), \nabra um chamado para o suporte.";
+                        AdicionaMensagem("5 - Superaquecimento do computador" +
+                            "\n• Verifique se a ventoinha que se localiza na parte de trás do gabinete " +
+                            "\n(caixa do computador) está funcionando. Caso não esteja funcionando (girando), " +
+                            "\nabra um chamado para o suporte.");
+                        return $"{MensagemFinal}";
                     }else
                     {
                         return "Opção inválida! Insira uma das respostas acima";
@@ -138,30 +168,64 @@ namespace TecnPoint.Interface
                     if(opcaoUsuario == "1")
                     {
                         estadoChat = "final";
-                        return "1 - Sem conexão com a internet\n• Tente se reconectar à rede Wi-Fi ou conectar o cabo de rede (cabo azul com a \nponta transparente) no computador novamente.";
+                        AdicionaMensagem("1 - Sem conexão com a internet" +
+                            "\n• Tente se reconectar à rede Wi-Fi ou conectar o cabo de rede (cabo azul com a " +
+                            "\nponta transparente) no computador novamente.");
+                        return $"{MensagemFinal}";
                     }else if(opcaoUsuario == "2")
                     {
                         estadoChat = "final";
-                        return "2 - Conexão instável (cai toda hora)\n• Pode ser interferência ou sinal fraco. Tente se aproximar do roteador ou reconectar \no cabo de rede se possível.";
+                        AdicionaMensagem("2 - Conexão instável (cai toda hora)" +
+                            "\n• Pode ser interferência ou sinal fraco. Tente se aproximar do roteador ou reconectar " +
+                            "\no cabo de rede se possível.");
+                        return $"{MensagemFinal}";
                     }else if(opcaoUsuario == "3")
                     {
                         estadoChat = "final";
-                        return "3 - Acesso negado a sites específicos\n• Teste o acesso com outro navegador ou dispositivo. Se o problema persistir, \nverifique se há restrições no antivírus ou na rede com um suporte";
+                        AdicionaMensagem("3 - Acesso negado a sites específicos" +
+                            "\n• Teste o acesso com outro navegador ou dispositivo. Se o problema persistir, " +
+                            "\nverifique se há restrições no antivírus ou na rede com um suporte");
+                        return $"{MensagemFinal}";
                     }else if(opcaoUsuario == "4")
                     {
                         estadoChat = "final";
-                        return "4 - Internet muito lenta\n• Desconecte os dispositivos que não estão em uso. Se o problema persistir, \ncontate um suporte";
+                        AdicionaMensagem("4 - Internet muito lenta" +
+                            "\n• Desconecte os dispositivos que não estão em uso. Se o problema persistir, " +
+                            "\ncontate um suporte");
+                        return $"{MensagemFinal}";
                     }else if(opcaoUsuario == "5")
                     {
                         estadoChat = "final";
-                        return "5 - Ícone de rede não aparece no computador\n• Verifique se o Wi-Fi está ativado no seu dispositivo. Se estiver, tente reiniciar \no computador. Caso esteja usando conexão cabeada, desconecte e reconecte o cabo \nde rede com cuidado para garantir um bom encaixe. Se o problema persistir contate \no suporte.";
+                        AdicionaMensagem("5 - Ícone de rede não aparece no computador" +
+                            "\n• Verifique se o Wi-Fi está ativado no seu dispositivo. Se estiver, tente reiniciar " +
+                            "\no computador. Caso esteja usando conexão cabeada, desconecte e reconecte o cabo " +
+                            "\nde rede com cuidado para garantir um bom encaixe. Se o problema persistir contate " +
+                            "\no suporte.");
+                        return $"{MensagemFinal}";
                     }
                     else
                     {
                         return "Opção inválida! Insira uma das respostas acima";
                     }
                 case "final":
-                    return "Espero que eu tenha resiolvido o seu problema";
+                    AdicionaMensagem("");
+                    if (opcaoUsuario == "1")
+                    {
+                        DadosUsuario dadosUsuario = new DadosUsuario();
+                        FormTelaCliente telaCliente = new FormTelaCliente(dadosUsuario);
+                        FormTelaCadastroChamado cadastroChamado = new FormTelaCadastroChamado(dadosUsuario, telaCliente);
+                        cadastroChamado.Show();
+                        this.Close();
+                    }
+                    else if (opcaoUsuario == "2")
+                    {
+                        this.Close();
+                    }
+                    else 
+                    {
+                        return "N etendi";
+                    }
+                    return "Tenha um ótimo dia.";
                 default:
                         return "default";
             }
