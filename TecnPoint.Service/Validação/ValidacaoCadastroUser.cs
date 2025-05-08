@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TecnPoint.Service.Validação
 {
-    internal class ValidacaoCadastro
+    internal class ValidacaoCadastroUser    
     {
         public bool NomeValido(string nome)
         {

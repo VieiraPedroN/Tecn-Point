@@ -12,13 +12,13 @@ namespace TecnPoint.Service.CadastroUsuarios
 {
     public class CadastroUsuarios
     {
-        private ValidacaoCadastro _validacaoCadastro;
+        private ValidacaoCadastroUser _validacaoCadastro;
         private ClassRepositorioCadastro _dadosUsuarioCadastro;
 
         public CadastroUsuarios()
         {
             _dadosUsuarioCadastro = new ClassRepositorioCadastro();
-            _validacaoCadastro  = new ValidacaoCadastro();
+            _validacaoCadastro  = new ValidacaoCadastroUser();
         }
 
         public bool CadastrarUsuario(string Nome, string Email, string Senha, string Tipo_Usuario)
