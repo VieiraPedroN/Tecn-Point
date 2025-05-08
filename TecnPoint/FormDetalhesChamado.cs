@@ -28,6 +28,7 @@ namespace TecnPoint.Interface
         public ServCarregarMensagens ServCarregarMensagens = new ServCarregarMensagens();
         public ServEnviarMensagem ServEnviarMensagem = new ServEnviarMensagem();
         private DadosUsuario usuarioLogado;
+        private int IdUltimaMensagem = 0;
 
         public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado, DadosUsuario usuarioParam)
         {
@@ -97,8 +98,8 @@ namespace TecnPoint.Interface
         {
             if (!carregandoCombo && cbxPrioridade.SelectedItem != null)
             {
-                if(cbxPrioridade.SelectedIndex != 0)
-                { 
+                if (cbxPrioridade.SelectedIndex != 0)
+                {
                     string prioridadeAtualizada = cbxPrioridade.Text;
                     ServAtribuiPrioridade.AtribuirPrioridades(dadosChamado.IdChamado, prioridadeAtualizada);
                     label5.Text = prioridadeAtualizada;
@@ -109,11 +110,18 @@ namespace TecnPoint.Interface
         private void CarregaMensagem()
         {
             List<DadosMensagens> listaMensagens = new List<DadosMensagens>();
-            listaMensagens = ServCarregarMensagens.ObterMensagens(dadosChamado.IdChamado);
+            //obtenção da lista de mensagens lidas do banco de dados
+            listaMensagens = ServCarregarMensagens.ObterMensagens(dadosChamado.IdChamado, IdUltimaMensagem);
 
             foreach (var mensagem in listaMensagens)
             {
                 ExibeMensagens(mensagem.NomeRemetente, mensagem.Mensagem); //Exibe as mensagem, passa os dados da listaMensagens para a função
+
+                //Atualiza o idUltimaConversa
+                if (mensagem.IdMensagem > IdUltimaMensagem)
+                {
+                    IdUltimaMensagem = mensagem.IdMensagem;
+                }
             }
         }
 
@@ -121,7 +129,6 @@ namespace TecnPoint.Interface
         {
             DadosMensagens EnvioMensagem = new DadosMensagens(tbxMensagem.Text, dadosChamado.IdChamado, usuarioLogado.IdUsuario);
             ServEnviarMensagem.EnviarMensagem(EnvioMensagem);//registra a mensagem no banco
-            ExibeMensagens(usuarioLogado.Nome, tbxMensagem.Text);//exibe a mensagem que o usuárioLogado acabou de enviar
             tbxMensagem.Clear();
         }
 
@@ -149,7 +156,11 @@ namespace TecnPoint.Interface
             PanelMsg.ScrollControlIntoView(mensagemNoPanel);//vai pra úlitma mensagem
         }
 
-        
+        private void timerLeituraDeMensagens_Tick(object sender, EventArgs e)
+        {
+            //a cada 2 segundos carregas as mensagens do banco
+            CarregaMensagem();
+        }
     }
 }
 

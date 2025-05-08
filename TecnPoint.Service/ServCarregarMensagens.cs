@@ -17,9 +17,9 @@ namespace TecnPoint.Service
             carregandoMensagens = new CarregaMensagens();
         }
 
-        public List<DadosMensagens> ObterMensagens(int IdChamado)
+        public List<DadosMensagens> ObterMensagens(int IdChamado, int IdUltimaMensagem)
         {
-            return carregandoMensagens.CarregandoMensagens(IdChamado);
+            return carregandoMensagens.CarregandoMensagens(IdChamado, IdUltimaMensagem);
         }
     }
 }

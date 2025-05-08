@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetalhesChamado));
             label1 = new Label();
             label2 = new Label();
@@ -41,6 +42,7 @@
             btnEnviar = new Button();
             cbxStatus = new ComboBox();
             cbxPrioridade = new ComboBox();
+            timerLeituraDeMensagens = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -169,6 +171,12 @@
             cbxPrioridade.TabIndex = 11;
             cbxPrioridade.SelectedIndexChanged += cbxPrioridade_SelectedIndexChanged;
             // 
+            // timerLeituraDeMensagens
+            // 
+            timerLeituraDeMensagens.Enabled = true;
+            timerLeituraDeMensagens.Interval = 2000;
+            timerLeituraDeMensagens.Tick += timerLeituraDeMensagens_Tick;
+            // 
             // FormDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -208,5 +216,6 @@
         private Button btnEnviar;
         private ComboBox cbxStatus;
         private ComboBox cbxPrioridade;
+        private System.Windows.Forms.Timer timerLeituraDeMensagens;
     }
 }
