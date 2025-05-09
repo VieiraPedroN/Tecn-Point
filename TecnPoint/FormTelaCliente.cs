@@ -43,7 +43,7 @@ namespace TecnPoint.Interface
             NomeUsuario.Text = usuarioLogado.Nome;
             EmailUsuario.Text = usuarioLogado.Email;
         }
-        private void botaoCriarChamado_Click(object sender, EventArgs e)
+        public void botaoCriarChamado_Click(object sender, EventArgs e)
         {
             AlternarBotoes(botaoCriarChamado, botaoAcompanharChamado);
             CarregarFormularioForm(new FormTelaCadastroChamado(usuarioLogado, this));
@@ -57,7 +57,7 @@ namespace TecnPoint.Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormTelaChatbot telachatbot = new FormTelaChatbot();
+            FormTelaChatbot telachatbot = new FormTelaChatbot(this);
             telachatbot.ShowDialog();
         }
     }

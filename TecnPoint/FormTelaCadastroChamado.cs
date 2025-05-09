@@ -19,10 +19,10 @@ namespace TecnPoint.Interface
         private DadosUsuario usuarioLogado;
         CadastroChamado cadastroChamado;
 
-        public FormTelaCadastroChamado(DadosUsuario dadosUsuario, FormTelaCliente tela)
+        public FormTelaCadastroChamado(DadosUsuario dadosUsuario, FormTelaCliente telaClienteParam)
         {
             this.usuarioLogado = dadosUsuario;
-            this.telaCliente = tela;
+            this.telaCliente = telaClienteParam;
             InitializeComponent();
             cadastroChamado = new CadastroChamado();
             cbxModulo.SelectedIndex = 0;

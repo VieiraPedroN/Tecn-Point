@@ -13,13 +13,16 @@ namespace TecnPoint.Interface
 {
     public partial class FormTelaChatbot : Form
     {
+        private FormTelaCliente telaCliente;
+
         private string MensagemFinal = "Espero que eu tenha resolvido o seu problema" +
                         "\nGostaria de abrir um chamado?" +
                         "\n1 - Sim 2 - Não";
         private string estadoChat = "inicio";
 
-        public FormTelaChatbot()
+        public FormTelaChatbot(FormTelaCliente telaClienteParam)
         {
+            this.telaCliente = telaClienteParam;
             InitializeComponent();
         }
 
@@ -211,10 +214,7 @@ namespace TecnPoint.Interface
                     AdicionaMensagem("");
                     if (opcaoUsuario == "1")
                     {
-                        DadosUsuario dadosUsuario = new DadosUsuario();
-                        FormTelaCliente telaCliente = new FormTelaCliente(dadosUsuario);
-                        FormTelaCadastroChamado cadastroChamado = new FormTelaCadastroChamado(dadosUsuario, telaCliente);
-                        cadastroChamado.Show();
+                        telaCliente.botaoCriarChamado_Click(null,null);
                         this.Close();
                     }
                     else if (opcaoUsuario == "2")
@@ -223,7 +223,8 @@ namespace TecnPoint.Interface
                     }
                     else 
                     {
-                        return "N etendi";
+                        AdicionaMensagem("Não entendi, poderia tentar novamente?");
+                        return "sla";
                     }
                     return "Tenha um ótimo dia.";
                 default:
