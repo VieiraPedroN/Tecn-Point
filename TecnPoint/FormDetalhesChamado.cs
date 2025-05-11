@@ -28,6 +28,8 @@ namespace TecnPoint.Interface
         public ServCarregarMensagens ServCarregarMensagens = new ServCarregarMensagens();
         public ServEnviarMensagem ServEnviarMensagem = new ServEnviarMensagem();
         private DadosUsuario usuarioLogado;
+
+        //Inicializando id da última mensagem em 0 para a primeira iteração no foreach
         private int IdUltimaMensagem = 0;
 
         public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado, DadosUsuario usuarioParam)
@@ -51,6 +53,13 @@ namespace TecnPoint.Interface
 
         private void FormDetalhesChamado_Load(object sender, EventArgs e)
         {
+            if(usuarioLogado.TipoUsuario == "Cliente")
+            {
+                cbxPrioridade.Visible = false;
+                cbxStatus.Visible = false;
+                cbxNomeFunc.Visible = false;
+            }
+
             PreencherDetalhes();
             Label label6 = new Label { Text = $"{dadosChamado.Descricao}", Location = new Point(22, 40), Size = new Size(250, 200), Font = new Font("Consolas", 9) };
             Controls.Add(label6);
