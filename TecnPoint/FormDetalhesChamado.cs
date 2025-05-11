@@ -21,11 +21,11 @@ namespace TecnPoint.Interface
     {
         private FormTelaAcompanharChamado formPai;
         private ExibicaoChamado dadosChamado;
-        public CarregaCbxFunc ServCarregaNomesFunc = new CarregaCbxFunc();
-        public ServCarregarMensagens ServCarregarMensagens = new ServCarregarMensagens();
-        public ServEnviarMensagem ServEnviarMensagem = new ServEnviarMensagem();
-
+        
         private DadosUsuario usuarioLogado;
+
+        //Service para gerenciar as mensagens (carregar o chat e enviá-las)
+        public ServMensagens ServMensagensChamado;
 
         //Service para atualizar os dados do chamado (status, prioridade e funcionário)
         public ServAtualizaChamado ServAtualizaChamado;
@@ -35,6 +35,7 @@ namespace TecnPoint.Interface
 
         public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado, DadosUsuario usuarioParam)
         {
+            ServMensagensChamado = new ServMensagens();
             ServAtualizaChamado = new ServAtualizaChamado();
             this.usuarioLogado = usuarioParam;
             this.formPai = acompanharChamado;
@@ -65,7 +66,7 @@ namespace TecnPoint.Interface
             PreencherDetalhes();
             Label label6 = new Label { Text = $"{dadosChamado.Descricao}", Location = new Point(22, 40), Size = new Size(250, 200), Font = new Font("Consolas", 9) };
             Controls.Add(label6);
-            ServCarregaNomesFunc.CarregaNomeFunc(cbxNomeFunc);
+            ServAtualizaChamado.CarregaNomeFunc(cbxNomeFunc);
             CarregaMensagem();
             carregandoCombo = false;
             cbxStatus.SelectedIndex = 0;
@@ -122,7 +123,7 @@ namespace TecnPoint.Interface
         {
             List<DadosMensagens> listaMensagens = new List<DadosMensagens>();
             //obtenção da lista de mensagens lidas do banco de dados
-            listaMensagens = ServCarregarMensagens.ObterMensagens(dadosChamado.IdChamado, IdUltimaMensagem);
+            listaMensagens = ServMensagensChamado.ObterMensagens(dadosChamado.IdChamado, IdUltimaMensagem);
 
             foreach (var mensagem in listaMensagens)
             {
@@ -139,7 +140,7 @@ namespace TecnPoint.Interface
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             DadosMensagens EnvioMensagem = new DadosMensagens(tbxMensagem.Text, dadosChamado.IdChamado, usuarioLogado.IdUsuario);
-            ServEnviarMensagem.EnviarMensagem(EnvioMensagem);//registra a mensagem no banco
+            ServMensagensChamado.EnviarMensagem(EnvioMensagem);//registra a mensagem no banco
             tbxMensagem.Clear();
         }
 

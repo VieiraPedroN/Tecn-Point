@@ -10,13 +10,21 @@ namespace TecnPoint.Service
 {
     public class ServAtualizaChamado
     {
-        AtualizacaoChamado atualizaChamado;
+        DadosAtualizacaoChamado atualizaChamado;
 
         public ServAtualizaChamado()
         {
-            atualizaChamado = new AtualizacaoChamado();
+            atualizaChamado = new DadosAtualizacaoChamado();
+        }
+        public void CarregaNomeFunc(ComboBox cbxForm)
+        {
+            atualizaChamado.CarregaFuncionarios(cbxForm);
         }
 
+        public void AtribuiChamadoParaFuncionario(int idchamado, int idfuncionario)
+        {
+            atualizaChamado.AtualizaFunc(idchamado, idfuncionario);
+        }
         public void AtribuirStatus(int idchamado, string status)
         {
             atualizaChamado.AtualizaStatus(idchamado, status);
@@ -26,9 +34,6 @@ namespace TecnPoint.Service
         {
             atualizaChamado.AtualizarPrioridade(idchamado, prioridade);
         }
-        public void AtribuiChamadoParaFuncionario(int idchamado, int idfuncionario)
-        {
-            atualizaChamado.AtualizaFunc(idchamado, idfuncionario);
-        }
+        
     }
 }

@@ -4,11 +4,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TecnPoint.Modelo.DadosUsuario;
 
 namespace TecnPoint.Dados
 {
-    public class AtualizacaoChamado
+    public class DadosAtualizacaoChamado
     {
+        public void CarregaFuncionarios(ComboBox comboboxFunc)
+        {
+            List<DadosUsuario> ListaNomeFunc = new List<DadosUsuario>();
+
+            using (ClassConexaoBanco conexao = new ClassConexaoBanco())
+            {
+                string query = "SELECT id_Usuario, Nome FROM Usuarios WHERE tipo_Usuario = 'Funcionário'";
+
+                using (NpgsqlCommand comando = new NpgsqlCommand(query, conexao.conexao))
+                {
+                    using (NpgsqlDataReader leitor = comando.ExecuteReader())
+                    {
+                        while (leitor.Read())
+                        {
+                            ListaNomeFunc.Add(new DadosUsuario
+                            {
+                                IdUsuario = leitor.GetInt32(leitor.GetOrdinal("id_Usuario")),
+                                Nome = leitor.GetString(leitor.GetOrdinal("Nome"))
+                            });
+                        }
+                    }
+                }
+            }
+            comboboxFunc.DataSource = ListaNomeFunc;
+            comboboxFunc.DisplayMember = "Nome";
+            comboboxFunc.ValueMember = "IdUsuario";
+        }
+
         public void AtualizaFunc(int idChamado, int idFunc)
         {
             using (ClassConexaoBanco conexao = new ClassConexaoBanco())
