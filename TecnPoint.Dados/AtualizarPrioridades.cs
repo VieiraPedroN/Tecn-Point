@@ -9,7 +9,7 @@ namespace TecnPoint.Dados
 {
     public class AtualizarPrioridades
     {
-        public void AtualizarPrioridade(int idChamado, string prioridade)
+        /*public void AtualizarPrioridade(int idChamado, string prioridade)
         {
             using (ClassConexaoBanco conexao = new ClassConexaoBanco())
             {
@@ -31,6 +31,6 @@ namespace TecnPoint.Dados
                     }
                 }
             }
-        }
+        }*/
     }
 }

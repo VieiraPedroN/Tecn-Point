@@ -9,7 +9,7 @@ namespace TecnPoint.Dados
 {
     public class AtualizarStatus
     {
-        public void AtualizaStatus(int idChamado, string status)
+        /*public void AtualizaStatus(int idChamado, string status)
         {
             using (ClassConexaoBanco conexao = new ClassConexaoBanco())
             {
@@ -31,6 +31,6 @@ namespace TecnPoint.Dados
                     }
                 }
             }
-        }
+        }*/
     }
 }

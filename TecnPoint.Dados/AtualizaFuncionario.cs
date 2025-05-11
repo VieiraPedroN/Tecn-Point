@@ -9,8 +9,7 @@ namespace TecnPoint.Dados
 {
     public class AtualizaFuncionario
     {
-
-        public void AtualizaFunc(int idChamado, int idFunc)
+        /*public void AtualizaFunc(int idChamado, int idFunc)
         {
             using (ClassConexaoBanco conexao = new ClassConexaoBanco())
             {
@@ -32,6 +31,6 @@ namespace TecnPoint.Dados
                     }
                 }
             }
-        }
+        }*/
     }
 }
