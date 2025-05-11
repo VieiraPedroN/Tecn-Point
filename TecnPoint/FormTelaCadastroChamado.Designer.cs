@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaCadastroChamado));
             txtbTitulo = new TextBox();
             txtbDescricao = new TextBox();
             btnAbrirChamado = new Button();
@@ -40,6 +41,12 @@
             lblPrioridade = new Label();
             lblTitulo = new Label();
             lblDescricao = new Label();
+            lblExplicaJornada = new Label();
+            pictureInfoJornada = new PictureBox();
+            pictureInfoModulo = new PictureBox();
+            lblExplicaModulo = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureInfoJornada).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureInfoModulo).BeginInit();
             SuspendLayout();
             // 
             // txtbTitulo
@@ -178,11 +185,58 @@
             lblDescricao.TabIndex = 17;
             lblDescricao.Text = "Descrição";
             // 
+            // lblExplicaJornada
+            // 
+            lblExplicaJornada.AutoSize = true;
+            lblExplicaJornada.Font = new Font("Consolas", 8F);
+            lblExplicaJornada.ForeColor = SystemColors.ControlText;
+            lblExplicaJornada.Location = new Point(198, 83);
+            lblExplicaJornada.Name = "lblExplicaJornada";
+            lblExplicaJornada.Size = new Size(235, 13);
+            lblExplicaJornada.TabIndex = 18;
+            lblExplicaJornada.Text = "Setor em que está ocorrendo o problema";
+            lblExplicaJornada.Visible = false;
+            // 
+            // pictureInfoJornada
+            // 
+            pictureInfoJornada.Image = (Image)resources.GetObject("pictureInfoJornada.Image");
+            pictureInfoJornada.Location = new Point(176, 80);
+            pictureInfoJornada.Name = "pictureInfoJornada";
+            pictureInfoJornada.Size = new Size(20, 19);
+            pictureInfoJornada.TabIndex = 19;
+            pictureInfoJornada.TabStop = false;
+            pictureInfoJornada.Click += pictureInfoJornada_Click;
+            // 
+            // pictureInfoModulo
+            // 
+            pictureInfoModulo.Image = (Image)resources.GetObject("pictureInfoModulo.Image");
+            pictureInfoModulo.Location = new Point(168, 16);
+            pictureInfoModulo.Name = "pictureInfoModulo";
+            pictureInfoModulo.Size = new Size(19, 20);
+            pictureInfoModulo.TabIndex = 20;
+            pictureInfoModulo.TabStop = false;
+            pictureInfoModulo.Click += pictureInfoModulo_Click;
+            // 
+            // lblExplicaModulo
+            // 
+            lblExplicaModulo.AutoSize = true;
+            lblExplicaModulo.Font = new Font("Consolas", 8F);
+            lblExplicaModulo.Location = new Point(190, 2);
+            lblExplicaModulo.Name = "lblExplicaModulo";
+            lblExplicaModulo.Size = new Size(199, 39);
+            lblExplicaModulo.TabIndex = 21;
+            lblExplicaModulo.Text = "Hardware = Componente físico; \r\nSoftware = Programa/Aplicativo; \r\nRede = Internet.";
+            lblExplicaModulo.Visible = false;
+            // 
             // FormTelaCadastroChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 460);
+            Controls.Add(lblExplicaModulo);
+            Controls.Add(pictureInfoModulo);
+            Controls.Add(pictureInfoJornada);
+            Controls.Add(lblExplicaJornada);
             Controls.Add(lblDescricao);
             Controls.Add(lblTitulo);
             Controls.Add(lblPrioridade);
@@ -198,6 +252,8 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormTelaCadastroChamado";
             Text = "FormTelaCadastroChamado";
+            ((System.ComponentModel.ISupportInitialize)pictureInfoJornada).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureInfoModulo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -216,5 +272,9 @@
         private Label lblPrioridade;
         private Label lblTitulo;
         private Label lblDescricao;
+        private Label lblExplicaJornada;
+        private PictureBox pictureInfoJornada;
+        private PictureBox pictureInfoModulo;
+        private Label lblExplicaModulo;
     }
 }

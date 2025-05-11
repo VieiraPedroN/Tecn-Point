@@ -32,30 +32,54 @@ namespace TecnPoint.Interface
 
         private void btnAbrirChamado_Click(object sender, EventArgs e)
         {
-
             var cadastrou = cadastroChamado.AbrirChamado(txtbTitulo.Text, txtbDescricao.Text,
-                                                            cbxPrioridade.Text, usuarioLogado.IdUsuario,
-                                                            cbxModulo.SelectedIndex, cbxJornada.SelectedIndex);
+                                                                cbxPrioridade.Text, usuarioLogado.IdUsuario,
+                                                                cbxModulo.SelectedIndex, cbxJornada.SelectedIndex);
             if (cadastrou == true)
             {
                 MessageBox.Show("Abertura de chamado realizada",
                                 "TECN SOLUTIONS",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
                 telaCliente.botaoAcompanharChamado_Click(null, null);
             }
             else
             {
-                MessageBox.Show("Abertura de chamado falhou",
-                                "TECN SOLUTIONS",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                 MessageBox.Show("Abertura de chamado falhou",
+                                 "TECN SOLUTIONS",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureInfoJornada_Click(object sender, EventArgs e)
+        {
+            if ((lblExplicaJornada.Visible == false))
+            {
+                lblExplicaJornada.Visible = true;
+            }
+            else
+            {
+                lblExplicaJornada.Visible = false;
+            }
+
+        }
+
+        private void pictureInfoModulo_Click(object sender, EventArgs e)
+        {
+            if(lblExplicaModulo.Visible == false)
+            {
+                lblExplicaModulo.Visible = true;
+            }
+            else
+            {
+                lblExplicaModulo.Visible = false;
+            }
         }
     }
 }
