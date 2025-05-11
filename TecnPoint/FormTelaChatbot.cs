@@ -15,7 +15,7 @@ namespace TecnPoint.Interface
     {
         private string MensagemFinal = "Espero que eu tenha resolvido o seu problema" +
                         "\nGostaria de abrir um chamado?" +
-                        "\n1 - Sim 2 - Não";
+                        "\n1 - Sim, gostaria de abrir um chamado!\n2 - Não, não será necessário abrir um chamado";
         private string estadoChat = "inicio";
 
         public FormTelaChatbot()
@@ -26,7 +26,7 @@ namespace TecnPoint.Interface
         private void FormTelaChatbot_Load(object sender, EventArgs e)
         {
             AdicionaMensagem("Olá! sou o TecnBot, que pena que está com problemas :(\nmas estou aqui para te ajudar! Onde está o problema? " +
-                            "\n\t1 - Software\n\t2 - Hardware\n\t3 - Rede");
+                            "\n\t1 - Software (aplicativos/programas)\n\t2 - Hardware (componentes físicos)\n\t3 - Rede");
         }
 
         private void btnEnviarMensagem_Click(object sender, EventArgs e)
@@ -134,8 +134,8 @@ namespace TecnPoint.Interface
                     {
                         estadoChat = "final";
                         AdicionaMensagem("2 - Monitor sem imagem" +
-                            "\n• Verifique se o cabo de vídeo está bem conectado e se o monitor está ligado. " +
-                            "\nTente reiniciar o computador.");
+                            "\n• Verifique se o cabo de vídeo (HDMI) está bem conectado e se o monitor está ligado. " +
+                            "\nCaso o problema continuar, desligue e ligue o computador.");
                         return $"{MensagemFinal}";
                     }else if(opcaoUsuario == "3")
                     {
