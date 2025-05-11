@@ -14,7 +14,10 @@ namespace TecnPoint.Modelo.DadosUsuario
         private string _senha;
         private string _tipoUsuario;
 
+        //Construtor para login de usuário e carregamento da lista de funcionários
         public DadosUsuario() { }
+
+        //Construtor para cadastro de usuário
         public DadosUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario)
         {
             _idUsuario = idUsuario;
