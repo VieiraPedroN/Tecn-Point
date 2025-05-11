@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaCadastroChamado));
-            txtbTitulo = new TextBox();
             txtbDescricao = new TextBox();
             btnAbrirChamado = new Button();
             cbxModulo = new ComboBox();
@@ -45,18 +45,12 @@
             pictureInfoJornada = new PictureBox();
             pictureInfoModulo = new PictureBox();
             lblExplicaModulo = new Label();
+            txtbTitulo = new TextBox();
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)pictureInfoJornada).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureInfoModulo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
-            // 
-            // txtbTitulo
-            // 
-            txtbTitulo.Font = new Font("Segoe UI", 12F);
-            txtbTitulo.Location = new Point(126, 230);
-            txtbTitulo.Name = "txtbTitulo";
-            txtbTitulo.PlaceholderText = "Descreva o problema de forma resumida";
-            txtbTitulo.Size = new Size(330, 29);
-            txtbTitulo.TabIndex = 4;
             // 
             // txtbDescricao
             // 
@@ -68,6 +62,7 @@
             txtbDescricao.ScrollBars = ScrollBars.Vertical;
             txtbDescricao.Size = new Size(330, 97);
             txtbDescricao.TabIndex = 5;
+            txtbDescricao.Leave += txtbDescricao_Leave;
             // 
             // btnAbrirChamado
             // 
@@ -95,6 +90,7 @@
             cbxModulo.Name = "cbxModulo";
             cbxModulo.Size = new Size(330, 29);
             cbxModulo.TabIndex = 1;
+            cbxModulo.Leave += cbxModulo_Leave;
             // 
             // cbxJornada
             // 
@@ -107,6 +103,7 @@
             cbxJornada.Name = "cbxJornada";
             cbxJornada.Size = new Size(330, 29);
             cbxJornada.TabIndex = 2;
+            cbxJornada.Leave += cbxJornada_Leave;
             // 
             // cbxPrioridade
             // 
@@ -228,6 +225,20 @@
             lblExplicaModulo.Text = "Hardware = Componente físico; \r\nSoftware = Programa/Aplicativo; \r\nRede = Internet.";
             lblExplicaModulo.Visible = false;
             // 
+            // txtbTitulo
+            // 
+            txtbTitulo.Font = new Font("Segoe UI", 12F);
+            txtbTitulo.Location = new Point(126, 230);
+            txtbTitulo.Name = "txtbTitulo";
+            txtbTitulo.PlaceholderText = "Descreva o problema de forma resumida";
+            txtbTitulo.Size = new Size(330, 29);
+            txtbTitulo.TabIndex = 4;
+            txtbTitulo.Leave += txtbTitulo_Leave;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // FormTelaCadastroChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -254,13 +265,12 @@
             Text = "FormTelaCadastroChamado";
             ((System.ComponentModel.ISupportInitialize)pictureInfoJornada).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureInfoModulo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox txtbTitulo;
         private TextBox txtbDescricao;
         private Button btnAbrirChamado;
         private ComboBox cbxModulo;
@@ -276,5 +286,7 @@
         private PictureBox pictureInfoJornada;
         private PictureBox pictureInfoModulo;
         private Label lblExplicaModulo;
+        private TextBox txtbTitulo;
+        private ErrorProvider errorProvider1;
     }
 }

@@ -130,10 +130,16 @@
   <data name="pictureInfoModulo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAKpJREFUOE/tkzEOwjAMRS24gX2jwAVA6ggpxJ2ZmDtzhA4MbCwgjlg5ZbIDxFsH
+        DAAACwwBP0AiyAAAAKpJREFUOE/tkzEOwjAMRS24gX2jwAVA6ggpxJ2ZmDtzhA4MbCwgjlg5ZbIDxFsH
         LH15eM7zEgPMvhpoljvs1i2mbW0iHVfyTrtAQMT08qYlDtoFeVNh+FfknXZ9llG6HZA3kfhqmF/G54l3
         J8P8svTcI1+kG+aX8SMiD1O33CdDHoRnoWF/mR58y+7yPXI3zC37nrKMOOjBmhRvU65fgGyqDnHooV9o
         1/xqBJaeNPSMPm6gAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

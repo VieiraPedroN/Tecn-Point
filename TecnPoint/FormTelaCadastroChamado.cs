@@ -18,7 +18,6 @@ namespace TecnPoint.Interface
         private FormTelaCliente telaCliente;
         private DadosUsuario usuarioLogado;
         CadastroChamado cadastroChamado;
-
         public FormTelaCadastroChamado(DadosUsuario dadosUsuario, FormTelaCliente telaClienteParam)
         {
             this.usuarioLogado = dadosUsuario;
@@ -29,34 +28,43 @@ namespace TecnPoint.Interface
             cbxJornada.SelectedIndex = 0;
             cbxPrioridade.SelectedIndex = 0;
         }
-
         private void btnAbrirChamado_Click(object sender, EventArgs e)
         {
-            var cadastrou = cadastroChamado.AbrirChamado(txtbTitulo.Text, txtbDescricao.Text,
+            if (cadastroChamado.ValidarModulo(cbxModulo) &&
+                cadastroChamado.ValidarJornada(cbxJornada) &&
+                cadastroChamado.ValidarTitulo(txtbTitulo.Text) &&
+                cadastroChamado.ValidarDescricao(txtbDescricao.Text))
+
+            {
+                var cadastrou = cadastroChamado.AbrirChamado(txtbTitulo.Text, txtbDescricao.Text,
                                                                 cbxPrioridade.Text, usuarioLogado.IdUsuario,
                                                                 cbxModulo.SelectedIndex, cbxJornada.SelectedIndex);
-            if (cadastrou == true)
-            {
-                MessageBox.Show("Abertura de chamado realizada",
-                                "TECN SOLUTIONS",
-                                 MessageBoxButtons.OK,
-                                 MessageBoxIcon.Information);
-                telaCliente.botaoAcompanharChamado_Click(null, null);
+                if (cadastrou == true)
+                {
+                    MessageBox.Show("Abertura de chamado realizada",
+                                    "TECN SOLUTIONS",
+                                     MessageBoxButtons.OK,
+                                     MessageBoxIcon.Information);
+                    telaCliente.botaoAcompanharChamado_Click(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Abertura de chamado falhou",
+                                    "TECN SOLUTIONS",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
             else
             {
-                 MessageBox.Show("Abertura de chamado falhou",
-                                 "TECN SOLUTIONS",
-                                 MessageBoxButtons.OK,
-                                 MessageBoxIcon.Error);
+                MessageBox.Show("Preencha todos os campos corretamente.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void pictureInfoJornada_Click(object sender, EventArgs e)
         {
             if ((lblExplicaJornada.Visible == false))
@@ -69,7 +77,6 @@ namespace TecnPoint.Interface
             }
 
         }
-
         private void pictureInfoModulo_Click(object sender, EventArgs e)
         {
             if(lblExplicaModulo.Visible == false)
@@ -81,5 +88,50 @@ namespace TecnPoint.Interface
                 lblExplicaModulo.Visible = false;
             }
         }
+        private void txtbTitulo_Leave(object sender, EventArgs e) 
+        {
+            if (!cadastroChamado.ValidarTitulo(txtbTitulo.Text)) 
+            {
+                errorProvider1.SetError(txtbTitulo, "Campo obrigatório");
+            }
+            else 
+            {
+                errorProvider1.SetError(txtbTitulo, "");
+            }
+        }
+        private void txtbDescricao_Leave(object sender, EventArgs e) 
+        {
+            if (!cadastroChamado.ValidarDescricao(txtbDescricao.Text))
+            {
+                errorProvider1.SetError(txtbDescricao, "Campo obrigatório");
+            }
+            else
+            {
+                errorProvider1.SetError(txtbDescricao, "");
+            }
+        }
+        private void cbxModulo_Leave(object sender, EventArgs e) 
+        {
+            if (!cadastroChamado.ValidarModulo(cbxModulo)) 
+            {
+                errorProvider1.SetError(cbxModulo, "Opção invalida");
+            }
+            else 
+            {
+                errorProvider1.SetError(cbxModulo, "");
+            }
+        }
+        private void cbxJornada_Leave(object sender, EventArgs e)
+        {
+            if (!cadastroChamado.ValidarJornada(cbxJornada)) 
+            {
+                errorProvider1.SetError(cbxJornada, "Opção invalida");
+            }
+            else 
+            {
+                errorProvider1.SetError(cbxJornada, "");
+            }
+        }
+
     }
 }
