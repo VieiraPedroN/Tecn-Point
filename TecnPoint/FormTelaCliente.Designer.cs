@@ -36,6 +36,9 @@
             panel1 = new Panel();
             groupBox1 = new GroupBox();
             button1 = new Button();
+            lblTituloTelaInicioCliente = new Label();
+            lblSubtituloTelaInicialCliente = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // NomeUsuario
@@ -107,6 +110,8 @@
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(lblSubtituloTelaInicialCliente);
+            panel1.Controls.Add(lblTituloTelaInicioCliente);
             panel1.Location = new Point(248, -4);
             panel1.Name = "panel1";
             panel1.Size = new Size(555, 456);
@@ -140,6 +145,26 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // lblTituloTelaInicioCliente
+            // 
+            lblTituloTelaInicioCliente.AutoSize = true;
+            lblTituloTelaInicioCliente.Font = new Font("Consolas", 32F, FontStyle.Bold);
+            lblTituloTelaInicioCliente.Location = new Point(116, 281);
+            lblTituloTelaInicioCliente.Name = "lblTituloTelaInicioCliente";
+            lblTituloTelaInicioCliente.Size = new Size(358, 51);
+            lblTituloTelaInicioCliente.TabIndex = 0;
+            lblTituloTelaInicioCliente.Text = "Tech Solutions";
+            // 
+            // lblSubtituloTelaInicialCliente
+            // 
+            lblSubtituloTelaInicialCliente.AutoSize = true;
+            lblSubtituloTelaInicialCliente.Font = new Font("Consolas", 8F);
+            lblSubtituloTelaInicialCliente.Location = new Point(146, 332);
+            lblSubtituloTelaInicialCliente.Name = "lblSubtituloTelaInicialCliente";
+            lblSubtituloTelaInicialCliente.Size = new Size(295, 13);
+            lblSubtituloTelaInicialCliente.TabIndex = 1;
+            lblSubtituloTelaInicialCliente.Text = "Unidos pelo desafio, moldados pelo conhecimento.";
+            // 
             // FormTelaCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -162,6 +187,8 @@
             Text = "FormTelaCliente";
             Closed += FormTelaCliente_Closed;
             Load += FormTelaCliente_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -175,5 +202,7 @@
         private Panel panel1;
         private GroupBox groupBox1;
         private Button button1;
+        private Label lblTituloTelaInicioCliente;
+        private Label lblSubtituloTelaInicialCliente;
     }
 }

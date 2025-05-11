@@ -15,7 +15,7 @@ namespace TecnPoint
 
         private void botaoEntrarLogin_Click(object sender, EventArgs e)
         {
-            var usuarioLogado = validarLogin.Checar(EntradaEmail.Text, EntradaSenha.Text);
+            var usuarioLogado = validarLogin.Checar(EntradaEmail.Text.ToLower(), EntradaSenha.Text);
 
             if (usuarioLogado != null)
             {

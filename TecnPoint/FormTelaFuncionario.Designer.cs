@@ -33,8 +33,11 @@
             EmailUsuario = new Label();
             botaoAcompanharChamado = new Button();
             panel1 = new Panel();
+            lblSubtituloTelaInicioFunc = new Label();
+            lblTituloTelaInicioFunc = new Label();
             groupBox1 = new GroupBox();
             btnAddUser = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // NomeUsuario
@@ -86,10 +89,34 @@
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(lblSubtituloTelaInicioFunc);
+            panel1.Controls.Add(lblTituloTelaInicioFunc);
             panel1.Location = new Point(248, -5);
             panel1.Name = "panel1";
             panel1.Size = new Size(555, 460);
             panel1.TabIndex = 4;
+            // 
+            // lblSubtituloTelaInicioFunc
+            // 
+            lblSubtituloTelaInicioFunc.AutoSize = true;
+            lblSubtituloTelaInicioFunc.BackColor = Color.Transparent;
+            lblSubtituloTelaInicioFunc.Font = new Font("Consolas", 8F);
+            lblSubtituloTelaInicioFunc.Location = new Point(146, 332);
+            lblSubtituloTelaInicioFunc.Name = "lblSubtituloTelaInicioFunc";
+            lblSubtituloTelaInicioFunc.Size = new Size(295, 13);
+            lblSubtituloTelaInicioFunc.TabIndex = 1;
+            lblSubtituloTelaInicioFunc.Text = "Unidos pelo desafio, moldados pelo conhecimento.";
+            // 
+            // lblTituloTelaInicioFunc
+            // 
+            lblTituloTelaInicioFunc.AutoSize = true;
+            lblTituloTelaInicioFunc.BackColor = Color.Transparent;
+            lblTituloTelaInicioFunc.Font = new Font("Consolas", 32F, FontStyle.Bold);
+            lblTituloTelaInicioFunc.Location = new Point(116, 281);
+            lblTituloTelaInicioFunc.Name = "lblTituloTelaInicioFunc";
+            lblTituloTelaInicioFunc.Size = new Size(358, 51);
+            lblTituloTelaInicioFunc.TabIndex = 0;
+            lblTituloTelaInicioFunc.Text = "Tech Solutions";
             // 
             // groupBox1
             // 
@@ -140,6 +167,8 @@
             Text = "FormTelaFuncionario";
             Closed += FormTelaCliente_Closed;
             Load += FormTelaCliente_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,5 +181,7 @@
         private Panel panel1;
         private GroupBox groupBox1;
         private Button btnAddUser;
+        private Label lblTituloTelaInicioFunc;
+        private Label lblSubtituloTelaInicioFunc;
     }
 }
