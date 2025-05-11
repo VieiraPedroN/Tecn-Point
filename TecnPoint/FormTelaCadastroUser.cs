@@ -27,7 +27,7 @@ namespace TecnPoint.Interface
                 validarCadastro.ValidarSenha(txtbSenha.Text) &&
                 validarCadastro.ValidarTipoUsuario(cbbTipoUsuário.Text))
             {
-                var cadastro = cadastroUsuarios.CadastrarUsuario(txtbNome.Text, txtbEmail.Text, txtbSenha.Text, cbbTipoUsuário.Text);
+                var cadastro = cadastroUsuarios.CadastrarUsuario(txtbNome.Text, txtbEmail.Text.ToLower(), txtbSenha.Text, cbbTipoUsuário.Text);
                 if (cadastro)
                 {
                     MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -91,6 +91,20 @@ namespace TecnPoint.Interface
             else
             {
                 errorProvider1.SetError(cbbTipoUsuário, "");
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if((lblInfoEmail.Visible == false && lblExclamacao.Visible == false))
+            {
+                lblInfoEmail.Visible = true;
+                lblExclamacao.Visible = true;
+            }
+            else
+            {
+                lblInfoEmail.Visible = false;
+                lblExclamacao.Visible = false;
             }
         }
     }

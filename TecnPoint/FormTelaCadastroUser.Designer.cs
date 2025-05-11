@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaCadastroUser));
             txtbNome = new TextBox();
             txtbEmail = new TextBox();
             txtbSenha = new TextBox();
@@ -40,7 +41,11 @@
             lblTipoUsuario = new Label();
             cbbTipoUsuário = new ComboBox();
             errorProvider1 = new ErrorProvider(components);
+            lblInfoEmail = new Label();
+            lblExclamacao = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtbNome
@@ -166,6 +171,42 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // lblInfoEmail
+            // 
+            lblInfoEmail.AutoSize = true;
+            lblInfoEmail.BackColor = Color.Transparent;
+            lblInfoEmail.FlatStyle = FlatStyle.Flat;
+            lblInfoEmail.Font = new Font("Consolas", 8F);
+            lblInfoEmail.ForeColor = SystemColors.ControlText;
+            lblInfoEmail.Location = new Point(203, 124);
+            lblInfoEmail.Name = "lblInfoEmail";
+            lblInfoEmail.Size = new Size(247, 13);
+            lblInfoEmail.TabIndex = 11;
+            lblInfoEmail.Text = "Os caracteres '@' e '.' são obrigatórios";
+            lblInfoEmail.Visible = false;
+            // 
+            // lblExclamacao
+            // 
+            lblExclamacao.AutoSize = true;
+            lblExclamacao.Font = new Font("Consolas", 11F, FontStyle.Bold);
+            lblExclamacao.ForeColor = Color.Red;
+            lblExclamacao.Location = new Point(446, 121);
+            lblExclamacao.Name = "lblExclamacao";
+            lblExclamacao.Size = new Size(16, 18);
+            lblExclamacao.TabIndex = 13;
+            lblExclamacao.Text = "!";
+            lblExclamacao.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(182, 121);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(20, 19);
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // FormTelaCadastroUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -173,6 +214,9 @@
             BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(555, 460);
+            Controls.Add(pictureBox1);
+            Controls.Add(lblExclamacao);
+            Controls.Add(lblInfoEmail);
             Controls.Add(cbbTipoUsuário);
             Controls.Add(lblTipoUsuario);
             Controls.Add(lblSenha);
@@ -189,6 +233,7 @@
             Name = "FormTelaCadastroUser";
             Text = "FormTelaCadastroUser";
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -206,5 +251,8 @@
         private Label lblSenha;
         private Label lblTipoUsuario;
         private ErrorProvider errorProvider1;
+        private Label lblInfoEmail;
+        private Label lblExclamacao;
+        private PictureBox pictureBox1;
     }
 }

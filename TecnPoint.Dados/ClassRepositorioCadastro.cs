@@ -21,7 +21,7 @@ namespace TecnPoint.Dados
                 {
                     //Enviando os parâmetros para o comando
                     comandoConsulta.Parameters.AddWithValue("@RecebeNome", usuarioCadastro.Nome);
-                    comandoConsulta.Parameters.AddWithValue("@RecebeEmail", usuarioCadastro.Email);
+                    comandoConsulta.Parameters.AddWithValue("@RecebeEmail", usuarioCadastro.Email.ToLower());
                     comandoConsulta.Parameters.AddWithValue("@RecebeSenha", usuarioCadastro.Senha);
                     comandoConsulta.Parameters.AddWithValue("@RecebeTipoUsuario", usuarioCadastro.TipoUsuario);
                     comandoConsulta.ExecuteNonQuery();
