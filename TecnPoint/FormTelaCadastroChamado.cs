@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Modelo.DadosUsuario;
+using TecnPoint.Modelo;
 using TecnPoint.Service;
 using TecnPoint.Interface;
 
@@ -16,14 +16,14 @@ namespace TecnPoint.Interface
     public partial class FormTelaCadastroChamado : Form
     {
         private FormTelaCliente telaCliente;
-        private DadosUsuario usuarioLogado;
-        CadastroChamado cadastroChamado;
-        public FormTelaCadastroChamado(DadosUsuario dadosUsuario, FormTelaCliente telaClienteParam)
+        private ModeloUsuario usuarioLogado;
+        ServChamado cadastroChamado;
+        public FormTelaCadastroChamado(ModeloUsuario dadosUsuario, FormTelaCliente telaClienteParam)
         {
             this.usuarioLogado = dadosUsuario;
             this.telaCliente = telaClienteParam;
             InitializeComponent();
-            cadastroChamado = new CadastroChamado();
+            cadastroChamado = new ServChamado();
             cbxModulo.SelectedIndex = 0;
             cbxJornada.SelectedIndex = 0;
             cbxPrioridade.SelectedIndex = 0;
@@ -63,6 +63,7 @@ namespace TecnPoint.Interface
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            telaCliente.CarregarTelaInicio();
             this.Close();
         }
         private void pictureInfoJornada_Click(object sender, EventArgs e)

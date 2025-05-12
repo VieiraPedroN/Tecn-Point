@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Modelo.DadosUsuario;
+using TecnPoint.Modelo;
 
 namespace TecnPoint.Interface
 {
@@ -54,7 +54,12 @@ namespace TecnPoint.Interface
                         estadoChat = "sub_Software";
                         return "O seu problema está relacionado a algum Software ❓ \nUm programa não abre \nUm programa está travando ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Aplicativo externo não está abrindo\n2 - Lentidão e travamentos frequentes do sistema ou aplicativos\n3 - Aparece uma mensagem de erro e você não sabe o que é\n4 - Um programa externo pede uma senha ou código que você não tem\n5 - Como cadastrar um novo usuário";
+                            "\n1 - Aplicativo externo não está abrindo" +
+                            "\n2 - Lentidão e travamentos frequentes do sistema ou aplicativos" +
+                            "\n3 - Aparece uma mensagem de erro e você não sabe o que é" +
+                            "\n4 - Um programa externo pede uma senha ou código que você não tem" +
+                            "\n5 - Como cadastrar um novo usuário" +
+                            "\n6 - Não encontrei meu problema";
                     }
                     else if (opcaoUsuario == "2")
                     {
@@ -62,8 +67,12 @@ namespace TecnPoint.Interface
                         estadoChat = "sub_Hardware";
                         return "O seu problema está relacionado a Hardware??\nUm componente está apresentando falhas ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Problemas com teclado/mouse\n2 - Monitor sem imagem\n3 - Impressora não está imprimindo" +
-                            "\n4 - Falhas no som (alto-falante/fone)\n5 - Superaquecimento do computador";
+                            "\n1 - Problemas com teclado/mouse" +
+                            "\n2 - Monitor sem imagem" +
+                            "\n3 - Impressora não está imprimindo" +
+                            "\n4 - Falhas no som (alto-falante/fone)" +
+                            "\n5 - Superaquecimento do computador" +
+                            "\n6 - Não encontrei meu problema";
                     }
                     else if (opcaoUsuario == "3")
                     {
@@ -71,7 +80,12 @@ namespace TecnPoint.Interface
                         estadoChat = "sub_Rede";
                         return "O seu problema está relacionado à Rede??\nA sua internet está lenta ❓" +
                             "\n\nSelecione uma das opções abaixo para eu tentar te ajudar..." +
-                            "\n1 - Sem conexão com a internet\n2 - Conexão instável (cai toda hora)\n3 - Acesso negado a sites específicos\n4 - Internet muito lenta\n5 - Ícone de rede não aparece no computador";
+                            "\n1 - Sem conexão com a internet" +
+                            "\n2 - Conexão instável (cai toda hora)" +
+                            "\n3 - Acesso negado a sites específicos" +
+                            "\n4 - Internet muito lenta" +
+                            "\n5 - Ícone de rede não aparece no computador" +
+                            "\n6 - Não encontrei meu problema";
                     }
                     else
                     {
@@ -121,6 +135,14 @@ namespace TecnPoint.Interface
                             "\nsuporte com os seguintes dados: nome, e-mail, senha padrão, tipo do usuário.");
                         return $"{MensagemFinal}";
                     }
+                    else if (opcaoUsuario == "6")
+                    {
+                        estadoChat = "confirma_chamado";
+                        return "6 - Não encontrei meu problema" +
+                               "\nCerto, então seu problema não está na lista acima." +
+                               "\nDeseja abrir um chamado?" +
+                               "\n1 - Sim, gostaria de abrir um chamado!\n2 - Não, não será necessário abrir um chamado";
+                    }
                     else
                     {
                         return "Opção inválida! Insira uma das respostas acima";
@@ -163,7 +185,16 @@ namespace TecnPoint.Interface
                             "\n(caixa do computador) está funcionando. Caso não esteja funcionando (girando), " +
                             "\nabra um chamado para o suporte.");
                         return $"{MensagemFinal}";
-                    }else
+                    }
+                    else if (opcaoUsuario == "6")
+                    {
+                        estadoChat = "confirma_chamado";
+                        return "6 - Não encontrei meu problema" +
+                               "\nCerto, então seu problema não está na lista acima." +
+                               "\nDeseja abrir um chamado?" +
+                               "\n1 - Sim, gostaria de abrir um chamado!\n2 - Não, não será necessário abrir um chamado";
+                    }
+                    else
                     {
                         return "Opção inválida! Insira uma das respostas acima";
                     }
@@ -206,12 +237,38 @@ namespace TecnPoint.Interface
                             "\no suporte.");
                         return $"{MensagemFinal}";
                     }
+                    else if (opcaoUsuario == "6")
+                    {
+                        estadoChat = "confirma_chamado";
+                        return "6 - Não encontrei meu problema" +
+                               "\nCerto, então seu problema não está na lista acima." +
+                               "\nDeseja abrir um chamado?" +
+                               "\n1 - Sim, gostaria de abrir um chamado!\n2 - Não, não será necessário abrir um chamado";
+                    }
                     else
                     {
                         return "Opção inválida! Insira uma das respostas acima";
                     }
+                case "confirma_chamado":
+                    if (opcaoUsuario == "1")
+                    {
+                        telaCliente.botaoCriarChamado_Click(null, null);
+                        this.Close();
+                        return "Chamado aberto com sucesso.";
+                    }
+                    else if (opcaoUsuario == "2")
+                    {
+                        AdicionaMensagem("Tudo bem. Se precisar, estou aqui!");
+                        telaCliente.CarregarTelaInicio();
+                        this.Close();
+                        return "Chamado fechado";
+                    }
+                    else
+                    {
+                        return "Opção inválida. Deseja abrir um chamado?" +
+                            "\n1 - Sim, gostaria de abrir um chamado!\n2 - Não, não será necessário abrir um chamado";
+                    }
                 case "final":
-                    AdicionaMensagem("");
                     if (opcaoUsuario == "1")
                     {
                         telaCliente.botaoCriarChamado_Click(null,null);
@@ -219,12 +276,14 @@ namespace TecnPoint.Interface
                     }
                     else if (opcaoUsuario == "2")
                     {
+                        AdicionaMensagem("Tudo bem. Se precisar, estou aqui!");
+                        telaCliente.CarregarTelaInicio();
                         this.Close();
                     }
                     else 
                     {
-                        AdicionaMensagem("Não entendi, poderia tentar novamente?");
-                        return "sla";
+                        estadoChat = "final";
+                        return "Não entendi, poderia tentar novamente?";
                     }
                     return "Tenha um ótimo dia.";
                 default:

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TecnPoint.Modelo.DadosUsuario
+namespace TecnPoint.Modelo
 {
-    public class DadosUsuario
+    public class ModeloUsuario
     {
         private int _idUsuario;
         private string _nome;
@@ -15,10 +15,10 @@ namespace TecnPoint.Modelo.DadosUsuario
         private string _tipoUsuario;
 
         //Construtor para login de usuário e carregamento da lista de funcionários
-        public DadosUsuario() { }
+        public ModeloUsuario() { }
 
         //Construtor para cadastro de usuário
-        public DadosUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario)
+        public ModeloUsuario(int idUsuario, string nome, string email, string senha, string tipoUsuario)
         {
             _idUsuario = idUsuario;
             _nome = nome;
