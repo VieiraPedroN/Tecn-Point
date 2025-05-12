@@ -67,7 +67,7 @@ CREATE TABLE Conversa (
 /*usuários*/
 INSERT INTO Usuarios (Nome, Email, Senha, tipo_Usuario)
 VALUES 
-	('Suporte Tech', 'TechSolution@gmail.com', 'techs', 'Funcionário'),
+	('Suporte Tech', 'techsolution@gmail.com', 'techs', 'Funcionário'),
 	('cliente', '@.', '123', 'Cliente'),
 	('teste', 'testefunc@gmail.com', 'teste', 'Funcionário'),
 	('Danilo Alves da Silva', 'danalvessilva@gmail.com.br', 'dan163', 'Funcionário'),
