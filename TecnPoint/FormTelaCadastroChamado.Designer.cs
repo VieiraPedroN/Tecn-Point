@@ -54,6 +54,7 @@
             // 
             // txtbDescricao
             // 
+            txtbDescricao.Cursor = Cursors.IBeam;
             txtbDescricao.Font = new Font("Segoe UI", 12F);
             txtbDescricao.Location = new Point(126, 293);
             txtbDescricao.Multiline = true;
@@ -68,6 +69,9 @@
             // 
             btnAbrirChamado.BackColor = Color.FromArgb(126, 105, 171);
             btnAbrirChamado.Cursor = Cursors.Hand;
+            btnAbrirChamado.FlatAppearance.BorderColor = Color.DarkGray;
+            btnAbrirChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            btnAbrirChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnAbrirChamado.FlatStyle = FlatStyle.Flat;
             btnAbrirChamado.Font = new Font("Consolas", 11F);
             btnAbrirChamado.ForeColor = SystemColors.ControlLightLight;
@@ -121,9 +125,12 @@
             // 
             button1.BackColor = SystemColors.ButtonFace;
             button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.DarkGray;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Consolas", 11F);
-            button1.ForeColor = Color.Gray;
+            button1.ForeColor = Color.DimGray;
             button1.Location = new Point(230, 417);
             button1.Name = "button1";
             button1.Size = new Size(110, 30);
@@ -196,6 +203,7 @@
             // 
             // pictureInfoJornada
             // 
+            pictureInfoJornada.Cursor = Cursors.Hand;
             pictureInfoJornada.Image = (Image)resources.GetObject("pictureInfoJornada.Image");
             pictureInfoJornada.Location = new Point(176, 80);
             pictureInfoJornada.Name = "pictureInfoJornada";
@@ -206,6 +214,7 @@
             // 
             // pictureInfoModulo
             // 
+            pictureInfoModulo.Cursor = Cursors.Hand;
             pictureInfoModulo.Image = (Image)resources.GetObject("pictureInfoModulo.Image");
             pictureInfoModulo.Location = new Point(168, 16);
             pictureInfoModulo.Name = "pictureInfoModulo";
@@ -227,6 +236,7 @@
             // 
             // txtbTitulo
             // 
+            txtbTitulo.Cursor = Cursors.IBeam;
             txtbTitulo.Font = new Font("Segoe UI", 12F);
             txtbTitulo.Location = new Point(126, 230);
             txtbTitulo.Name = "txtbTitulo";

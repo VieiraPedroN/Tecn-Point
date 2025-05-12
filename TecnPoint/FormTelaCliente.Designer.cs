@@ -34,10 +34,10 @@
             botaoCriarChamado = new Button();
             botaoAcompanharChamado = new Button();
             panel1 = new Panel();
+            lblSubtituloTelaInicialCliente = new Label();
+            lblTituloTelaInicioCliente = new Label();
             groupBox1 = new GroupBox();
             button1 = new Button();
-            lblTituloTelaInicioCliente = new Label();
-            lblSubtituloTelaInicialCliente = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,11 +45,11 @@
             // 
             NomeUsuario.AutoSize = true;
             NomeUsuario.BackColor = Color.Transparent;
-            NomeUsuario.Font = new Font("Consolas", 11F);
+            NomeUsuario.Font = new Font("Consolas", 10F);
             NomeUsuario.ForeColor = Color.Gainsboro;
             NomeUsuario.Location = new Point(80, 23);
             NomeUsuario.Name = "NomeUsuario";
-            NomeUsuario.Size = new Size(104, 18);
+            NomeUsuario.Size = new Size(104, 17);
             NomeUsuario.TabIndex = 0;
             NomeUsuario.Text = "Nome Usuario";
             // 
@@ -57,11 +57,11 @@
             // 
             EmailUsuario.AutoSize = true;
             EmailUsuario.BackColor = Color.Transparent;
-            EmailUsuario.Font = new Font("Consolas", 11F);
+            EmailUsuario.Font = new Font("Consolas", 10F);
             EmailUsuario.ForeColor = Color.Gainsboro;
             EmailUsuario.Location = new Point(80, 48);
             EmailUsuario.Name = "EmailUsuario";
-            EmailUsuario.Size = new Size(112, 18);
+            EmailUsuario.Size = new Size(112, 17);
             EmailUsuario.TabIndex = 1;
             EmailUsuario.Text = "Email Usuario";
             // 
@@ -117,6 +117,26 @@
             panel1.Size = new Size(555, 456);
             panel1.TabIndex = 4;
             // 
+            // lblSubtituloTelaInicialCliente
+            // 
+            lblSubtituloTelaInicialCliente.AutoSize = true;
+            lblSubtituloTelaInicialCliente.Font = new Font("Consolas", 8F);
+            lblSubtituloTelaInicialCliente.Location = new Point(146, 332);
+            lblSubtituloTelaInicialCliente.Name = "lblSubtituloTelaInicialCliente";
+            lblSubtituloTelaInicialCliente.Size = new Size(295, 13);
+            lblSubtituloTelaInicialCliente.TabIndex = 1;
+            lblSubtituloTelaInicialCliente.Text = "Unidos pelo desafio, moldados pelo conhecimento.";
+            // 
+            // lblTituloTelaInicioCliente
+            // 
+            lblTituloTelaInicioCliente.AutoSize = true;
+            lblTituloTelaInicioCliente.Font = new Font("Consolas", 32F, FontStyle.Bold);
+            lblTituloTelaInicioCliente.Location = new Point(116, 281);
+            lblTituloTelaInicioCliente.Name = "lblTituloTelaInicioCliente";
+            lblTituloTelaInicioCliente.Size = new Size(358, 51);
+            lblTituloTelaInicioCliente.TabIndex = 0;
+            lblTituloTelaInicioCliente.Text = "Tech Solutions";
+            // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
@@ -138,32 +158,12 @@
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(10, 400);
+            button1.Location = new Point(10, 398);
             button1.Name = "button1";
-            button1.Size = new Size(44, 38);
+            button1.Size = new Size(45, 40);
             button1.TabIndex = 6;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // lblTituloTelaInicioCliente
-            // 
-            lblTituloTelaInicioCliente.AutoSize = true;
-            lblTituloTelaInicioCliente.Font = new Font("Consolas", 32F, FontStyle.Bold);
-            lblTituloTelaInicioCliente.Location = new Point(116, 281);
-            lblTituloTelaInicioCliente.Name = "lblTituloTelaInicioCliente";
-            lblTituloTelaInicioCliente.Size = new Size(358, 51);
-            lblTituloTelaInicioCliente.TabIndex = 0;
-            lblTituloTelaInicioCliente.Text = "Tech Solutions";
-            // 
-            // lblSubtituloTelaInicialCliente
-            // 
-            lblSubtituloTelaInicialCliente.AutoSize = true;
-            lblSubtituloTelaInicialCliente.Font = new Font("Consolas", 8F);
-            lblSubtituloTelaInicialCliente.Location = new Point(146, 332);
-            lblSubtituloTelaInicialCliente.Name = "lblSubtituloTelaInicialCliente";
-            lblSubtituloTelaInicialCliente.Size = new Size(295, 13);
-            lblSubtituloTelaInicialCliente.TabIndex = 1;
-            lblSubtituloTelaInicialCliente.Text = "Unidos pelo desafio, moldados pelo conhecimento.";
             // 
             // FormTelaCliente
             // 
