@@ -20,7 +20,7 @@ namespace TecnPoint.Interface
     {
         private FormTelaAcompanharChamado formPai;
         private ExibicaoChamado dadosChamado;
-        
+
         private ModeloUsuario usuarioLogado;
 
         //Service para gerenciar as mensagens (carregar o chat e enviá-las)
@@ -46,16 +46,16 @@ namespace TecnPoint.Interface
 
         private void PreencherDetalhes()
         {
-            label1.Text = dadosChamado.Titulo;
-            label2.Text = dadosChamado.NomeCliente;
-            label3.Text = dadosChamado.Status;
-            label4.Text = dadosChamado.NomeFuncionario;
-            label5.Text = dadosChamado.Prioridade;
+            lblTitulo.Text = dadosChamado.Titulo;
+            lblCliente.Text = dadosChamado.NomeCliente;
+            lblStatus.Text = dadosChamado.Status;
+            lblFuncionario.Text = dadosChamado.NomeFuncionario;
+            lblPrioridade.Text = dadosChamado.Prioridade;
         }
 
         private void FormDetalhesChamado_Load(object sender, EventArgs e)
         {
-            if(usuarioLogado.TipoUsuario == "Cliente")
+            if (usuarioLogado.TipoUsuario == "Cliente")
             {
                 cbxPrioridade.Visible = false;
                 cbxStatus.Visible = false;
@@ -87,7 +87,7 @@ namespace TecnPoint.Interface
                 if (funcionarioSelecionado != null)
                 {
                     ServAtualizaChamado.AtribuiChamadoParaFuncionario(dadosChamado.IdChamado, funcionarioSelecionado.IdUsuario);
-                    label4.Text = funcionarioSelecionado.Nome;
+                    lblFuncionario.Text = funcionarioSelecionado.Nome;
                 }
             }
         }
@@ -100,7 +100,7 @@ namespace TecnPoint.Interface
                 {
                     string statusAtualizado = cbxStatus.Text;
                     ServAtualizaChamado.AtribuirStatus(dadosChamado.IdChamado, statusAtualizado);
-                    label3.Text = statusAtualizado;
+                    lblStatus.Text = statusAtualizado;
                 }
             }
         }
@@ -113,7 +113,7 @@ namespace TecnPoint.Interface
                 {
                     string prioridadeAtualizada = cbxPrioridade.Text;
                     ServAtualizaChamado.AtribuirPrioridades(dadosChamado.IdChamado, prioridadeAtualizada);
-                    label5.Text = prioridadeAtualizada;
+                    lblPrioridade.Text = prioridadeAtualizada;
                 }
             }
         }

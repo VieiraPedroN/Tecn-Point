@@ -30,12 +30,12 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetalhesChamado));
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            lblTitulo = new Label();
+            lblCliente = new Label();
+            lblStatus = new Label();
+            lblFuncionario = new Label();
             btnVoltar = new Button();
-            label5 = new Label();
+            lblPrioridade = new Label();
             cbxNomeFunc = new ComboBox();
             PanelMsg = new FlowLayoutPanel();
             tbxMensagem = new TextBox();
@@ -43,49 +43,49 @@
             cbxStatus = new ComboBox();
             cbxPrioridade = new ComboBox();
             timerLeituraDeMensagens = new System.Windows.Forms.Timer(components);
-            label6 = new Label();
-            label7 = new Label();
+            lblExibeStatus = new Label();
+            lblExibePrioridade = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lblTitulo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 15F, FontStyle.Bold);
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 23);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Consolas", 15F, FontStyle.Bold);
+            lblTitulo.Location = new Point(12, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(109, 23);
+            lblTitulo.TabIndex = 6;
+            lblTitulo.Text = "lblTitulo";
             // 
-            // label2
+            // lblCliente
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Consolas", 11F);
-            label2.Location = new Point(374, 274);
-            label2.Name = "label2";
-            label2.Size = new Size(56, 18);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            lblCliente.AutoSize = true;
+            lblCliente.Font = new Font("Consolas", 11F);
+            lblCliente.Location = new Point(374, 274);
+            lblCliente.Name = "lblCliente";
+            lblCliente.Size = new Size(88, 18);
+            lblCliente.TabIndex = 13;
+            lblCliente.Text = "lblCliente";
             // 
-            // label3
+            // lblStatus
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Consolas", 10F);
-            label3.Location = new Point(333, 34);
-            label3.Name = "label3";
-            label3.Size = new Size(56, 17);
-            label3.TabIndex = 3;
-            label3.Text = "label3";
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Consolas", 10F);
+            lblStatus.Location = new Point(333, 34);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(80, 17);
+            lblStatus.TabIndex = 9;
+            lblStatus.Text = "lblStatus";
             // 
-            // label4
+            // lblFuncionario
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Consolas", 11F);
-            label4.Location = new Point(374, 111);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 18);
-            label4.TabIndex = 2;
-            label4.Text = "label4";
+            lblFuncionario.AutoSize = true;
+            lblFuncionario.Font = new Font("Consolas", 11F);
+            lblFuncionario.Location = new Point(374, 111);
+            lblFuncionario.Name = "lblFuncionario";
+            lblFuncionario.Size = new Size(120, 18);
+            lblFuncionario.TabIndex = 12;
+            lblFuncionario.Text = "lblFuncionario";
             // 
             // btnVoltar
             // 
@@ -95,20 +95,20 @@
             btnVoltar.Location = new Point(12, 420);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Size = new Size(56, 28);
-            btnVoltar.TabIndex = 4;
+            btnVoltar.TabIndex = 3;
             btnVoltar.Text = "Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
             btnVoltar.Click += button1_Click;
             // 
-            // label5
+            // lblPrioridade
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Consolas", 10F);
-            label5.Location = new Point(447, 34);
-            label5.Name = "label5";
-            label5.Size = new Size(56, 17);
-            label5.TabIndex = 5;
-            label5.Text = "label5";
+            lblPrioridade.AutoSize = true;
+            lblPrioridade.Font = new Font("Consolas", 10F);
+            lblPrioridade.Location = new Point(447, 34);
+            lblPrioridade.Name = "lblPrioridade";
+            lblPrioridade.Size = new Size(56, 17);
+            lblPrioridade.TabIndex = 10;
+            lblPrioridade.Text = "label5";
             // 
             // cbxNomeFunc
             // 
@@ -117,7 +117,7 @@
             cbxNomeFunc.Location = new Point(374, 136);
             cbxNomeFunc.Name = "cbxNomeFunc";
             cbxNomeFunc.Size = new Size(155, 23);
-            cbxNomeFunc.TabIndex = 6;
+            cbxNomeFunc.TabIndex = 2;
             cbxNomeFunc.SelectedIndexChanged += cbxNomeFunc_SelectedIndexChanged;
             // 
             // PanelMsg
@@ -128,7 +128,7 @@
             PanelMsg.Location = new Point(12, 109);
             PanelMsg.Name = "PanelMsg";
             PanelMsg.Size = new Size(356, 276);
-            PanelMsg.TabIndex = 8;
+            PanelMsg.TabIndex = 11;
             PanelMsg.WrapContents = false;
             // 
             // tbxMensagem
@@ -139,7 +139,7 @@
             tbxMensagem.Name = "tbxMensagem";
             tbxMensagem.ScrollBars = ScrollBars.Vertical;
             tbxMensagem.Size = new Size(222, 40);
-            tbxMensagem.TabIndex = 0;
+            tbxMensagem.TabIndex = 4;
             // 
             // btnEnviar
             // 
@@ -147,7 +147,7 @@
             btnEnviar.Location = new Point(319, 420);
             btnEnviar.Name = "btnEnviar";
             btnEnviar.Size = new Size(49, 26);
-            btnEnviar.TabIndex = 9;
+            btnEnviar.TabIndex = 5;
             btnEnviar.UseVisualStyleBackColor = true;
             btnEnviar.Click += btnEnviar_Click;
             // 
@@ -159,7 +159,7 @@
             cbxStatus.Location = new Point(333, 55);
             cbxStatus.Name = "cbxStatus";
             cbxStatus.Size = new Size(89, 23);
-            cbxStatus.TabIndex = 10;
+            cbxStatus.TabIndex = 0;
             cbxStatus.SelectedIndexChanged += cbxStatus_SelectedIndexChanged;
             // 
             // cbxPrioridade
@@ -170,7 +170,7 @@
             cbxPrioridade.Location = new Point(447, 55);
             cbxPrioridade.Name = "cbxPrioridade";
             cbxPrioridade.Size = new Size(89, 23);
-            cbxPrioridade.TabIndex = 11;
+            cbxPrioridade.TabIndex = 1;
             cbxPrioridade.SelectedIndexChanged += cbxPrioridade_SelectedIndexChanged;
             // 
             // timerLeituraDeMensagens
@@ -179,45 +179,45 @@
             timerLeituraDeMensagens.Interval = 2000;
             timerLeituraDeMensagens.Tick += timerLeituraDeMensagens_Tick;
             // 
-            // label6
+            // lblExibeStatus
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Consolas", 10F);
-            label6.Location = new Point(325, 9);
-            label6.Name = "label6";
-            label6.Size = new Size(64, 17);
-            label6.TabIndex = 12;
-            label6.Text = "Status:";
+            lblExibeStatus.AutoSize = true;
+            lblExibeStatus.Font = new Font("Consolas", 10F);
+            lblExibeStatus.Location = new Point(325, 9);
+            lblExibeStatus.Name = "lblExibeStatus";
+            lblExibeStatus.Size = new Size(64, 17);
+            lblExibeStatus.TabIndex = 7;
+            lblExibeStatus.Text = "Status:";
             // 
-            // label7
+            // lblExibePrioridade
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Consolas", 10F);
-            label7.Location = new Point(440, 9);
-            label7.Name = "label7";
-            label7.Size = new Size(96, 17);
-            label7.TabIndex = 13;
-            label7.Text = "Prioridade:";
+            lblExibePrioridade.AutoSize = true;
+            lblExibePrioridade.Font = new Font("Consolas", 10F);
+            lblExibePrioridade.Location = new Point(440, 9);
+            lblExibePrioridade.Name = "lblExibePrioridade";
+            lblExibePrioridade.Size = new Size(96, 17);
+            lblExibePrioridade.TabIndex = 8;
+            lblExibePrioridade.Text = "Prioridade:";
             // 
             // FormDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 460);
-            Controls.Add(label7);
-            Controls.Add(label6);
+            Controls.Add(lblExibePrioridade);
+            Controls.Add(lblExibeStatus);
             Controls.Add(cbxPrioridade);
             Controls.Add(cbxStatus);
             Controls.Add(btnEnviar);
             Controls.Add(tbxMensagem);
             Controls.Add(PanelMsg);
             Controls.Add(cbxNomeFunc);
-            Controls.Add(label5);
+            Controls.Add(lblPrioridade);
             Controls.Add(btnVoltar);
-            Controls.Add(label3);
-            Controls.Add(label4);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblStatus);
+            Controls.Add(lblFuncionario);
+            Controls.Add(lblCliente);
+            Controls.Add(lblTitulo);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormDetalhesChamado";
             Text = "FormDetalhesChamados";
@@ -228,12 +228,12 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label lblTitulo;
+        private Label lblCliente;
+        private Label lblStatus;
+        private Label lblFuncionario;
         private Button btnVoltar;
-        private Label label5;
+        private Label lblPrioridade;
         private ComboBox cbxNomeFunc;
         private FlowLayoutPanel PanelMsg;
         private TextBox tbxMensagem;
@@ -241,7 +241,7 @@
         private ComboBox cbxStatus;
         private ComboBox cbxPrioridade;
         private System.Windows.Forms.Timer timerLeituraDeMensagens;
-        private Label label6;
-        private Label label7;
+        private Label lblExibeStatus;
+        private Label lblExibePrioridade;
     }
 }

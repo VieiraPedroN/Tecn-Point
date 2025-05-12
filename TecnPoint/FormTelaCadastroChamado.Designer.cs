@@ -78,7 +78,7 @@
             btnAbrirChamado.Location = new Point(346, 417);
             btnAbrirChamado.Name = "btnAbrirChamado";
             btnAbrirChamado.Size = new Size(110, 30);
-            btnAbrirChamado.TabIndex = 6;
+            btnAbrirChamado.TabIndex = 7;
             btnAbrirChamado.Text = "Enviar";
             btnAbrirChamado.UseVisualStyleBackColor = false;
             btnAbrirChamado.Click += btnAbrirChamado_Click;
@@ -134,7 +134,7 @@
             button1.Location = new Point(230, 417);
             button1.Name = "button1";
             button1.Size = new Size(110, 30);
-            button1.TabIndex = 7;
+            button1.TabIndex = 6;
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
