@@ -41,11 +41,11 @@
             // 
             NomeUsuario.AutoSize = true;
             NomeUsuario.BackColor = Color.Transparent;
-            NomeUsuario.Font = new Font("Consolas", 11F);
+            NomeUsuario.Font = new Font("Consolas", 10F);
             NomeUsuario.ForeColor = Color.Gainsboro;
             NomeUsuario.Location = new Point(80, 23);
             NomeUsuario.Name = "NomeUsuario";
-            NomeUsuario.Size = new Size(104, 18);
+            NomeUsuario.Size = new Size(104, 17);
             NomeUsuario.TabIndex = 0;
             NomeUsuario.Text = "Nome Usuario";
             // 
@@ -53,11 +53,11 @@
             // 
             EmailUsuario.AutoSize = true;
             EmailUsuario.BackColor = Color.Transparent;
-            EmailUsuario.Font = new Font("Consolas", 11F);
+            EmailUsuario.Font = new Font("Consolas", 10F);
             EmailUsuario.ForeColor = Color.Gainsboro;
             EmailUsuario.Location = new Point(80, 48);
             EmailUsuario.Name = "EmailUsuario";
-            EmailUsuario.Size = new Size(112, 18);
+            EmailUsuario.Size = new Size(112, 17);
             EmailUsuario.TabIndex = 1;
             EmailUsuario.Text = "Email Usuario";
             // 
@@ -112,9 +112,9 @@
             btnAddUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnAddUser.FlatStyle = FlatStyle.Flat;
             btnAddUser.Image = Properties.Resources.Add_User;
-            btnAddUser.Location = new Point(12, 408);
+            btnAddUser.Location = new Point(10, 398);
             btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(30, 30);
+            btnAddUser.Size = new Size(45, 40);
             btnAddUser.TabIndex = 6;
             btnAddUser.UseVisualStyleBackColor = false;
             btnAddUser.Click += btnAddUser_Click;
@@ -136,10 +136,10 @@
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormTelaFuncionario";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormTelaFuncionario";
-            Closed += FormTelaCliente_Closed;
-            Load += FormTelaCliente_Load;
+            Closed += FormTelaFuncionario_Closed;
+            Load += FormTelaFuncionario_Load;
             ResumeLayout(false);
             PerformLayout();
         }

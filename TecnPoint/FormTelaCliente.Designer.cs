@@ -42,11 +42,11 @@
             // 
             NomeUsuario.AutoSize = true;
             NomeUsuario.BackColor = Color.Transparent;
-            NomeUsuario.Font = new Font("Consolas", 11F);
+            NomeUsuario.Font = new Font("Consolas", 10F);
             NomeUsuario.ForeColor = Color.Gainsboro;
             NomeUsuario.Location = new Point(80, 23);
             NomeUsuario.Name = "NomeUsuario";
-            NomeUsuario.Size = new Size(104, 18);
+            NomeUsuario.Size = new Size(104, 17);
             NomeUsuario.TabIndex = 0;
             NomeUsuario.Text = "Nome Usuario";
             // 
@@ -54,11 +54,11 @@
             // 
             EmailUsuario.AutoSize = true;
             EmailUsuario.BackColor = Color.Transparent;
-            EmailUsuario.Font = new Font("Consolas", 11F);
+            EmailUsuario.Font = new Font("Consolas", 10F);
             EmailUsuario.ForeColor = Color.Gainsboro;
             EmailUsuario.Location = new Point(80, 48);
             EmailUsuario.Name = "EmailUsuario";
-            EmailUsuario.Size = new Size(112, 18);
+            EmailUsuario.Size = new Size(112, 17);
             EmailUsuario.TabIndex = 1;
             EmailUsuario.Text = "Email Usuario";
             // 
@@ -133,9 +133,9 @@
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(10, 400);
+            button1.Location = new Point(10, 398);
             button1.Name = "button1";
-            button1.Size = new Size(44, 38);
+            button1.Size = new Size(45, 40);
             button1.TabIndex = 6;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
