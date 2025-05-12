@@ -63,6 +63,7 @@ namespace TecnPoint.Interface
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            telaCliente.CarregarTelaInicio();
             this.Close();
         }
         private void pictureInfoJornada_Click(object sender, EventArgs e)

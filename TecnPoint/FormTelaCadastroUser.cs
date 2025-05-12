@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TecnPoint.Modelo;
 using TecnPoint.Service;
 
 namespace TecnPoint.Interface
@@ -15,11 +16,14 @@ namespace TecnPoint.Interface
     {
         ServUsuario validarCadastro;
         ServUsuario cadastroUsuarios;
-
-        public FormTelaCadastroUser()
+        FormTelaFuncionario telaFuncionario;
+        ModeloUsuario modeloUsuario;
+        public FormTelaCadastroUser(FormTelaFuncionario telaFuncionarioParam, ModeloUsuario usuario)
         {
+            modeloUsuario = usuario;
             validarCadastro = new ServUsuario();
             cadastroUsuarios = new ServUsuario();
+            telaFuncionario = telaFuncionarioParam;
             InitializeComponent();
         }
 
@@ -35,6 +39,7 @@ namespace TecnPoint.Interface
                 {
                     MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
+                    telaFuncionario.CarregarTelaInicio();
                 }
             }
             else
@@ -46,6 +51,7 @@ namespace TecnPoint.Interface
 
         private void btnCancelarCadastro_Click(object sender, EventArgs e)
         {
+            telaFuncionario.CarregarTelaInicio();
             this.Close();
         }
 

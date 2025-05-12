@@ -43,6 +43,8 @@
             cbxStatus = new ComboBox();
             cbxPrioridade = new ComboBox();
             timerLeituraDeMensagens = new System.Windows.Forms.Timer(components);
+            label6 = new Label();
+            label7 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -177,11 +179,33 @@
             timerLeituraDeMensagens.Interval = 2000;
             timerLeituraDeMensagens.Tick += timerLeituraDeMensagens_Tick;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Consolas", 10F);
+            label6.Location = new Point(325, 9);
+            label6.Name = "label6";
+            label6.Size = new Size(64, 17);
+            label6.TabIndex = 12;
+            label6.Text = "Status:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Consolas", 10F);
+            label7.Location = new Point(440, 9);
+            label7.Name = "label7";
+            label7.Size = new Size(96, 17);
+            label7.TabIndex = 13;
+            label7.Text = "Prioridade:";
+            // 
             // FormDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 460);
+            Controls.Add(label7);
+            Controls.Add(label6);
             Controls.Add(cbxPrioridade);
             Controls.Add(cbxStatus);
             Controls.Add(btnEnviar);
@@ -217,5 +241,7 @@
         private ComboBox cbxStatus;
         private ComboBox cbxPrioridade;
         private System.Windows.Forms.Timer timerLeituraDeMensagens;
+        private Label label6;
+        private Label label7;
     }
 }

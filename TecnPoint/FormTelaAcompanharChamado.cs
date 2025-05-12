@@ -44,7 +44,7 @@ namespace TecnPoint.Interface
 
                 Label lblTitulo = new Label { Text = $"{dadosChamado.Titulo}", Location = new Point(10, 20), AutoSize = false, Size = new Size(250,40)};
                 Label lblCliente = new Label { Text = $"Criado por: {dadosChamado.NomeCliente}", Location = new Point(10, 70), AutoSize = true };
-                Label lblFuncionario = new Label { Text = $"Atribuido: {dadosChamado.NomeFuncionario}", Location = new Point(275, 70), AutoSize = true };
+                Label lblFuncionario = new Label { Text = $"Atribuído: {dadosChamado.NomeFuncionario}", Location = new Point(275, 70), AutoSize = true };
                 Label lblStatus = new Label { Text = $"Status: {dadosChamado.Status}", Location = new Point(275, 20), AutoSize = true };
 
                 card.Controls.Add(lblTitulo);

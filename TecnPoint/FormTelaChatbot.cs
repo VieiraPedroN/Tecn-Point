@@ -259,6 +259,7 @@ namespace TecnPoint.Interface
                     else if (opcaoUsuario == "2")
                     {
                         AdicionaMensagem("Tudo bem. Se precisar, estou aqui!");
+                        telaCliente.CarregarTelaInicio();
                         this.Close();
                         return "Chamado fechado";
                     }
@@ -276,6 +277,7 @@ namespace TecnPoint.Interface
                     else if (opcaoUsuario == "2")
                     {
                         AdicionaMensagem("Tudo bem. Se precisar, estou aqui!");
+                        telaCliente.CarregarTelaInicio();
                         this.Close();
                     }
                     else 
