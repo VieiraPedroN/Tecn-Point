@@ -1,12 +1,12 @@
 using TecnPoint.Interface;
-using TecnPoint.Service.ValidarLogin;
-using TecnPoint.Modelo.DadosUsuario;
+using TecnPoint.Service;
+using TecnPoint.Modelo;
 
 namespace TecnPoint
 {
     public partial class FormTelaLogin : Form
     {
-        private ValidarLogin validarLogin = new ValidarLogin();
+        private ServUsuario _loginUsuario = new ServUsuario();
 
         public FormTelaLogin()
         {
@@ -15,7 +15,7 @@ namespace TecnPoint
 
         private void botaoEntrarLogin_Click(object sender, EventArgs e)
         {
-            var usuarioLogado = validarLogin.Checar(EntradaEmail.Text, EntradaSenha.Text);
+            var usuarioLogado = _loginUsuario.RealizarLogin(EntradaEmail.Text.ToLower(), EntradaSenha.Text);
 
             if (usuarioLogado != null)
             {

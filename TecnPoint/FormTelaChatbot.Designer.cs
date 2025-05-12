@@ -46,7 +46,7 @@
             flpChatbot.FlowDirection = FlowDirection.TopDown;
             flpChatbot.Location = new Point(-1, 52);
             flpChatbot.Name = "flpChatbot";
-            flpChatbot.Size = new Size(556, 373);
+            flpChatbot.Size = new Size(556, 355);
             flpChatbot.TabIndex = 0;
             flpChatbot.WrapContents = false;
             // 
@@ -82,18 +82,20 @@
             // 
             // tbxMensagem
             // 
-            tbxMensagem.Location = new Point(140, 431);
+            tbxMensagem.Font = new Font("Segoe UI", 11F);
+            tbxMensagem.Location = new Point(119, 423);
+            tbxMensagem.Multiline = true;
             tbxMensagem.Name = "tbxMensagem";
             tbxMensagem.PlaceholderText = "Digite aqui...";
-            tbxMensagem.Size = new Size(280, 23);
+            tbxMensagem.Size = new Size(286, 30);
             tbxMensagem.TabIndex = 2;
             // 
             // btnEnviarMensagem
             // 
             btnEnviarMensagem.Image = (Image)resources.GetObject("btnEnviarMensagem.Image");
-            btnEnviarMensagem.Location = new Point(426, 431);
+            btnEnviarMensagem.Location = new Point(411, 422);
             btnEnviarMensagem.Name = "btnEnviarMensagem";
-            btnEnviarMensagem.Size = new Size(48, 24);
+            btnEnviarMensagem.Size = new Size(48, 31);
             btnEnviarMensagem.TabIndex = 3;
             btnEnviarMensagem.UseVisualStyleBackColor = true;
             btnEnviarMensagem.Click += btnEnviarMensagem_Click;

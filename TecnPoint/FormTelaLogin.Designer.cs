@@ -39,6 +39,7 @@ namespace TecnPoint
             NomeEmpresa = new Label();
             DescricaoLogin = new Label();
             DescricaoSistema = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // botaoEntrarLogin
@@ -109,11 +110,11 @@ namespace TecnPoint
             NomeEmpresa.AutoSize = true;
             NomeEmpresa.BackColor = Color.Transparent;
             NomeEmpresa.Font = new Font("Consolas", 30F, FontStyle.Bold);
-            NomeEmpresa.Location = new Point(236, 66);
+            NomeEmpresa.Location = new Point(235, 75);
             NomeEmpresa.Name = "NomeEmpresa";
             NomeEmpresa.Size = new Size(328, 47);
             NomeEmpresa.TabIndex = 5;
-            NomeEmpresa.Text = "Tech Solutions";
+            NomeEmpresa.Text = "Lar dos Sonhos";
             // 
             // DescricaoLogin
             // 
@@ -122,7 +123,7 @@ namespace TecnPoint
             DescricaoLogin.BackColor = Color.Transparent;
             DescricaoLogin.Font = new Font("Consolas", 10F);
             DescricaoLogin.ForeColor = SystemColors.ControlDarkDark;
-            DescricaoLogin.Location = new Point(291, 123);
+            DescricaoLogin.Location = new Point(295, 131);
             DescricaoLogin.Name = "DescricaoLogin";
             DescricaoLogin.Size = new Size(216, 17);
             DescricaoLogin.TabIndex = 6;
@@ -135,11 +136,22 @@ namespace TecnPoint
             DescricaoSistema.BackColor = Color.Transparent;
             DescricaoSistema.Font = new Font("Consolas", 10F);
             DescricaoSistema.ForeColor = SystemColors.ControlDarkDark;
-            DescricaoSistema.Location = new Point(280, 368);
+            DescricaoSistema.Location = new Point(280, 366);
             DescricaoSistema.Name = "DescricaoSistema";
             DescricaoSistema.Size = new Size(240, 17);
             DescricaoSistema.TabIndex = 7;
             DescricaoSistema.Text = "Sistema de Suporte ao Cliente";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Consolas", 8F);
+            label1.Location = new Point(318, 385);
+            label1.Name = "label1";
+            label1.Size = new Size(157, 13);
+            label1.TabIndex = 8;
+            label1.Text = "Criado por Tech Solutions";
             // 
             // FormTelaLogin
             // 
@@ -149,6 +161,7 @@ namespace TecnPoint
             BackgroundImage = Interface.Properties.Resources.TelaFundoLogin;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(DescricaoSistema);
             Controls.Add(DescricaoLogin);
             Controls.Add(NomeEmpresa);
@@ -178,5 +191,6 @@ namespace TecnPoint
         private Label NomeEmpresa;
         private Label DescricaoLogin;
         private Label DescricaoSistema;
+        private Label label1;
     }
 }

@@ -7,16 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Service.CadastroUsuarios;
+using TecnPoint.Modelo;
+using TecnPoint.Service;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaCadastroUser : Form
     {
-        CadastroUsuarios validarCadastro = new CadastroUsuarios();
-        CadastroUsuarios cadastroUsuarios = new CadastroUsuarios();
-        public FormTelaCadastroUser()
+        ServUsuario validarCadastro;
+        ServUsuario cadastroUsuarios;
+        FormTelaFuncionario telaFuncionario;
+        ModeloUsuario modeloUsuario;
+        public FormTelaCadastroUser(FormTelaFuncionario telaFuncionarioParam, ModeloUsuario usuario)
         {
+            modeloUsuario = usuario;
+            validarCadastro = new ServUsuario();
+            cadastroUsuarios = new ServUsuario();
+            telaFuncionario = telaFuncionarioParam;
             InitializeComponent();
         }
 
@@ -27,11 +34,12 @@ namespace TecnPoint.Interface
                 validarCadastro.ValidarSenha(txtbSenha.Text) &&
                 validarCadastro.ValidarTipoUsuario(cbbTipoUsuário.Text))
             {
-                var cadastro = cadastroUsuarios.CadastrarUsuario(txtbNome.Text, txtbEmail.Text, txtbSenha.Text, cbbTipoUsuário.Text);
+                var cadastro = cadastroUsuarios.CadastrarUsuario(txtbNome.Text, txtbEmail.Text.ToLower(), txtbSenha.Text, cbbTipoUsuário.Text);
                 if (cadastro)
                 {
                     MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
+                    telaFuncionario.CarregarTelaInicio();
                 }
             }
             else
@@ -43,6 +51,7 @@ namespace TecnPoint.Interface
 
         private void btnCancelarCadastro_Click(object sender, EventArgs e)
         {
+            telaFuncionario.CarregarTelaInicio();
             this.Close();
         }
 
@@ -91,6 +100,20 @@ namespace TecnPoint.Interface
             else
             {
                 errorProvider1.SetError(cbbTipoUsuário, "");
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if((lblInfoEmail.Visible == false && lblExclamacao.Visible == false))
+            {
+                lblInfoEmail.Visible = true;
+                lblExclamacao.Visible = true;
+            }
+            else
+            {
+                lblInfoEmail.Visible = false;
+                lblExclamacao.Visible = false;
             }
         }
     }

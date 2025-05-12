@@ -8,18 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TecnPoint.Modelo;
-using TecnPoint.Modelo.DadosUsuario;
 using TecnPoint.Modelo.DTO;
-using TecnPoint.Service.ObterChamadosPorUsuario;
+using TecnPoint.Service;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaAcompanharChamado : Form
     {
-        private DadosUsuario usuarioLogado;
+        private ModeloUsuario usuarioLogado;
+        ServChamado ServObtemChamados;
 
-        public FormTelaAcompanharChamado(DadosUsuario dadosUsuario)
+        public FormTelaAcompanharChamado(ModeloUsuario dadosUsuario)
         {
+            ServObtemChamados = new ServChamado();
             this.usuarioLogado = dadosUsuario;
             InitializeComponent();
 
@@ -29,8 +30,7 @@ namespace TecnPoint.Interface
 
         public void CarregarChamados()
         {
-            ObterChamadosPorUsuario service = new ObterChamadosPorUsuario();
-            var dadosChamados = service.BuscarChamados(usuarioLogado.IdUsuario, usuarioLogado.TipoUsuario);
+            var dadosChamados = ServObtemChamados.BuscarChamados(usuarioLogado.IdUsuario, usuarioLogado.TipoUsuario);
             foreach (var dadosChamado in dadosChamados)
             {
                 GroupBox card = new GroupBox
@@ -44,7 +44,7 @@ namespace TecnPoint.Interface
 
                 Label lblTitulo = new Label { Text = $"{dadosChamado.Titulo}", Location = new Point(10, 20), AutoSize = false, Size = new Size(250,40)};
                 Label lblCliente = new Label { Text = $"Criado por: {dadosChamado.NomeCliente}", Location = new Point(10, 70), AutoSize = true };
-                Label lblFuncionario = new Label { Text = $"Atribuido: {dadosChamado.NomeFuncionario}", Location = new Point(275, 70), AutoSize = true };
+                Label lblFuncionario = new Label { Text = $"Atribuído: {dadosChamado.NomeFuncionario}", Location = new Point(275, 70), AutoSize = true };
                 Label lblStatus = new Label { Text = $"Status: {dadosChamado.Status}", Location = new Point(275, 20), AutoSize = true };
 
                 card.Controls.Add(lblTitulo);
@@ -67,9 +67,8 @@ namespace TecnPoint.Interface
 
                 void AbrirDetalhes(ExibicaoChamado dadosChamado)
                 {
-                    DadosUsuario usuarioParam = new DadosUsuario();
+                    ModeloUsuario usuarioParam = new ModeloUsuario();
                     usuarioParam = usuarioLogado;
-                    DadosChamado chamados = new DadosChamado();
                     panel1.BringToFront();
 
                     FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(dadosChamado, this, usuarioParam);

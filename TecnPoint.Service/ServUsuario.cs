@@ -3,39 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TecnPoint.Modelo.DadosUsuario;
 using TecnPoint.Dados;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using TecnPoint.Modelo;
 using TecnPoint.Service.Validação;
 
-namespace TecnPoint.Service.CadastroUsuarios
+namespace TecnPoint.Service
 {
-    public class CadastroUsuarios
+    public class ServUsuario
     {
-        private ValidacaoCadastro _validacaoCadastro;
-        private ClassRepositorioCadastro _dadosUsuarioCadastro;
+        private ValidacaoCadastroUser _validacaoCadastro;
+        private DadosUsuario _dadosUsuario;
 
-        public CadastroUsuarios()
+        public ServUsuario()
         {
-            _dadosUsuarioCadastro = new ClassRepositorioCadastro();
-            _validacaoCadastro  = new ValidacaoCadastro();
+            _dadosUsuario = new DadosUsuario();
+            _validacaoCadastro = new ValidacaoCadastroUser();
         }
 
         public bool CadastrarUsuario(string Nome, string Email, string Senha, string Tipo_Usuario)
         {
-            //validações
-            DadosUsuario dadosUsuario = new DadosUsuario()
+            ModeloUsuario novoUsuario = new ModeloUsuario()
             {
                 Nome = Nome,
                 Email = Email,
                 Senha = Senha,
                 TipoUsuario = Tipo_Usuario
             };
-            _dadosUsuarioCadastro.CadastrarUsuario(dadosUsuario);
+            _dadosUsuario.CadastrarUsuario(novoUsuario);
             return true;
         }
 
-        public bool ValidarNome(string nome) 
+        public bool ValidarNome(string nome)
         {
             return _validacaoCadastro.NomeValido(nome);
         }
@@ -47,9 +45,15 @@ namespace TecnPoint.Service.CadastroUsuarios
         {
             return _validacaoCadastro.SenhaValido(senha);
         }
-        public bool ValidarTipoUsuario(string tipoUsuario) 
+        public bool ValidarTipoUsuario(string tipoUsuario)
         {
             return _validacaoCadastro.TipoUsuárioValido(tipoUsuario);
         }
+
+        public ModeloUsuario RealizarLogin(string EntradaEmail, string EntradaSenha)
+        {
+            return _dadosUsuario.LoginUsuario(EntradaEmail, EntradaSenha);
+        }
+
     }
 }
