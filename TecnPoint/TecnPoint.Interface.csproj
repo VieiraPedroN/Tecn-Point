@@ -8,7 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
 	<ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
 	<ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+	<ApplicationIcon>TECH.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="TECH.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TecnPoint.Dados\TecnPoint.Dados.csproj" />

@@ -108,9 +108,10 @@
             Controls.Add(panel1);
             Controls.Add(flpChatbot);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormTelaChatbot";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormTelaChatbot";
+            Text = "Tecn Point";
             Load += FormTelaChatbot_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

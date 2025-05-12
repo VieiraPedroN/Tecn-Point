@@ -30,6 +30,7 @@ namespace TecnPoint
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaLogin));
             botaoEntrarLogin = new Button();
             EntradaEmail = new TextBox();
             EntradaSenha = new TextBox();
@@ -158,10 +159,11 @@ namespace TecnPoint
             Controls.Add(botaoEntrarLogin);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormTelaLogin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormTelaLogin";
+            Text = "Tecn Point";
             ResumeLayout(false);
             PerformLayout();
         }

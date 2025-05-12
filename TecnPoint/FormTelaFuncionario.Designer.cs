@@ -135,9 +135,10 @@
             Controls.Add(NomeUsuario);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormTelaFuncionario";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "FormTelaFuncionario";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Tecn Point";
             Closed += FormTelaCliente_Closed;
             Load += FormTelaCliente_Load;
             ResumeLayout(false);
