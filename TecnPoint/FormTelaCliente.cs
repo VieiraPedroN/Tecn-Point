@@ -14,11 +14,14 @@ namespace TecnPoint.Interface
 {
     public partial class FormTelaCliente : Form
     {
+        private readonly bool _modoDaltonico;
         private ModeloUsuario usuarioLogado;
-        public FormTelaCliente(ModeloUsuario dadosUsuario)
+        public FormTelaCliente(ModeloUsuario dadosUsuario, bool modoDaltonico)
         {
             this.usuarioLogado = dadosUsuario;
             InitializeComponent();
+            _modoDaltonico = modoDaltonico;
+            ModoDaltonismo();
         }
         private void CarregarFormularioForm(Form form)
         {
@@ -28,14 +31,10 @@ namespace TecnPoint.Interface
             panel1.Controls.Add(form);
             form.Show();
         }
-        private void AlternarBotoes(Button ativo, Button inativo)
-        {
-            ativo.BackColor = Color.FromArgb(163, 89, 253);
-            inativo.BackColor = Color.Transparent;
-        }
         private void FormTelaCliente_Closed(object sender, EventArgs e)
         {
             FormTelaLogin telaLogin = new FormTelaLogin();
+            telaLogin.DefinirModoDaltonico(_modoDaltonico);
             telaLogin.Show();
         }
         private void FormTelaCliente_Load(object sender, EventArgs e)
@@ -46,19 +45,17 @@ namespace TecnPoint.Interface
         }
         public void botaoCriarChamado_Click(object sender, EventArgs e)
         {
-            AlternarBotoes(botaoCriarChamado, botaoAcompanharChamado);
-            CarregarFormularioForm(new FormTelaCadastroChamado(usuarioLogado, this));
+            CarregarFormularioForm(new FormTelaCadastroChamado(usuarioLogado, this, _modoDaltonico));
 
         }
         public void botaoAcompanharChamado_Click(object sender, EventArgs e)
         {
-            AlternarBotoes(botaoAcompanharChamado, botaoCriarChamado);
-            CarregarFormularioForm(new FormTelaAcompanharChamado(usuarioLogado));
+            CarregarFormularioForm(new FormTelaAcompanharChamado(usuarioLogado, _modoDaltonico));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormTelaChatbot telachatbot = new FormTelaChatbot(this);
+            FormTelaChatbot telachatbot = new FormTelaChatbot(this, _modoDaltonico);
             telachatbot.ShowDialog();
         }
 
@@ -87,7 +84,7 @@ namespace TecnPoint.Interface
             lblSubtituloTelaInicialCliente.Text = "Unidos pelo desafio, moldados pelo conhecimento.";
 
 
-            Logo.Image = Properties.Resources.WhatsApp_Image_2025_05_11_at_22_09_06_removebg_preview__1_;
+            Logo.Image = Properties.Resources._02051eac_c113_448e_b8ec_e26d1461e356;
             Logo.Location = new Point(145, 52);
             Logo.Name = "pictureBox1";
             Logo.Size = new Size(262, 217);
@@ -97,6 +94,50 @@ namespace TecnPoint.Interface
             panel1.Controls.Add(lblTituloTelaInicioCliente);
             panel1.Controls.Add(lblSubtituloTelaInicialCliente);
             panel1.Controls.Add(Logo);
+        }
+        private void ModoDaltonismo()
+        {
+            if (_modoDaltonico)
+            {
+                this.BackgroundImage = Interface.Properties.Resources.Rectangle_34_Daltonico;
+
+                btnCriarChamado.BackColor = Color.Transparent;
+                btnCriarChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(254, 190, 137);
+                btnCriarChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(253, 163, 89);
+
+               
+
+                btnAcompanharChamado.BackColor = Color.Transparent;
+                btnAcompanharChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(254, 190, 137);
+                btnAcompanharChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(253, 163, 89);
+                
+
+                btnChatBot.BackColor = Color.Transparent;
+                btnChatBot.FlatAppearance.MouseDownBackColor = Color.FromArgb(254, 190, 137);
+                btnChatBot.FlatAppearance.MouseOverBackColor = Color.FromArgb(253, 163, 89);
+                
+                
+            }
+            else
+            {
+                this.BackgroundImage = Interface.Properties.Resources.TelaFundo;
+
+                btnCriarChamado.BackColor = Color.Transparent;
+                btnCriarChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+                btnCriarChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+                btnCriarChamado.Click += (sender, e) =>
+                
+
+                btnAcompanharChamado.BackColor = Color.Transparent;
+                btnAcompanharChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+                btnAcompanharChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+
+                
+
+                btnChatBot.BackColor = Color.Transparent;
+                btnChatBot.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+                btnChatBot.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+            }
         }
     }
 

@@ -15,10 +15,11 @@ namespace TecnPoint.Interface
 {
     public partial class FormTelaCadastroChamado : Form
     {
+        private readonly bool _modoDaltonico;
         private FormTelaCliente telaCliente;
         private ModeloUsuario usuarioLogado;
         ServChamado cadastroChamado;
-        public FormTelaCadastroChamado(ModeloUsuario dadosUsuario, FormTelaCliente telaClienteParam)
+        public FormTelaCadastroChamado(ModeloUsuario dadosUsuario, FormTelaCliente telaClienteParam, bool modoDaltonico)
         {
             this.usuarioLogado = dadosUsuario;
             this.telaCliente = telaClienteParam;
@@ -28,6 +29,8 @@ namespace TecnPoint.Interface
             cbxJornada.SelectedIndex = 0;
             cbxPrioridade.SelectedIndex = 0;
             this.AcceptButton = btnAbrirChamado;
+            _modoDaltonico = modoDaltonico;
+            ModoDaltonismo();
         }
         private void btnAbrirChamado_Click(object sender, EventArgs e)
         {
@@ -135,5 +138,27 @@ namespace TecnPoint.Interface
             }
         }
 
+        private void ModoDaltonismo()
+        {
+            if (_modoDaltonico)
+            {
+                btnAbrirChamado.BackColor = Color.FromArgb(171, 126, 105);
+                btnAbrirChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(254, 190, 137);
+                btnAbrirChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(253, 163, 89);
+
+                btnCancelarCadastro.FlatAppearance.MouseDownBackColor = Color.FromArgb(254, 190, 137);
+                btnCancelarCadastro.FlatAppearance.MouseOverBackColor = Color.FromArgb(253, 163, 89);
+
+            }
+            else
+            {
+                btnAbrirChamado.BackColor = Color.FromArgb(126, 105, 171);
+                btnAbrirChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+                btnAbrirChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+
+                btnCancelarCadastro.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+                btnCancelarCadastro.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+            }
+        }
     }
 }

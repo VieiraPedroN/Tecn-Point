@@ -15,13 +15,15 @@ namespace TecnPoint.Interface
 {
     public partial class FormTelaAcompanharChamado : Form
     {
+        private bool _modoDaltonico;
         private ModeloUsuario usuarioLogado;
         ServChamado ServObtemChamados;
 
-        public FormTelaAcompanharChamado(ModeloUsuario dadosUsuario)
+        public FormTelaAcompanharChamado(ModeloUsuario dadosUsuario, bool modoDaltonico)
         {
             ServObtemChamados = new ServChamado();
             this.usuarioLogado = dadosUsuario;
+            this._modoDaltonico = modoDaltonico;
             InitializeComponent();
 
             this.TopLevel = false;
@@ -71,7 +73,7 @@ namespace TecnPoint.Interface
                     usuarioParam = usuarioLogado;
                     panel1.BringToFront();
 
-                    FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(dadosChamado, this, usuarioParam);
+                    FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(dadosChamado, this, usuarioParam, _modoDaltonico);
                     detalhesChamado.TopLevel = false;
 
                     panel1.Controls.Clear();

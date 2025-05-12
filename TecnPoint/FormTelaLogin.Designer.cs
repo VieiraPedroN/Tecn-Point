@@ -31,7 +31,6 @@ namespace TecnPoint
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaLogin));
-            botaoEntrarLogin = new Button();
             EntradaEmail = new TextBox();
             EntradaSenha = new TextBox();
             EmailLogin = new Label();
@@ -40,23 +39,9 @@ namespace TecnPoint
             DescricaoLogin = new Label();
             DescricaoSistema = new Label();
             label1 = new Label();
+            btnEntrarLogin = new Button();
+            chcbModoDaltonico = new CheckBox();
             SuspendLayout();
-            // 
-            // botaoEntrarLogin
-            // 
-            botaoEntrarLogin.Anchor = AnchorStyles.None;
-            botaoEntrarLogin.BackColor = Color.FromArgb(126, 105, 171);
-            botaoEntrarLogin.Cursor = Cursors.Hand;
-            botaoEntrarLogin.FlatStyle = FlatStyle.Flat;
-            botaoEntrarLogin.Font = new Font("Consolas", 11F);
-            botaoEntrarLogin.ForeColor = SystemColors.ButtonHighlight;
-            botaoEntrarLogin.Location = new Point(325, 327);
-            botaoEntrarLogin.Name = "botaoEntrarLogin";
-            botaoEntrarLogin.Size = new Size(150, 30);
-            botaoEntrarLogin.TabIndex = 0;
-            botaoEntrarLogin.Text = "Entrar";
-            botaoEntrarLogin.UseVisualStyleBackColor = false;
-            botaoEntrarLogin.Click += botaoEntrarLogin_Click;
             // 
             // EntradaEmail
             // 
@@ -66,7 +51,7 @@ namespace TecnPoint
             EntradaEmail.Name = "EntradaEmail";
             EntradaEmail.PlaceholderText = "Digite seu e-mail";
             EntradaEmail.Size = new Size(270, 25);
-            EntradaEmail.TabIndex = 1;
+            EntradaEmail.TabIndex = 0;
             // 
             // EntradaSenha
             // 
@@ -78,7 +63,7 @@ namespace TecnPoint
             EntradaSenha.PasswordChar = '*';
             EntradaSenha.PlaceholderText = "Digite sua senha";
             EntradaSenha.Size = new Size(270, 25);
-            EntradaSenha.TabIndex = 2;
+            EntradaSenha.TabIndex = 1;
             // 
             // EmailLogin
             // 
@@ -89,7 +74,7 @@ namespace TecnPoint
             EmailLogin.Location = new Point(247, 165);
             EmailLogin.Name = "EmailLogin";
             EmailLogin.Size = new Size(60, 22);
-            EmailLogin.TabIndex = 3;
+            EmailLogin.TabIndex = 6;
             EmailLogin.Text = "Email";
             // 
             // SenhaLogin
@@ -101,7 +86,7 @@ namespace TecnPoint
             SenhaLogin.Location = new Point(247, 244);
             SenhaLogin.Name = "SenhaLogin";
             SenhaLogin.Size = new Size(60, 22);
-            SenhaLogin.TabIndex = 4;
+            SenhaLogin.TabIndex = 7;
             SenhaLogin.Text = "Senha";
             // 
             // NomeEmpresa
@@ -113,7 +98,7 @@ namespace TecnPoint
             NomeEmpresa.Location = new Point(235, 75);
             NomeEmpresa.Name = "NomeEmpresa";
             NomeEmpresa.Size = new Size(328, 47);
-            NomeEmpresa.TabIndex = 5;
+            NomeEmpresa.TabIndex = 4;
             NomeEmpresa.Text = "Lar dos Sonhos";
             // 
             // DescricaoLogin
@@ -126,7 +111,7 @@ namespace TecnPoint
             DescricaoLogin.Location = new Point(295, 131);
             DescricaoLogin.Name = "DescricaoLogin";
             DescricaoLogin.Size = new Size(216, 17);
-            DescricaoLogin.TabIndex = 6;
+            DescricaoLogin.TabIndex = 5;
             DescricaoLogin.Text = "Entre com suas credenciais";
             // 
             // DescricaoSistema
@@ -136,10 +121,10 @@ namespace TecnPoint
             DescricaoSistema.BackColor = Color.Transparent;
             DescricaoSistema.Font = new Font("Consolas", 10F);
             DescricaoSistema.ForeColor = SystemColors.ControlDarkDark;
-            DescricaoSistema.Location = new Point(280, 366);
+            DescricaoSistema.Location = new Point(280, 361);
             DescricaoSistema.Name = "DescricaoSistema";
             DescricaoSistema.Size = new Size(240, 17);
-            DescricaoSistema.TabIndex = 7;
+            DescricaoSistema.TabIndex = 8;
             DescricaoSistema.Text = "Sistema de Suporte ao Cliente";
             // 
             // label1
@@ -147,11 +132,41 @@ namespace TecnPoint
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Consolas", 8F);
-            label1.Location = new Point(318, 385);
+            label1.Location = new Point(318, 382);
             label1.Name = "label1";
             label1.Size = new Size(157, 13);
-            label1.TabIndex = 8;
+            label1.TabIndex = 9;
             label1.Text = "Criado por Tech Solutions";
+            // 
+            // btnEntrarLogin
+            // 
+            btnEntrarLogin.Anchor = AnchorStyles.None;
+            btnEntrarLogin.BackColor = Color.FromArgb(126, 105, 171);
+            btnEntrarLogin.Cursor = Cursors.Hand;
+            btnEntrarLogin.FlatStyle = FlatStyle.Flat;
+            btnEntrarLogin.Font = new Font("Consolas", 11F);
+            btnEntrarLogin.ForeColor = SystemColors.ButtonHighlight;
+            btnEntrarLogin.Location = new Point(325, 319);
+            btnEntrarLogin.Name = "btnEntrarLogin";
+            btnEntrarLogin.Size = new Size(150, 30);
+            btnEntrarLogin.TabIndex = 2;
+            btnEntrarLogin.Text = "Entrar";
+            btnEntrarLogin.UseVisualStyleBackColor = false;
+            btnEntrarLogin.Click += botaoEntrarLogin_Click;
+            // 
+            // chcbModoDaltonico
+            // 
+            chcbModoDaltonico.AutoSize = true;
+            chcbModoDaltonico.BackColor = Color.Transparent;
+            chcbModoDaltonico.Font = new Font("Segoe UI", 10F);
+            chcbModoDaltonico.ForeColor = Color.LightGray;
+            chcbModoDaltonico.Location = new Point(12, 415);
+            chcbModoDaltonico.Name = "chcbModoDaltonico";
+            chcbModoDaltonico.Size = new Size(127, 23);
+            chcbModoDaltonico.TabIndex = 3;
+            chcbModoDaltonico.Text = "Modo Daltonico";
+            chcbModoDaltonico.UseVisualStyleBackColor = false;
+            chcbModoDaltonico.CheckedChanged += chcbModoDaltonico_CheckedChanged;
             // 
             // FormTelaLogin
             // 
@@ -161,6 +176,7 @@ namespace TecnPoint
             BackgroundImage = Interface.Properties.Resources.TelaFundoLogin;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(chcbModoDaltonico);
             Controls.Add(label1);
             Controls.Add(DescricaoSistema);
             Controls.Add(DescricaoLogin);
@@ -169,7 +185,7 @@ namespace TecnPoint
             Controls.Add(EmailLogin);
             Controls.Add(EntradaSenha);
             Controls.Add(EntradaEmail);
-            Controls.Add(botaoEntrarLogin);
+            Controls.Add(btnEntrarLogin);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -182,8 +198,6 @@ namespace TecnPoint
         }
 
         #endregion
-
-        private Button botaoEntrarLogin;
         private TextBox EntradaEmail;
         private TextBox EntradaSenha;
         private Label EmailLogin;
@@ -192,5 +206,7 @@ namespace TecnPoint
         private Label DescricaoLogin;
         private Label DescricaoSistema;
         private Label label1;
+        private Button btnEntrarLogin;
+        private CheckBox chcbModoDaltonico;
     }
 }

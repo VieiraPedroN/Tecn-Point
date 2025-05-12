@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaCliente));
             NomeUsuario = new Label();
             EmailUsuario = new Label();
-            botaoCriarChamado = new Button();
-            botaoAcompanharChamado = new Button();
+            btnCriarChamado = new Button();
+            btnAcompanharChamado = new Button();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
-            button1 = new Button();
+            btnChatBot = new Button();
             SuspendLayout();
             // 
             // NomeUsuario
@@ -62,46 +62,46 @@
             EmailUsuario.TabIndex = 1;
             EmailUsuario.Text = "Email Usuario";
             // 
-            // botaoCriarChamado
+            // btnCriarChamado
             // 
-            botaoCriarChamado.BackColor = Color.Transparent;
-            botaoCriarChamado.Cursor = Cursors.Hand;
-            botaoCriarChamado.FlatAppearance.BorderColor = Color.DarkGray;
-            botaoCriarChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
-            botaoCriarChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
-            botaoCriarChamado.FlatStyle = FlatStyle.Flat;
-            botaoCriarChamado.Font = new Font("Consolas", 11F);
-            botaoCriarChamado.ForeColor = Color.Gainsboro;
-            botaoCriarChamado.Image = Properties.Resources.PlusIconActive;
-            botaoCriarChamado.ImageAlign = ContentAlignment.MiddleLeft;
-            botaoCriarChamado.Location = new Point(10, 111);
-            botaoCriarChamado.Name = "botaoCriarChamado";
-            botaoCriarChamado.Size = new Size(232, 40);
-            botaoCriarChamado.TabIndex = 2;
-            botaoCriarChamado.Text = "Criar um chamado";
-            botaoCriarChamado.UseVisualStyleBackColor = false;
-            botaoCriarChamado.Click += botaoCriarChamado_Click;
+            btnCriarChamado.BackColor = Color.Transparent;
+            btnCriarChamado.Cursor = Cursors.Hand;
+            btnCriarChamado.FlatAppearance.BorderColor = Color.DarkGray;
+            btnCriarChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            btnCriarChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+            btnCriarChamado.FlatStyle = FlatStyle.Flat;
+            btnCriarChamado.Font = new Font("Consolas", 11F);
+            btnCriarChamado.ForeColor = Color.Gainsboro;
+            btnCriarChamado.Image = Properties.Resources.PlusIconActive;
+            btnCriarChamado.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCriarChamado.Location = new Point(10, 111);
+            btnCriarChamado.Name = "btnCriarChamado";
+            btnCriarChamado.Size = new Size(232, 40);
+            btnCriarChamado.TabIndex = 2;
+            btnCriarChamado.Text = "Criar um chamado";
+            btnCriarChamado.UseVisualStyleBackColor = false;
+            btnCriarChamado.Click += botaoCriarChamado_Click;
             // 
-            // botaoAcompanharChamado
+            // btnAcompanharChamado
             // 
-            botaoAcompanharChamado.BackColor = Color.Transparent;
-            botaoAcompanharChamado.Cursor = Cursors.Hand;
-            botaoAcompanharChamado.FlatAppearance.BorderColor = Color.DarkGray;
-            botaoAcompanharChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
-            botaoAcompanharChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
-            botaoAcompanharChamado.FlatStyle = FlatStyle.Flat;
-            botaoAcompanharChamado.Font = new Font("Consolas", 11F);
-            botaoAcompanharChamado.ForeColor = Color.Gainsboro;
-            botaoAcompanharChamado.Image = Properties.Resources.ChecklistIconActive;
-            botaoAcompanharChamado.ImageAlign = ContentAlignment.MiddleLeft;
-            botaoAcompanharChamado.Location = new Point(10, 158);
-            botaoAcompanharChamado.Name = "botaoAcompanharChamado";
-            botaoAcompanharChamado.Size = new Size(232, 40);
-            botaoAcompanharChamado.TabIndex = 3;
-            botaoAcompanharChamado.Text = "Acompanhar um chamado";
-            botaoAcompanharChamado.TextAlign = ContentAlignment.MiddleRight;
-            botaoAcompanharChamado.UseVisualStyleBackColor = false;
-            botaoAcompanharChamado.Click += botaoAcompanharChamado_Click;
+            btnAcompanharChamado.BackColor = Color.Transparent;
+            btnAcompanharChamado.Cursor = Cursors.Hand;
+            btnAcompanharChamado.FlatAppearance.BorderColor = Color.DarkGray;
+            btnAcompanharChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            btnAcompanharChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+            btnAcompanharChamado.FlatStyle = FlatStyle.Flat;
+            btnAcompanharChamado.Font = new Font("Consolas", 11F);
+            btnAcompanharChamado.ForeColor = Color.Gainsboro;
+            btnAcompanharChamado.Image = Properties.Resources.ChecklistIconActive;
+            btnAcompanharChamado.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAcompanharChamado.Location = new Point(10, 158);
+            btnAcompanharChamado.Name = "btnAcompanharChamado";
+            btnAcompanharChamado.Size = new Size(232, 40);
+            btnAcompanharChamado.TabIndex = 3;
+            btnAcompanharChamado.Text = "Acompanhar um chamado";
+            btnAcompanharChamado.TextAlign = ContentAlignment.MiddleRight;
+            btnAcompanharChamado.UseVisualStyleBackColor = false;
+            btnAcompanharChamado.Click += botaoAcompanharChamado_Click;
             // 
             // panel1
             // 
@@ -124,33 +124,33 @@
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             // 
-            // button1
+            // btnChatBot
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.DarkGray;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(10, 398);
-            button1.Name = "button1";
-            button1.Size = new Size(45, 40);
-            button1.TabIndex = 6;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnChatBot.BackColor = Color.Transparent;
+            btnChatBot.Cursor = Cursors.Hand;
+            btnChatBot.FlatAppearance.BorderColor = Color.DarkGray;
+            btnChatBot.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            btnChatBot.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+            btnChatBot.FlatStyle = FlatStyle.Flat;
+            btnChatBot.Image = (Image)resources.GetObject("btnChatBot.Image");
+            btnChatBot.Location = new Point(10, 398);
+            btnChatBot.Name = "btnChatBot";
+            btnChatBot.Size = new Size(45, 40);
+            btnChatBot.TabIndex = 6;
+            btnChatBot.UseVisualStyleBackColor = false;
+            btnChatBot.Click += button1_Click;
             // 
             // FormTelaCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(100, 52, 144);
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.TelaFundo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(botaoAcompanharChamado);
-            Controls.Add(botaoCriarChamado);
+            Controls.Add(btnChatBot);
+            Controls.Add(btnAcompanharChamado);
+            Controls.Add(btnCriarChamado);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Controls.Add(EmailUsuario);
@@ -171,10 +171,10 @@
 
         private Label NomeUsuario;
         private Label EmailUsuario;
-        private Button botaoCriarChamado;
-        private Button botaoAcompanharChamado;
+        private Button btnCriarChamado;
+        private Button btnAcompanharChamado;
         private Panel panel1;
         private GroupBox groupBox1;
-        private Button button1;
+        private Button btnChatBot;
     }
 }

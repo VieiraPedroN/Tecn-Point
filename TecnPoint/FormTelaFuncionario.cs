@@ -13,11 +13,14 @@ namespace TecnPoint.Interface
 {
     public partial class FormTelaFuncionario : Form
     {
+        private readonly bool _modoDaltonico;
         private ModeloUsuario usuarioLogado;
-        public FormTelaFuncionario(ModeloUsuario dadosUsuario)
+        public FormTelaFuncionario(ModeloUsuario dadosUsuario, bool modoDaltonico)
         {
             InitializeComponent();
             this.usuarioLogado = dadosUsuario;
+            _modoDaltonico = modoDaltonico;
+            ModoDaltonismo();
         }
         private void CarregarFormularioForm(Form form)
         {
@@ -30,6 +33,7 @@ namespace TecnPoint.Interface
         private void FormTelaFuncionario_Closed(object sender, EventArgs e)
         {
             FormTelaLogin telaLogin = new FormTelaLogin();
+            telaLogin.DefinirModoDaltonico(_modoDaltonico);
             telaLogin.Show();
         }
         private void FormTelaFuncionario_Load(object sender, EventArgs e)
@@ -38,15 +42,14 @@ namespace TecnPoint.Interface
             EmailUsuario.Text = usuarioLogado.Email;
             CarregarTelaInicio();
         }
-        private void botaoAcompanharChamado_Click(object sender, EventArgs e)
+        private void btnAcompanharChamado_Click(object sender, EventArgs e)
         {
-            botaoAcompanharChamado.BackColor = Color.FromArgb(163, 89, 253);
-            CarregarFormularioForm(new FormTelaAcompanharChamado(usuarioLogado));
+            CarregarFormularioForm(new FormTelaAcompanharChamado(usuarioLogado, _modoDaltonico));
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            CarregarFormularioForm(new FormTelaCadastroUser(this, usuarioLogado));
+            CarregarFormularioForm(new FormTelaCadastroUser(this, usuarioLogado, _modoDaltonico));
         }
 
         public void CarregarTelaInicio()
@@ -74,7 +77,7 @@ namespace TecnPoint.Interface
             lblSubtituloTelaInicialCliente.Text = "Unidos pelo desafio, moldados pelo conhecimento.";
 
 
-            Logo.Image = Properties.Resources.WhatsApp_Image_2025_05_11_at_22_09_06_removebg_preview__1_;
+            Logo.Image = Properties.Resources._02051eac_c113_448e_b8ec_e26d1461e356;
             Logo.Location = new Point(145, 52);
             Logo.Name = "pictureBox1";
             Logo.Size = new Size(262, 217);
@@ -84,6 +87,41 @@ namespace TecnPoint.Interface
             panel1.Controls.Add(lblTituloTelaInicioCliente);
             panel1.Controls.Add(lblSubtituloTelaInicialCliente);
             panel1.Controls.Add(Logo);
+        }
+        private void ModoDaltonismo()
+        {
+            if (_modoDaltonico)
+            {
+                this.BackgroundImage = Interface.Properties.Resources.Rectangle_34_Daltonico;
+
+                btnAcompanharChamado.BackColor = Color.Transparent;
+                btnAcompanharChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(254, 190, 137);
+                btnAcompanharChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(253, 163, 89);
+
+               
+
+                btnAddUser.BackColor = Color.Transparent;
+                btnAddUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(254, 190, 137);
+                btnAddUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(253, 163, 89);
+
+                
+            }
+            else
+            {
+                this.BackgroundImage = Interface.Properties.Resources.TelaFundo;
+
+                btnAcompanharChamado.BackColor = Color.Transparent;
+                btnAcompanharChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+                btnAcompanharChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+
+               
+
+                btnAddUser.BackColor = Color.Transparent;
+                btnAddUser.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+                btnAddUser.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+
+                
+            }
         }
     }
 }

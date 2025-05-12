@@ -13,6 +13,7 @@ namespace TecnPoint.Interface
 {
     public partial class FormTelaChatbot : Form
     {
+        private readonly bool _modoDaltonico;
         private FormTelaCliente telaCliente;
 
         private string MensagemFinal = "Espero que eu tenha resolvido o seu problema" +
@@ -20,11 +21,13 @@ namespace TecnPoint.Interface
                         "\n1 - Sim, gostaria de abrir um chamado!\n2 - Não, não será necessário abrir um chamado";
         private string estadoChat = "inicio";
 
-        public FormTelaChatbot(FormTelaCliente telaClienteParam)
+        public FormTelaChatbot(FormTelaCliente telaClienteParam, bool modoDaltonico)
         {
             this.telaCliente = telaClienteParam;
             InitializeComponent();
             this.AcceptButton = btnEnviarMensagem;
+            _modoDaltonico = modoDaltonico;
+            ModoDaltonismo();
         }
 
         private void FormTelaChatbot_Load(object sender, EventArgs e)
@@ -297,7 +300,7 @@ namespace TecnPoint.Interface
         {
             Panel mensagemNoPanel = new Panel()
             {
-                BackColor = Color.Thistle,
+                BackColor = Color.Gainsboro,
                 AutoSize = true,
                 Margin = new Padding(5),
                 Padding = new Padding(10),
@@ -315,6 +318,18 @@ namespace TecnPoint.Interface
             flpChatbot.Controls.Add(mensagemNoPanel);
 
             flpChatbot.ScrollControlIntoView(mensagemNoPanel);
+        }
+
+        private void ModoDaltonismo()
+        {
+            if (_modoDaltonico)
+            {
+                panel1.BackColor = Color.FromArgb(204, 121, 167);
+            }
+            else
+            {
+                panel1.BackColor = Color.FromArgb(100, 52, 144);
+            }
         }
     }
 }

@@ -63,6 +63,16 @@ namespace TecnPoint.Interface.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _02051eac_c113_448e_b8ec_e26d1461e356 {
+            get {
+                object obj = ResourceManager.GetObject("02051eac-c113-448e-b8ec-e26d1461e356", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_User {
             get {
                 object obj = ResourceManager.GetObject("Add User", resourceCulture);
@@ -86,16 +96,6 @@ namespace TecnPoint.Interface.Properties {
         internal static System.Drawing.Bitmap ChecklistIconActive {
             get {
                 object obj = ResourceManager.GetObject("ChecklistIconActive", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Group_5 {
-            get {
-                object obj = ResourceManager.GetObject("Group 5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,29 @@ namespace TecnPoint.Interface.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_34_Daltonico {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 34 Daltonico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TECH {
             get {
                 object obj = ResourceManager.GetObject("TECH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TECH__1_ {
+            get {
+                object obj = ResourceManager.GetObject("TECH (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +216,16 @@ namespace TecnPoint.Interface.Properties {
         internal static System.Drawing.Bitmap TelaFundoLogin {
             get {
                 object obj = ResourceManager.GetObject("TelaFundoLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TelaInicioDaltonico {
+            get {
+                object obj = ResourceManager.GetObject("TelaInicioDaltonico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

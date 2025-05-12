@@ -18,6 +18,7 @@ namespace TecnPoint.Interface
 {
     public partial class FormDetalhesChamado : Form
     {
+        private readonly bool _modoDaltonico;
         private FormTelaAcompanharChamado formPai;
         private ExibicaoChamado dadosChamado;
 
@@ -32,7 +33,7 @@ namespace TecnPoint.Interface
         //Inicializando id da última mensagem em 0 para a primeira iteração no foreach
         private int IdUltimaMensagem = 0;
 
-        public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado, ModeloUsuario usuarioParam)
+        public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado, ModeloUsuario usuarioParam, bool modoDaltonico)
         {
             ServMensagensChamado = new ServMensagens();
             ServAtualizaChamado = new ServAtualizaChamado();
@@ -41,6 +42,8 @@ namespace TecnPoint.Interface
             this.dadosChamado = dadosChamado;
             InitializeComponent();
             this.AcceptButton = btnEnviar;
+            _modoDaltonico = modoDaltonico;
+            ModoDaltonismo();
         }
 
         private bool carregandoCombo = true;
@@ -148,7 +151,7 @@ namespace TecnPoint.Interface
         {
             Panel mensagemNoPanel = new Panel()
             {
-                BackColor = Color.Thistle,
+                BackColor = Color.Gainsboro,
                 Width = PanelMsg.Width - 30,
                 AutoSize = true,
                 Margin = new Padding(5),
@@ -172,6 +175,19 @@ namespace TecnPoint.Interface
         {
             //a cada 2 segundos carregas as mensagens do banco
             CarregaMensagem();
+        }
+
+        private void ModoDaltonismo()
+        {
+            if (_modoDaltonico)
+            {
+                pictureBox1.Image = Properties.Resources.TECH__1_;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.TECH;
+
+            }
         }
     }
 }

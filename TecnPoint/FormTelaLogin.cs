@@ -10,9 +10,16 @@ namespace TecnPoint
 
         public FormTelaLogin()
         {
+
             InitializeComponent();
-            this.AcceptButton = botaoEntrarLogin;
+            this.AcceptButton = btnEntrarLogin;
         }
+        public void DefinirModoDaltonico(bool modo)
+        {
+            chcbModoDaltonico.Checked = modo;
+        }
+
+        public bool ModoDaltonicoAtivo => chcbModoDaltonico.Checked;
 
         private void botaoEntrarLogin_Click(object sender, EventArgs e)
         {
@@ -22,13 +29,13 @@ namespace TecnPoint
             {
                 if (usuarioLogado.TipoUsuario == "Funcionário")
                 {
-                    FormTelaFuncionario telaFuncionario = new FormTelaFuncionario(usuarioLogado);
+                    FormTelaFuncionario telaFuncionario = new FormTelaFuncionario(usuarioLogado, ModoDaltonicoAtivo);
                     telaFuncionario.Show();
                     this.Hide();
                 }
                 else
                 {
-                    FormTelaCliente telaCliente = new FormTelaCliente(usuarioLogado);
+                    FormTelaCliente telaCliente = new FormTelaCliente(usuarioLogado, ModoDaltonicoAtivo);
                     telaCliente.Show();
                     this.Hide();
                 }
@@ -39,6 +46,34 @@ namespace TecnPoint
                     "Erro ao executar essa ação",
                             MessageBoxButtons.OK,
                            MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        private void AtivarModoDaltonico()
+        {
+            this.BackgroundImage = Interface.Properties.Resources.TelaInicioDaltonico;
+
+            btnEntrarLogin.BackColor = Color.FromArgb(171, 126, 105);
+        }
+
+        private void DesativarModoDaltonico()
+        {
+            this.BackgroundImage = Interface.Properties.Resources.TelaFundoLogin;
+
+            btnEntrarLogin.BackColor = Color.FromArgb(126, 105, 171);
+        }
+
+        private void chcbModoDaltonico_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chcbModoDaltonico.Checked)
+            {
+                AtivarModoDaltonico();
+            }
+            else
+            {
+                DesativarModoDaltonico();
             }
         }
     }

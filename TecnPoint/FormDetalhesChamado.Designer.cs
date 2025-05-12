@@ -127,7 +127,7 @@
             // PanelMsg
             // 
             PanelMsg.AutoScroll = true;
-            PanelMsg.BackColor = Color.Gainsboro;
+            PanelMsg.BackColor = Color.WhiteSmoke;
             PanelMsg.FlowDirection = FlowDirection.TopDown;
             PanelMsg.Location = new Point(12, 109);
             PanelMsg.Name = "PanelMsg";
@@ -211,7 +211,7 @@
             lblFuncResponsavel.Name = "lblFuncResponsavel";
             lblFuncResponsavel.Size = new Size(104, 18);
             lblFuncResponsavel.TabIndex = 14;
-            lblFuncResponsavel.Text = "Responsavel:";
+            lblFuncResponsavel.Text = "Responsável:";
             // 
             // lblCriadoPeloCliente
             // 
