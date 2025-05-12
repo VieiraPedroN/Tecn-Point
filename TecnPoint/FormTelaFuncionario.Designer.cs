@@ -139,8 +139,8 @@
             Name = "FormTelaFuncionario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Tecn Point";
-            Closed += FormTelaCliente_Closed;
-            Load += FormTelaCliente_Load;
+            Closed += FormTelaFuncionario_Closed;
+            Load += FormTelaFuncionario_Load;
             ResumeLayout(false);
             PerformLayout();
         }
