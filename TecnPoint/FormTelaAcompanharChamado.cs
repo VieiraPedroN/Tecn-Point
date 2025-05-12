@@ -8,18 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TecnPoint.Modelo;
-using TecnPoint.Modelo.DadosUsuario;
 using TecnPoint.Modelo.DTO;
-using TecnPoint.Service.ObterChamadosPorUsuario;
+using TecnPoint.Service;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaAcompanharChamado : Form
     {
-        private DadosUsuario usuarioLogado;
+        private ModeloUsuario usuarioLogado;
+        ServChamado ServObtemChamados;
 
-        public FormTelaAcompanharChamado(DadosUsuario dadosUsuario)
+        public FormTelaAcompanharChamado(ModeloUsuario dadosUsuario)
         {
+            ServObtemChamados = new ServChamado();
             this.usuarioLogado = dadosUsuario;
             InitializeComponent();
 
@@ -29,8 +30,7 @@ namespace TecnPoint.Interface
 
         public void CarregarChamados()
         {
-            ObterChamadosPorUsuario service = new ObterChamadosPorUsuario();
-            var dadosChamados = service.BuscarChamados(usuarioLogado.IdUsuario, usuarioLogado.TipoUsuario);
+            var dadosChamados = ServObtemChamados.BuscarChamados(usuarioLogado.IdUsuario, usuarioLogado.TipoUsuario);
             foreach (var dadosChamado in dadosChamados)
             {
                 GroupBox card = new GroupBox
@@ -67,9 +67,8 @@ namespace TecnPoint.Interface
 
                 void AbrirDetalhes(ExibicaoChamado dadosChamado)
                 {
-                    DadosUsuario usuarioParam = new DadosUsuario();
+                    ModeloUsuario usuarioParam = new ModeloUsuario();
                     usuarioParam = usuarioLogado;
-                    DadosChamado chamados = new DadosChamado();
                     panel1.BringToFront();
 
                     FormDetalhesChamado detalhesChamado = new FormDetalhesChamado(dadosChamado, this, usuarioParam);

@@ -5,27 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using TecnPoint.Dados;
 using TecnPoint.Modelo;
-using TecnPoint.Modelo.DadosUsuario;
+using TecnPoint.Modelo.DTO;
 using TecnPoint.Service.Validação;
 
 namespace TecnPoint.Service
 {
-    public class CadastroChamado
+    public class ServChamado
     {
         private ValidacaoCadastroChamado _validacaoCadastroChamado;
-        ClassRepositorioAberturaChamado classRepositorioAberturaChamado;
-        
-        public CadastroChamado()
+        DadosChamados dadosChamados;
+
+        public ServChamado()
         {
             _validacaoCadastroChamado = new ValidacaoCadastroChamado();
-            classRepositorioAberturaChamado = new ClassRepositorioAberturaChamado();
+            dadosChamados = new DadosChamados();
         }
 
         public bool AbrirChamado(string titulo, string descricao,
                                  string prioridade, int idCliente,
                                  int Modulo, int Jornada)
         {
-            DadosChamado chamadoParam = new DadosChamado()
+            ModeloChamado chamadoParam = new ModeloChamado()
             {
                 Titulo = titulo,
                 Descricao = descricao,
@@ -36,25 +36,31 @@ namespace TecnPoint.Service
                 IdModulo = Modulo,
                 IdJornada = Jornada
             };
-            classRepositorioAberturaChamado.AbreChamado(chamadoParam);
+            dadosChamados.AbreChamado(chamadoParam);
             return true;
         }
 
-        public bool ValidarTitulo(string titulo) 
+        public bool ValidarTitulo(string titulo)
         {
             return _validacaoCadastroChamado.txtbTitulo(titulo);
         }
-        public bool ValidarDescricao(string descricao) 
+        public bool ValidarDescricao(string descricao)
         {
             return _validacaoCadastroChamado.txtbDescricao(descricao);
         }
-        public bool ValidarModulo(ComboBox comboBox) 
+        public bool ValidarModulo(ComboBox comboBox)
         {
             return _validacaoCadastroChamado.cbxModulo(comboBox);
         }
-        public bool ValidarJornada(ComboBox comboBox) 
+        public bool ValidarJornada(ComboBox comboBox)
         {
-            return _validacaoCadastroChamado.cbxJornada(comboBox);        
+            return _validacaoCadastroChamado.cbxJornada(comboBox);
         }
+
+        public List<ExibicaoChamado> BuscarChamados(int idusuario, string tipousuario)
+        {
+            return dadosChamados.ExibeChamadosUsuario(idusuario, tipousuario);
+        }
+
     }
 }

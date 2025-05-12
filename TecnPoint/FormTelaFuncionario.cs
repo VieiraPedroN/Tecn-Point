@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Modelo.DadosUsuario;
+using TecnPoint.Modelo;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaFuncionario : Form
     {
-        private DadosUsuario usuarioLogado;
-        public FormTelaFuncionario(DadosUsuario dadosUsuario)
+        private ModeloUsuario usuarioLogado;
+        public FormTelaFuncionario(ModeloUsuario dadosUsuario)
         {
             InitializeComponent();
             this.usuarioLogado = dadosUsuario;

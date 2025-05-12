@@ -4,12 +4,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TecnPoint.Modelo;
 using TecnPoint.Modelo.DTO;
 
-namespace TecnPoint.Dados.BuscarChamadoPorUsuario
+namespace TecnPoint.Dados
 {
-    public class BuscarChamadoPorUsuario
+    public class DadosChamados
     {
+        public void AbreChamado(ModeloChamado chamadoAbertura)
+        {
+            using (ClassConexaoBanco conexaoCad = new ClassConexaoBanco())
+            {
+                string queryCadastroChamado = "INSERT INTO Chamados (Titulo, Descricao, Status, Prioridade, fk_idCliente, fk_idFuncionario, fk_idJornada, fk_idModulo)" +
+                    "VALUES (@RecebeTitulo, @RecebeDescricao, @RecebeStatus, @RecebePrioridade, @RecebeIdCliente, @RecebeIdFuncionario, @RecebeIdJornada, @RecebeIdModulo)";
+
+                using (NpgsqlCommand comandoCad = new NpgsqlCommand(queryCadastroChamado, conexaoCad.conexao))
+                {
+                    //Enviando parâmetros para a query
+                    comandoCad.Parameters.AddWithValue("@RecebeTitulo", chamadoAbertura.Titulo);
+                    comandoCad.Parameters.AddWithValue("@RecebeDescricao", chamadoAbertura.Descricao);
+                    comandoCad.Parameters.AddWithValue("@RecebeStatus", chamadoAbertura.Status);
+                    comandoCad.Parameters.AddWithValue("@RecebePrioridade", chamadoAbertura.Prioridade);
+                    comandoCad.Parameters.AddWithValue("@RecebeIdCliente", chamadoAbertura.IdCliente);
+                    comandoCad.Parameters.AddWithValue("@RecebeIdFuncionario", chamadoAbertura.IdFuncionario);
+                    comandoCad.Parameters.AddWithValue("@RecebeIdJornada", chamadoAbertura.IdJornada);
+                    comandoCad.Parameters.AddWithValue("@RecebeIdModulo", chamadoAbertura.IdModulo);
+                    comandoCad.ExecuteNonQuery();
+                }
+            }
+        }
+
         public List<ExibicaoChamado> ExibeChamadosUsuario(int IdUsuario, string TipoUsuario)
         {
             List<ExibicaoChamado> listaRecebeDados = new List<ExibicaoChamado>();
@@ -62,7 +86,5 @@ namespace TecnPoint.Dados.BuscarChamadoPorUsuario
 
             return listaRecebeDados;
         }
-
     }
 }
-

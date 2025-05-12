@@ -13,7 +13,6 @@ using TecnPoint.Interface;
 using TecnPoint.Modelo.DTO;
 using TecnPoint.Service;
 using TecnPoint.Modelo;
-using TecnPoint.Modelo.DadosUsuario;
 
 namespace TecnPoint.Interface
 {
@@ -22,7 +21,7 @@ namespace TecnPoint.Interface
         private FormTelaAcompanharChamado formPai;
         private ExibicaoChamado dadosChamado;
         
-        private DadosUsuario usuarioLogado;
+        private ModeloUsuario usuarioLogado;
 
         //Service para gerenciar as mensagens (carregar o chat e enviá-las)
         public ServMensagens ServMensagensChamado;
@@ -33,7 +32,7 @@ namespace TecnPoint.Interface
         //Inicializando id da última mensagem em 0 para a primeira iteração no foreach
         private int IdUltimaMensagem = 0;
 
-        public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado, DadosUsuario usuarioParam)
+        public FormDetalhesChamado(ExibicaoChamado dadosChamado, FormTelaAcompanharChamado acompanharChamado, ModeloUsuario usuarioParam)
         {
             ServMensagensChamado = new ServMensagens();
             ServAtualizaChamado = new ServAtualizaChamado();
@@ -84,7 +83,7 @@ namespace TecnPoint.Interface
         {
             if (!carregandoCombo && cbxNomeFunc.SelectedItem != null)
             {
-                var funcionarioSelecionado = cbxNomeFunc.SelectedItem as DadosUsuario;
+                var funcionarioSelecionado = cbxNomeFunc.SelectedItem as ModeloUsuario;
                 if (funcionarioSelecionado != null)
                 {
                     ServAtualizaChamado.AtribuiChamadoParaFuncionario(dadosChamado.IdChamado, funcionarioSelecionado.IdUsuario);

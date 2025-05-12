@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TecnPoint.Modelo.DadosUsuario;
+using TecnPoint.Modelo;
 
 namespace TecnPoint.Dados
 {
@@ -12,7 +12,7 @@ namespace TecnPoint.Dados
     {
         public void CarregaFuncionarios(ComboBox comboboxFunc)
         {
-            List<DadosUsuario> ListaNomeFunc = new List<DadosUsuario>();
+            List<ModeloUsuario> ListaNomeFunc = new List<ModeloUsuario>();
 
             using (ClassConexaoBanco conexao = new ClassConexaoBanco())
             {
@@ -24,7 +24,7 @@ namespace TecnPoint.Dados
                     {
                         while (leitor.Read())
                         {
-                            ListaNomeFunc.Add(new DadosUsuario
+                            ListaNomeFunc.Add(new ModeloUsuario
                             {
                                 IdUsuario = leitor.GetInt32(leitor.GetOrdinal("id_Usuario")),
                                 Nome = leitor.GetString(leitor.GetOrdinal("Nome"))

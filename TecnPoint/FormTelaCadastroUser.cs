@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TecnPoint.Service.CadastroUsuarios;
+using TecnPoint.Service;
 
 namespace TecnPoint.Interface
 {
     public partial class FormTelaCadastroUser : Form
     {
-        CadastroUsuarios validarCadastro = new CadastroUsuarios();
-        CadastroUsuarios cadastroUsuarios = new CadastroUsuarios();
+        ServUsuario validarCadastro;
+        ServUsuario cadastroUsuarios;
+
         public FormTelaCadastroUser()
         {
+            validarCadastro = new ServUsuario();
+            cadastroUsuarios = new ServUsuario();
             InitializeComponent();
         }
 
