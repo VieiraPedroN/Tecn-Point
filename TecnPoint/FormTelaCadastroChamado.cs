@@ -30,7 +30,6 @@ namespace TecnPoint.Interface
         }
         private void btnAbrirChamado_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"id Jornada = {cbxJornada.SelectedIndex} {cbxJornada.Text}\nid Modulo = {cbxModulo.SelectedIndex} {cbxModulo.Text}");
             if (cadastroChamado.ValidarModulo(cbxModulo) &&
                 cadastroChamado.ValidarJornada(cbxJornada) &&
                 cadastroChamado.ValidarTitulo(txtbTitulo.Text) &&
