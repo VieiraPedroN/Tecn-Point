@@ -50,6 +50,7 @@
             // 
             // txtbNome
             // 
+            txtbNome.Cursor = Cursors.IBeam;
             txtbNome.Font = new Font("Segoe UI", 11F);
             txtbNome.Location = new Point(140, 76);
             txtbNome.Name = "txtbNome";
@@ -60,6 +61,7 @@
             // 
             // txtbEmail
             // 
+            txtbEmail.Cursor = Cursors.IBeam;
             txtbEmail.Font = new Font("Segoe UI", 11F);
             txtbEmail.Location = new Point(140, 157);
             txtbEmail.Name = "txtbEmail";
@@ -70,6 +72,7 @@
             // 
             // txtbSenha
             // 
+            txtbSenha.Cursor = Cursors.IBeam;
             txtbSenha.Font = new Font("Segoe UI", 11F);
             txtbSenha.Location = new Point(140, 238);
             txtbSenha.Name = "txtbSenha";
@@ -81,6 +84,7 @@
             // btnCadastrar
             // 
             btnCadastrar.BackColor = Color.FromArgb(126, 105, 171);
+            btnCadastrar.Cursor = Cursors.Hand;
             btnCadastrar.FlatAppearance.BorderColor = Color.DarkGray;
             btnCadastrar.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
             btnCadastrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
@@ -98,11 +102,13 @@
             // btnCancelarCadastro
             // 
             btnCancelarCadastro.BackColor = SystemColors.ButtonFace;
+            btnCancelarCadastro.Cursor = Cursors.Hand;
             btnCancelarCadastro.FlatAppearance.BorderColor = Color.DarkGray;
+            btnCancelarCadastro.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
             btnCancelarCadastro.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnCancelarCadastro.FlatStyle = FlatStyle.Flat;
             btnCancelarCadastro.Font = new Font("Consolas", 11.25F);
-            btnCancelarCadastro.ForeColor = Color.Gray;
+            btnCancelarCadastro.ForeColor = Color.DimGray;
             btnCancelarCadastro.Location = new Point(140, 403);
             btnCancelarCadastro.Name = "btnCancelarCadastro";
             btnCancelarCadastro.Size = new Size(110, 30);
@@ -157,6 +163,7 @@
             // 
             // cbbTipoUsuário
             // 
+            cbbTipoUsuário.Cursor = Cursors.Hand;
             cbbTipoUsuário.DropDownStyle = ComboBoxStyle.DropDownList;
             cbbTipoUsuário.Font = new Font("Segoe UI", 11F);
             cbbTipoUsuário.FormattingEnabled = true;
@@ -199,6 +206,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(182, 121);
             pictureBox1.Name = "pictureBox1";
@@ -227,7 +235,7 @@
             Controls.Add(txtbSenha);
             Controls.Add(txtbEmail);
             Controls.Add(txtbNome);
-            Cursor = Cursors.Hand;
+            Cursor = Cursors.Arrow;
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormTelaCadastroUser";

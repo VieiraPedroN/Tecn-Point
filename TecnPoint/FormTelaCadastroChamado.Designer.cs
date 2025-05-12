@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelaCadastroChamado));
-            txtbTitulo = new TextBox();
             txtbDescricao = new TextBox();
             btnAbrirChamado = new Button();
             cbxModulo = new ComboBox();
@@ -45,21 +45,16 @@
             pictureInfoJornada = new PictureBox();
             pictureInfoModulo = new PictureBox();
             lblExplicaModulo = new Label();
+            txtbTitulo = new TextBox();
+            errorProvider1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)pictureInfoJornada).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureInfoModulo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
-            // 
-            // txtbTitulo
-            // 
-            txtbTitulo.Font = new Font("Segoe UI", 12F);
-            txtbTitulo.Location = new Point(126, 230);
-            txtbTitulo.Name = "txtbTitulo";
-            txtbTitulo.PlaceholderText = "Descreva o problema de forma resumida";
-            txtbTitulo.Size = new Size(330, 29);
-            txtbTitulo.TabIndex = 4;
             // 
             // txtbDescricao
             // 
+            txtbDescricao.Cursor = Cursors.IBeam;
             txtbDescricao.Font = new Font("Segoe UI", 12F);
             txtbDescricao.Location = new Point(126, 293);
             txtbDescricao.Multiline = true;
@@ -68,11 +63,15 @@
             txtbDescricao.ScrollBars = ScrollBars.Vertical;
             txtbDescricao.Size = new Size(330, 97);
             txtbDescricao.TabIndex = 5;
+            txtbDescricao.Leave += txtbDescricao_Leave;
             // 
             // btnAbrirChamado
             // 
             btnAbrirChamado.BackColor = Color.FromArgb(126, 105, 171);
             btnAbrirChamado.Cursor = Cursors.Hand;
+            btnAbrirChamado.FlatAppearance.BorderColor = Color.DarkGray;
+            btnAbrirChamado.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            btnAbrirChamado.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             btnAbrirChamado.FlatStyle = FlatStyle.Flat;
             btnAbrirChamado.Font = new Font("Consolas", 11F);
             btnAbrirChamado.ForeColor = SystemColors.ControlLightLight;
@@ -95,6 +94,7 @@
             cbxModulo.Name = "cbxModulo";
             cbxModulo.Size = new Size(330, 29);
             cbxModulo.TabIndex = 1;
+            cbxModulo.Leave += cbxModulo_Leave;
             // 
             // cbxJornada
             // 
@@ -102,11 +102,12 @@
             cbxJornada.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxJornada.Font = new Font("Segoe UI", 12F);
             cbxJornada.FormattingEnabled = true;
-            cbxJornada.Items.AddRange(new object[] { "Selecione a jornada...", "Financeiro", "Marketing", "Recursos Humanos" });
+            cbxJornada.Items.AddRange(new object[] { "Selecione a jornada...", "Marketing", "Financeiro", "Recursos Humanos" });
             cbxJornada.Location = new Point(126, 105);
             cbxJornada.Name = "cbxJornada";
             cbxJornada.Size = new Size(330, 29);
             cbxJornada.TabIndex = 2;
+            cbxJornada.Leave += cbxJornada_Leave;
             // 
             // cbxPrioridade
             // 
@@ -124,9 +125,12 @@
             // 
             button1.BackColor = SystemColors.ButtonFace;
             button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.DarkGray;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Consolas", 11F);
-            button1.ForeColor = Color.Gray;
+            button1.ForeColor = Color.DimGray;
             button1.Location = new Point(230, 417);
             button1.Name = "button1";
             button1.Size = new Size(110, 30);
@@ -199,6 +203,7 @@
             // 
             // pictureInfoJornada
             // 
+            pictureInfoJornada.Cursor = Cursors.Hand;
             pictureInfoJornada.Image = (Image)resources.GetObject("pictureInfoJornada.Image");
             pictureInfoJornada.Location = new Point(176, 80);
             pictureInfoJornada.Name = "pictureInfoJornada";
@@ -209,6 +214,7 @@
             // 
             // pictureInfoModulo
             // 
+            pictureInfoModulo.Cursor = Cursors.Hand;
             pictureInfoModulo.Image = (Image)resources.GetObject("pictureInfoModulo.Image");
             pictureInfoModulo.Location = new Point(168, 16);
             pictureInfoModulo.Name = "pictureInfoModulo";
@@ -227,6 +233,21 @@
             lblExplicaModulo.TabIndex = 21;
             lblExplicaModulo.Text = "Hardware = Componente físico; \r\nSoftware = Programa/Aplicativo; \r\nRede = Internet.";
             lblExplicaModulo.Visible = false;
+            // 
+            // txtbTitulo
+            // 
+            txtbTitulo.Cursor = Cursors.IBeam;
+            txtbTitulo.Font = new Font("Segoe UI", 12F);
+            txtbTitulo.Location = new Point(126, 230);
+            txtbTitulo.Name = "txtbTitulo";
+            txtbTitulo.PlaceholderText = "Descreva o problema de forma resumida";
+            txtbTitulo.Size = new Size(330, 29);
+            txtbTitulo.TabIndex = 4;
+            txtbTitulo.Leave += txtbTitulo_Leave;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // FormTelaCadastroChamado
             // 
@@ -254,13 +275,12 @@
             Text = "FormTelaCadastroChamado";
             ((System.ComponentModel.ISupportInitialize)pictureInfoJornada).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureInfoModulo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox txtbTitulo;
         private TextBox txtbDescricao;
         private Button btnAbrirChamado;
         private ComboBox cbxModulo;
@@ -276,5 +296,7 @@
         private PictureBox pictureInfoJornada;
         private PictureBox pictureInfoModulo;
         private Label lblExplicaModulo;
+        private TextBox txtbTitulo;
+        private ErrorProvider errorProvider1;
     }
 }
