@@ -45,6 +45,10 @@
             timerLeituraDeMensagens = new System.Windows.Forms.Timer(components);
             lblExibeStatus = new Label();
             lblExibePrioridade = new Label();
+            lblFuncResponsavel = new Label();
+            lblCriadoPeloCliente = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblTitulo
@@ -61,7 +65,7 @@
             // 
             lblCliente.AutoSize = true;
             lblCliente.Font = new Font("Consolas", 11F);
-            lblCliente.Location = new Point(374, 274);
+            lblCliente.Location = new Point(391, 250);
             lblCliente.Name = "lblCliente";
             lblCliente.Size = new Size(88, 18);
             lblCliente.TabIndex = 13;
@@ -71,7 +75,7 @@
             // 
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Consolas", 10F);
-            lblStatus.Location = new Point(333, 34);
+            lblStatus.Location = new Point(327, 34);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(80, 17);
             lblStatus.TabIndex = 9;
@@ -81,7 +85,7 @@
             // 
             lblFuncionario.AutoSize = true;
             lblFuncionario.Font = new Font("Consolas", 11F);
-            lblFuncionario.Location = new Point(374, 111);
+            lblFuncionario.Location = new Point(391, 150);
             lblFuncionario.Name = "lblFuncionario";
             lblFuncionario.Size = new Size(120, 18);
             lblFuncionario.TabIndex = 12;
@@ -106,15 +110,15 @@
             lblPrioridade.Font = new Font("Consolas", 10F);
             lblPrioridade.Location = new Point(447, 34);
             lblPrioridade.Name = "lblPrioridade";
-            lblPrioridade.Size = new Size(56, 17);
+            lblPrioridade.Size = new Size(112, 17);
             lblPrioridade.TabIndex = 10;
-            lblPrioridade.Text = "label5";
+            lblPrioridade.Text = "lblPrioridade";
             // 
             // cbxNomeFunc
             // 
             cbxNomeFunc.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxNomeFunc.FormattingEnabled = true;
-            cbxNomeFunc.Location = new Point(374, 136);
+            cbxNomeFunc.Location = new Point(374, 180);
             cbxNomeFunc.Name = "cbxNomeFunc";
             cbxNomeFunc.Size = new Size(155, 23);
             cbxNomeFunc.TabIndex = 2;
@@ -127,7 +131,7 @@
             PanelMsg.FlowDirection = FlowDirection.TopDown;
             PanelMsg.Location = new Point(12, 109);
             PanelMsg.Name = "PanelMsg";
-            PanelMsg.Size = new Size(356, 276);
+            PanelMsg.Size = new Size(356, 291);
             PanelMsg.TabIndex = 11;
             PanelMsg.WrapContents = false;
             // 
@@ -156,7 +160,7 @@
             cbxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxStatus.FormattingEnabled = true;
             cbxStatus.Items.AddRange(new object[] { "Selecione...", "Aberto", "Em andamento", "Pendente", "Resolvido" });
-            cbxStatus.Location = new Point(333, 55);
+            cbxStatus.Location = new Point(327, 55);
             cbxStatus.Name = "cbxStatus";
             cbxStatus.Size = new Size(89, 23);
             cbxStatus.TabIndex = 0;
@@ -183,7 +187,7 @@
             // 
             lblExibeStatus.AutoSize = true;
             lblExibeStatus.Font = new Font("Consolas", 10F);
-            lblExibeStatus.Location = new Point(325, 9);
+            lblExibeStatus.Location = new Point(319, 9);
             lblExibeStatus.Name = "lblExibeStatus";
             lblExibeStatus.Size = new Size(64, 17);
             lblExibeStatus.TabIndex = 7;
@@ -199,11 +203,45 @@
             lblExibePrioridade.TabIndex = 8;
             lblExibePrioridade.Text = "Prioridade:";
             // 
+            // lblFuncResponsavel
+            // 
+            lblFuncResponsavel.AutoSize = true;
+            lblFuncResponsavel.Font = new Font("Consolas", 11F);
+            lblFuncResponsavel.Location = new Point(375, 120);
+            lblFuncResponsavel.Name = "lblFuncResponsavel";
+            lblFuncResponsavel.Size = new Size(104, 18);
+            lblFuncResponsavel.TabIndex = 14;
+            lblFuncResponsavel.Text = "Responsavel:";
+            // 
+            // lblCriadoPeloCliente
+            // 
+            lblCriadoPeloCliente.AutoSize = true;
+            lblCriadoPeloCliente.Font = new Font("Consolas", 11F);
+            lblCriadoPeloCliente.Location = new Point(375, 220);
+            lblCriadoPeloCliente.Name = "lblCriadoPeloCliente";
+            lblCriadoPeloCliente.Size = new Size(96, 18);
+            lblCriadoPeloCliente.TabIndex = 15;
+            lblCriadoPeloCliente.Text = "Criado por:";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Image = Properties.Resources.TECH;
+            pictureBox1.Location = new Point(386, 296);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 150);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
             // FormDetalhesChamado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(555, 460);
+            Controls.Add(pictureBox1);
+            Controls.Add(lblCriadoPeloCliente);
+            Controls.Add(lblFuncResponsavel);
             Controls.Add(lblExibePrioridade);
             Controls.Add(lblExibeStatus);
             Controls.Add(cbxPrioridade);
@@ -222,6 +260,7 @@
             Name = "FormDetalhesChamado";
             Text = "FormDetalhesChamados";
             Load += FormDetalhesChamado_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -243,5 +282,8 @@
         private System.Windows.Forms.Timer timerLeituraDeMensagens;
         private Label lblExibeStatus;
         private Label lblExibePrioridade;
+        private Label lblFuncResponsavel;
+        private Label lblCriadoPeloCliente;
+        private PictureBox pictureBox1;
     }
 }

@@ -11,6 +11,7 @@ namespace TecnPoint
         public FormTelaLogin()
         {
             InitializeComponent();
+            this.AcceptButton = botaoEntrarLogin;
         }
 
         private void botaoEntrarLogin_Click(object sender, EventArgs e)

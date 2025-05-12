@@ -40,6 +40,7 @@ namespace TecnPoint.Interface
             this.formPai = acompanharChamado;
             this.dadosChamado = dadosChamado;
             InitializeComponent();
+            this.AcceptButton = btnEnviar;
         }
 
         private bool carregandoCombo = true;

@@ -24,6 +24,7 @@ namespace TecnPoint.Interface
         {
             this.telaCliente = telaClienteParam;
             InitializeComponent();
+            this.AcceptButton = btnEnviarMensagem;
         }
 
         private void FormTelaChatbot_Load(object sender, EventArgs e)

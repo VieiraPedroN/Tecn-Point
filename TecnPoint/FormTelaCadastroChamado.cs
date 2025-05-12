@@ -27,6 +27,7 @@ namespace TecnPoint.Interface
             cbxModulo.SelectedIndex = 0;
             cbxJornada.SelectedIndex = 0;
             cbxPrioridade.SelectedIndex = 0;
+            this.AcceptButton = btnAbrirChamado;
         }
         private void btnAbrirChamado_Click(object sender, EventArgs e)
         {

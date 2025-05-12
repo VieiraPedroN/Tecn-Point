@@ -35,7 +35,7 @@
             cbxModulo = new ComboBox();
             cbxJornada = new ComboBox();
             cbxPrioridade = new ComboBox();
-            button1 = new Button();
+            btnCancelarCadastro = new Button();
             lblModulo = new Label();
             lblJornada = new Label();
             lblPrioridade = new Label();
@@ -121,23 +121,23 @@
             cbxPrioridade.Size = new Size(330, 29);
             cbxPrioridade.TabIndex = 3;
             // 
-            // button1
+            // btnCancelarCadastro
             // 
-            button1.BackColor = SystemColors.ButtonFace;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.DarkGray;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Consolas", 11F);
-            button1.ForeColor = Color.DimGray;
-            button1.Location = new Point(230, 417);
-            button1.Name = "button1";
-            button1.Size = new Size(110, 30);
-            button1.TabIndex = 6;
-            button1.Text = "Cancelar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnCancelarCadastro.BackColor = SystemColors.ButtonFace;
+            btnCancelarCadastro.Cursor = Cursors.Hand;
+            btnCancelarCadastro.FlatAppearance.BorderColor = Color.DarkGray;
+            btnCancelarCadastro.FlatAppearance.MouseDownBackColor = Color.FromArgb(190, 137, 254);
+            btnCancelarCadastro.FlatAppearance.MouseOverBackColor = Color.FromArgb(163, 89, 253);
+            btnCancelarCadastro.FlatStyle = FlatStyle.Flat;
+            btnCancelarCadastro.Font = new Font("Consolas", 11F);
+            btnCancelarCadastro.ForeColor = Color.DimGray;
+            btnCancelarCadastro.Location = new Point(230, 417);
+            btnCancelarCadastro.Name = "btnCancelarCadastro";
+            btnCancelarCadastro.Size = new Size(110, 30);
+            btnCancelarCadastro.TabIndex = 6;
+            btnCancelarCadastro.Text = "Cancelar";
+            btnCancelarCadastro.UseVisualStyleBackColor = false;
+            btnCancelarCadastro.Click += button1_Click;
             // 
             // lblModulo
             // 
@@ -263,7 +263,7 @@
             Controls.Add(lblPrioridade);
             Controls.Add(lblJornada);
             Controls.Add(lblModulo);
-            Controls.Add(button1);
+            Controls.Add(btnCancelarCadastro);
             Controls.Add(cbxPrioridade);
             Controls.Add(cbxJornada);
             Controls.Add(cbxModulo);
@@ -286,7 +286,7 @@
         private ComboBox cbxModulo;
         private ComboBox cbxJornada;
         private ComboBox cbxPrioridade;
-        private Button button1;
+        private Button btnCancelarCadastro;
         private Label lblModulo;
         private Label lblJornada;
         private Label lblPrioridade;

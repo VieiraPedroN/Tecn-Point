@@ -25,6 +25,7 @@ namespace TecnPoint.Interface
             cadastroUsuarios = new ServUsuario();
             telaFuncionario = telaFuncionarioParam;
             InitializeComponent();
+            this.AcceptButton = btnCadastrar;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

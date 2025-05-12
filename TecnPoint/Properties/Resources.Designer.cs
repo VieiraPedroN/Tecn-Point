@@ -173,6 +173,16 @@ namespace TecnPoint.Interface.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TECH {
+            get {
+                object obj = ResourceManager.GetObject("TECH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TelaFundo {
             get {
                 object obj = ResourceManager.GetObject("TelaFundo", resourceCulture);

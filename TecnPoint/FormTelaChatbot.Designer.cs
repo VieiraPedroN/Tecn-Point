@@ -83,17 +83,17 @@
             // tbxMensagem
             // 
             tbxMensagem.Font = new Font("Segoe UI", 11F);
-            tbxMensagem.Location = new Point(119, 423);
+            tbxMensagem.Location = new Point(119, 413);
             tbxMensagem.Multiline = true;
             tbxMensagem.Name = "tbxMensagem";
             tbxMensagem.PlaceholderText = "Digite aqui...";
-            tbxMensagem.Size = new Size(286, 30);
+            tbxMensagem.Size = new Size(286, 40);
             tbxMensagem.TabIndex = 2;
             // 
             // btnEnviarMensagem
             // 
             btnEnviarMensagem.Image = (Image)resources.GetObject("btnEnviarMensagem.Image");
-            btnEnviarMensagem.Location = new Point(411, 422);
+            btnEnviarMensagem.Location = new Point(411, 419);
             btnEnviarMensagem.Name = "btnEnviarMensagem";
             btnEnviarMensagem.Size = new Size(48, 31);
             btnEnviarMensagem.TabIndex = 3;
