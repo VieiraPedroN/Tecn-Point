@@ -8,7 +8,7 @@ using TecnPoint.Modelo;
 
 namespace TecnPoint.Dados
 {
-    public class DadosUsuario
+    public class DadosUsuario : IDadosUsuario
     {
         public void CadastrarUsuario(ModeloUsuario usuarioCadastro)
         {
