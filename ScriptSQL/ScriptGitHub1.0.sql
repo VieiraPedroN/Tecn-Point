@@ -68,12 +68,13 @@ CREATE TABLE Conversa (
 INSERT INTO Usuarios (Nome, Email, Senha, tipo_Usuario)
 VALUES 
 	('Suporte Tech', 'techsolution@gmail.com', 'techs', 'Funcionário'),
-	('cliente', '@.', '123', 'Cliente'),
-	('teste', 'testefunc@gmail.com', 'teste', 'Funcionário'),
-	('Danilo Alves da Silva', 'danalvessilva@gmail.com.br', 'dan163', 'Funcionário'),
-	('Michael do Valle', 'valledomichael@gmail.com', 'senhamaisforte', 'Cliente'),
-	('Leonardo Miranda', 'leomiranda@gmail.com', 'sanheforte', 'Funcionário'),
-	('Aroldo Carlos', 'caroldo@gmail.com', '99008760', 'Cliente');
+	('Admin', 'adminlardossonhos@gmail.com', 'adminlar', 'Funcionário'),
+	('Danilo Alves', 'danalves@gmail.com.br', 'dan163', 'Funcionário'),
+	('Michael Valle', 'vallemichael@gmail.com', 'vallem908', 'Cliente'),
+	('Leonardo Souza', 'leosouza@gmail.com', 'leopigarro', 'Funcionário'),
+	('Aroldo Carlos', 'caroldo@gmail.com', '99008760', 'Cliente'),	
+	('Jonas Cruz', 'jcruz@gmail.com', 'cruz321', 'Funcionário');
+	
 
 /*chamados*/
 INSERT INTO Chamados (Titulo, Descricao, Status, Prioridade, fk_idCliente, fk_idFuncionario, fk_idJornada, fk_idModulo)
@@ -101,3 +102,9 @@ SELECT * FROM Chamados;
 SELECT * FROM Jornada;
 SELECT * FROM Modulo;
 SELECT * FROM Conversa;
+
+DROP TABLE Usuarios;
+DROP TABLE Chamados;
+DROP TABLE Jornada;
+DROP TABLE Modulo;
+DROP TABLE Conversa;

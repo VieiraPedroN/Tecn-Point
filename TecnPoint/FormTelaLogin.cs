@@ -48,9 +48,6 @@ namespace TecnPoint
                            MessageBoxIcon.Error);
             }
         }
-
-
-
         private void AtivarModoDaltonico()
         {
             this.BackgroundImage = Interface.Properties.Resources.TelaInicioDaltonico;

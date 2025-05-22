@@ -20,11 +20,11 @@ namespace TecnPoint.Modelo
         }
         
         //Construtor utilizado para envio de mensagem para o banco
-        public DadosMensagens(string mensagem, int idchamado, int idremetente)
+        public DadosMensagens(string mensagem, int idChamado, int idRemetente)
         {
             Mensagem = mensagem;
-            IdChamado = idchamado;
-            IdRemetente = idremetente;
+            IdChamado = idChamado;
+            IdRemetente = idRemetente;
         }
     }
 }
