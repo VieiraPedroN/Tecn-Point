@@ -10,7 +10,7 @@ namespace TecnPoint.Dados
 
         public ClassConexaoBanco()
         {
-            _stringconexao = "Host=26.219.163.75;Port=5432;Username=postgres;Password=admin;Database=SystemDB";
+            _stringconexao = "Host=localhost;Port=5432;Username=postgres;Password=admin;Database=SystemDB";
             conexao = new NpgsqlConnection(_stringconexao);
             conexao.Open();
 
